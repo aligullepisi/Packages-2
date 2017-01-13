@@ -1,0 +1,52 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>intel-tbb</Name>
+        <Homepage>http://www.threadingbuildingblocks.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Intel Threading Building Blocks Library</Summary>
+        <Description>Threading Building Blocks (TBB) is a C++ runtime library that abstracts the low-level threading details necessary for optimal multi-core performance.</Description>
+        <Archive sha1sum="5841b61b9c80c23e2f06944c37332e79f0506cec" type="targz">https://www.threadingbuildingblocks.org/sites/default/files/software_releases/linux/tbb44_20160128oss_lin.tgz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="install.sh">install.sh</AdditionalFile>
+        </AdditionalFiles>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>intel-tbb</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>intel-tbb-devel</Name>
+        <Summary>Development files for intel-tbb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">intel-tbb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>44_20160128</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

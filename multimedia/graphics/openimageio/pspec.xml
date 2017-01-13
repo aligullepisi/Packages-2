@@ -1,0 +1,102 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>openimageio</Name>
+        <Homepage>https://sites.google.com/site/openimageio/home</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Library for reading and writing images</Summary>
+        <Description>OpenImageIO is a library for reading and writing images, and a bunch of related classes, utilities, and applications.</Description>
+        <Archive sha1sum="93177c35a859abb919fb385a7833571b4f188193" type="targz">https://github.com/OpenImageIO/oiio/archive/Release-1.6.14.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>openexr-devel</Dependency>
+            <Dependency>ilmbase-devel</Dependency>
+            <Dependency>glew-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>txt2man</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>opencv-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>giflib-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>jasper-devel</Dependency>
+            <Dependency>libraw-devel</Dependency>
+            <Dependency>openjpeg-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>openimageio</Name>
+        <RuntimeDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>webp</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>opencv</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>ilmbase</Dependency>
+            <Dependency>openjpeg</Dependency>
+            <Dependency>openexr-libs</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libraw</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>openimageio-devel</Name>
+        <Summary>Development files for openimageio</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">openimageio</Dependency>
+            <Dependency>tiff-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>opencv-devel</Dependency>
+            <Dependency>giflib-devel</Dependency>
+            <Dependency>ilmbase-devel</Dependency>
+            <Dependency>openjpeg-devel</Dependency>
+            <Dependency>openexr-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libraw-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-20</Date>
+            <Version>1.6.14</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

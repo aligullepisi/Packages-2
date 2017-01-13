@@ -1,0 +1,56 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>crystalhd</Name>
+        <Homepage>http://www.broadcom.com/support/crystal_hd/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Drivers for Broadcom's BCM70012 and BCM70015 Crystal HD</Summary>
+        <Description>Drivers for Broadcom's BCM70012 and BCM70015 Crystal HD</Description>
+        <Archive sha1sum="31616471614451730ba927471d7a2403dc333927" type="tarlzma">http://source.pisilinux.org/1.0/crystalhd.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>libcrystalhd</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libcrystalhd.so</Path>
+            <Path fileType="library">/usr/lib/libcrystalhd.so.3</Path>
+            <Path fileType="library">/usr/lib/libcrystalhd.so.3.6</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libcrystalhd-devel</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">libcrystalhd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/libcrystalhd/bc_dts_defs.h</Path>
+            <Path fileType="header">/usr/include/libcrystalhd/bc_dts_types.h</Path>
+            <Path fileType="header">/usr/include/libcrystalhd/libcrystalhd_if.h</Path>
+            <Path fileType="header">/usr/include/libcrystalhd/libcrystalhd_version.h</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>crystalhd-firmware</Name>
+        <Files>            
+            <Path fileType="data">/lib/firmware</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>20100703</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

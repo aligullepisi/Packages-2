@@ -1,0 +1,48 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>biosdevname</Name>
+        <Homepage>http://linux.dell.com/biosdevname/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>system.base</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Biosdevname is a udev helper utility developed</Summary>
+        <Description>Biosdevname is a udev helper utility developed by Dell and released under the GNU General Public License (GPL). It provides a consistent naming mechanism for network devices based on their physical location as suggested by the system BIOS.</Description>
+        <Archive sha1sum="972dc94c81cdbe12216fcf379453587ae505054f" type="targz">http://linux.dell.com/biosdevname/biosdevname-0.7.1/biosdevname-0.7.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pciutils-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>biosdevname</Name>
+        <RuntimeDependencies>
+            <Dependency>pciutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="library">/lib/udev/rules.d</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>0.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

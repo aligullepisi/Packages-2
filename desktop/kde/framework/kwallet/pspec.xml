@@ -1,0 +1,96 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kwallet</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>KDE password storage framework</Summary>
+        <Description>This framework contains two main components: Interface to KWallet, the safe desktop-wide storage for passwords on KDE workspaces. The kwalletd used to safely store the passwords on KDE work spaces.</Description>
+        <Archive sha1sum="69493d11371f984491370b2a49023e32bcda37c0" type="tarxz">mirrors://kde/stable/frameworks/5.29/kwallet-5.29.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libxslt</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kdoctools-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kcoreaddons-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kdbusaddons-devel</Dependency>
+            <Dependency versionFrom="5.29.0">ki18n-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kiconthemes-devel</Dependency>
+            <Dependency versionFrom="5.29.0">knotifications-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kservice-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kwidgetsaddons-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kwindowsystem-devel</Dependency>
+            <Dependency versionFrom="5.29.0">extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kwallet</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig</Dependency>
+            <Dependency versionFrom="5.29.0">kcoreaddons</Dependency>
+            <Dependency versionFrom="5.29.0">kdbusaddons</Dependency>
+            <Dependency versionFrom="5.29.0">ki18n</Dependency>
+            <Dependency versionFrom="5.29.0">kiconthemes</Dependency>
+            <Dependency versionFrom="5.29.0">knotifications</Dependency>
+            <Dependency versionFrom="5.29.0">kservice</Dependency>
+            <Dependency versionFrom="5.29.0">kwidgetsaddons</Dependency>
+            <Dependency versionFrom="5.29.0">kwindowsystem</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kwallet-devel</Name>
+        <Summary>Development files for kwallet</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kwallet</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kcoreaddons-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kdbusaddons-devel</Dependency>
+            <Dependency versionFrom="5.29.0">ki18n-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kiconthemes-devel</Dependency>
+            <Dependency versionFrom="5.29.0">knotifications-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kservice-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kwidgetsaddons-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kwindowsystem-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-21</Date>
+            <Version>5.29.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

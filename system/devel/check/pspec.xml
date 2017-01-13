@@ -1,0 +1,60 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>check</Name>
+        <Homepage>http://sourceforge.net/projects/check/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A unit test framework for C</Summary>
+        <Description>check is a unit testing framework for C. It features a simple interface for defining unit tests, putting little in the way of the developer. Tests are run in a separate address space, so Check can catch both assertion failures and code errors that cause segmentation faults or other signals. The output from unit tests can be used within source code editors and IDEs.</Description>
+        <Archive sha1sum="35d3a53446aea7b21a770faedb358d0fc7cba76d" type="targz">mirrors://sourceforge/check/0.10/check-0.10.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>check</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man/man1/checkmk.1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>check-devel</Name>
+        <Summary>Development files for check</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">check</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>check-docs</Name>
+        <Summary>Documents for check</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/check/example</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>0.10.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,52 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>numactl</Name>
+        <Homepage>ftp://oss.sgi.com/www/projects/libnuma/download</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Library for tuning NUMA machines</Summary>
+        <Description>numactl consists of a numactl program to run other programs with a specific NUMA policy and a libnuma to do allocations with NUMA policy in applications.</Description>
+        <Archive sha1sum="0846670269824078a4eae8a977728175437b0da4" type="targz">ftp://oss.sgi.com/www/projects/libnuma/download/numactl-2.0.11.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>numactl</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>numactl-devel</Name>
+        <Summary>Development files for numactl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">numactl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>2.0.11</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

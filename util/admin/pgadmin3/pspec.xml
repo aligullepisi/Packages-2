@@ -1,0 +1,61 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pgadmin3</Name>
+        <Homepage>http://www.pgadmin.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:gui</IsA>
+        <Summary>Graphical client for PostgreSQL</Summary>
+        <Description>pgadmin3 is a powerful administration and development platform for the PostgreSQL database, free for any use.</Description>
+        <Archive sha1sum="3091b0bdc5156e54197f157a86240e47af9becc2" type="targz">https://ftp.postgresql.org/pub/pgadmin3/release/v1.22.0/src/pgadmin3-1.22.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>wxGTK2.8-devel</Dependency>
+	    <!--Dependency>wxMaxima</Dependency-->
+        </BuildDependencies>
+        <!--Patches>
+            <Patch level="2">0001-Move-misplaced-unlock-of-s_currentObjectMutex.patch</Patch>
+        </Patches-->
+    </Source>
+
+    <Package>
+        <Name>pgadmin3</Name>
+        <RuntimeDependencies>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>wxGTK2.8</Dependency>
+            <Dependency>wxBase</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/pgadmin3</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pgadmin3.desktop">pgadmin3.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-08</Date>
+            <Version>1.22</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

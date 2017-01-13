@@ -1,0 +1,120 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sqlite</Name>
+        <Homepage>http://www.sqlite.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>An SQL Database Engine in a C Library</Summary>
+        <Description>SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine. Supports databases up to 2 terabytes in size.</Description>
+        <Archive sha1sum="e2d300e4b24af5ecd67a1396488893fa44864e36" type="targz">http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz</Archive>
+        <Archive sha1sum="9b58a0a48508103352144afee2e47469e74427ba" type="zip">http://www.sqlite.org/2016/sqlite-doc-3110000.zip</Archive>
+        <BuildDependencies>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sqlite</Name>
+        <RuntimeDependencies>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/sqlite/README</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sqlite-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for sqlite</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sqlite-32bit</Name>
+        <Summary>sqlite-32bit için paylaşımlı kitaplıklar</Summary>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for sqlite</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            
+            <Dependency release="current">sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+
+    <!--<Package>
+        <Name>sqlite-tcl</Name>
+        <PartOf>programming.language.tcl</PartOf>
+        <Summary>sqlite Tcl Extension Architecture (TEA)</Summary>
+        <BuildDependencies>
+            <Dependency>tcl-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/sqlite3.8.10.2</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sqlite-tcl-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>sqlite-tcl-32bit için paylaşımlı kitaplıklar</Summary>
+        <BuildDependencies>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/sqlite3.8.10.2/</Path>
+        </Files>
+    </Package>-->
+
+    <Package>
+        <Name>sqlite-doc</Name>
+        <Summary>sqlite-doc, sqlite için doküman belgeleri</Summary>
+        <RuntimeDependencies>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/doc/sqlite/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-15</Date>
+            <Version>3.11.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

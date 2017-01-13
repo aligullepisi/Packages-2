@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>timezone</Name>
+        <Homepage>ftp://elsie.nci.nih.gov/pub/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <License>public-domain</License>
+        <IsA>app:console</IsA>
+        <IsA>data</IsA>
+        <Summary>Timezone data files and tools</Summary>
+        <Description>timezone includes timezone data files and tools to use them. Package contents are synchronized with glibc tree.</Description>
+        <Archive sha1sum="9ba86f3bfc1c7c3470eeb6963dd6ac84c9195d69" type="targz">http://www.iana.org/time-zones/repository/releases/tzdata2016a.tar.gz</Archive>
+	<!--<Archive sha1sum="807cf10ef545314989175096aba605bee4062b61" type="targz">http://www.iana.org/time-zones/repository/releases/tzcode2015d.tar.gz</Archive>-->
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>gawk</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch>timezone-data-2015c-makefile.patch</Patch> -->
+            <Patch>timezone-data-2016a-makefile.patch</Patch>
+        </Patches>
+        <AdditionalFiles>
+        <!--<AdditionalFile permission="0755" target="yearistype.sh">yearistype.sh</AdditionalFile>-->
+        </AdditionalFiles>
+    </Source>
+
+    <Package>
+        <Name>timezone</Name>
+        <Files>
+            <Path fileType="data">/usr/share/zoneinfo</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>2016a</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

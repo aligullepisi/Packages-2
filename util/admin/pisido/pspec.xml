@@ -1,0 +1,43 @@
+
+<PISI>
+    <Source>
+        <Name>pisido</Name>
+        <Homepage>http://www.pisilinux.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <PartOf>util.admin</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>A pisi packager from GUI</Summary>
+        <Description>You can make pisi packages with a GUI. Also, you can import your existing build files.Warning:Alfa version. Ported Qt5.</Description>
+        <Archive type="targz" sha1sum="5a2c01f9ae2e9c0a838cf16b841af5e64040a0f9">https://github.com/hrngultekin/pisido/archive/pisido-v2.3.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qscintilla2-devel</Dependency>
+            <Dependency>qtermwidget5-devel</Dependency>
+        </BuildDependencies>        
+    </Source>
+    <Package>
+        <Name>pisido</Name>
+        <Summary>A pisi packager from GUI</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qscintilla2</Dependency>
+            <Dependency>qtermwidget5</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-06-08</Date>
+            <Version>2.3.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

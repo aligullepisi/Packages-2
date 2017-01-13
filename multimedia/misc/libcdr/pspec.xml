@@ -1,0 +1,73 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libcdr</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/libcdr</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <License>GPLv2</License>
+        <License>MPLv1.1</License>
+        <IsA>library</IsA>
+        <Summary>Library parsing the Corel cdr documents</Summary>
+        <Description>Libcdr is library providing ability to interpret and import Corel Draw drawings into various applications.</Description>
+        <Archive sha1sum="244b92a51451ab4c2abc9aebfbe521e6277f7800" type="tarxz">http://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>doxygen</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>libwpd-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>librevenge-devel</Dependency>
+            <Dependency>cppunit-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libcdr</Name>
+        <RuntimeDependencies>
+            <Dependency>lcms2</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>librevenge</Dependency>
+            <Dependency>cppunit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/libcdr</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libcdr-devel</Name>
+        <Summary>Development files for libcdr</Summary>
+        <RuntimeDependencies>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>librevenge-devel</Dependency>
+            <Dependency release="current">libcdr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

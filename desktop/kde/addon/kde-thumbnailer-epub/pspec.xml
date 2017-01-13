@@ -1,0 +1,50 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kde-thumbnailer-epub</Name>
+        <Homepage>http://kde-apps.org/content/show.php/KDE+ePub+Thumbnailer?content=151210</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A KDE thumbnail generator for the ePub file format.</Summary>
+        <Description>A KDE thumbnail generator for the ePub file format.</Description>
+        <Archive sha1sum="df73155616235d5e5e6083abd709685de9c77f7c" type="targz">https://sourceforge.net/projects/pisilinux/files/source/kde-thumbnailer-epub-1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>karchive-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kde-thumbnailer-epub</Name>
+         <RuntimeDependencies>            
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>karchive</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-08-04</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,42 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>intel-ucode</Name>
+        <Homepage>http://www.intel.com/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>Microcode update files for Intel CPUs</Summary>
+        <Description>Microcode update files for Intel CPUs</Description>
+        <Archive sha1sum="638d760b53c94f073d62b334561ae6bc139c8a32" type="targz" target="microcode-20140122">http://downloadmirror.intel.com/23574/eng/microcode-20140122.tgz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="intel-microcode2ucode.c">intel-microcode2ucode.c</AdditionalFile>
+        </AdditionalFiles>
+    </Source>
+
+    <Package>
+        <Name>intel-ucode</Name>
+        <Files>
+            <Path fileType="data">/usr/share/doc</Path>
+            <Path fileType="library">/lib/firmware</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/doc/intel-ucode/LICENSE" owner="root" permission="0644">LICENSE</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>20140122</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

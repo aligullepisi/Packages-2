@@ -1,0 +1,93 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pinentry</Name>
+        <Homepage>http://www.gnupg.org/aegypten/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol</Summary>
+        <Description>Pinentry is a collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol as described by the aegypten project.</Description>
+        <Archive sha1sum="11979a6826ef5de73b52fd8c5b84f8321a133e53" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-0.9.5.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libassuan-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--<Patch level="1">moreSecureMemoryForPinentry-qt.diff</Patch>-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>pinentry</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libassuan</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/pinentry">pinentry-wrapper</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <!--Package>
+        <Name>pinentry-qt</Name>
+        <Summary>pinentry for Qt4 toolkit</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>pinentry</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/pinentry-qt*</Path>
+        </Files>
+    </Package-->
+
+    <Package>
+        <Name>pinentry-gtk</Name>
+        <Summary>pinentry for GTK toolkit</Summary>
+        <RuntimeDependencies>
+            <Dependency>pinentry</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>libassuan</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/pinentry-gtk*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-08</Date>
+            <Version>0.9.5</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

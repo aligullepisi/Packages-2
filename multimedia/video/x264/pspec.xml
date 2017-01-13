@@ -1,0 +1,57 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>x264</Name>
+        <Homepage>http://developers.videolan.org/x264.html</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Open source H264/AVC encoder</Summary>
+        <Description>x264 is a free library for encoding H264/AVC video streams.</Description>
+        <!-- Archives come from http://download.videolan.org/pub/videolan/x264/snapshots/ -->
+        <Archive sha1sum="16d3302148b92a9f0e6254fec554e0c375ccce75" type="tarbz2">https://sourceforge.net/projects/pisilinux/files/source/last_stable_x264.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>yasm-devel</Dependency>
+            <Dependency>l-smash-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>x264</Name>
+        <RuntimeDependencies>
+            <Dependency>l-smash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>x264-devel</Name>
+        <Summary>Development files for x264</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">x264</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-07-22</Date>
+            <Version>2245.12062016</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

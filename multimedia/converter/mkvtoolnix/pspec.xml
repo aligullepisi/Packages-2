@@ -1,0 +1,68 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mkvtoolnix</Name>
+        <Homepage>http://www.bunkus.org/videotools/mkvtoolnix/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>mmg</Icon>
+        <IsA>app:console</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>A set of tools to create, alter and inspect Matroska files</Summary>
+        <Description>MKVToolnix is a set of tools (mkvmerge, mkvinfo and mkvextract) With these tools one can get information about (mkvinfo) Matroska files, extract tracks/data from (mkvextract) Matroska files and create (mkvmerge) Matroska files from other media files.</Description>
+        <Archive sha1sum="66050c813ee5a5ec7e2cbdff1e601a9087ddf5b8" type="tarxz">https://mkvtoolnix.download/sources/mkvtoolnix-9.5.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>flac-devel</Dependency>
+            <Dependency>boost-devel</Dependency>            
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libebml-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>libmatroska-devel</Dependency>
+            <Dependency>file</Dependency>
+             <Dependency>imagemagick-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mkvtoolnix</Name>
+        <RuntimeDependencies>
+            <Dependency>flac</Dependency>
+            <Dependency>boost</Dependency>            
+            <Dependency>libogg</Dependency>
+            <Dependency>file</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/mkvtoolnix</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-04</Date>
+            <Version>9.5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

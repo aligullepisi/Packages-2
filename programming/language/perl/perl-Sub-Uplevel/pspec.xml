@@ -1,0 +1,43 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Sub-Uplevel</Name>
+        <Homepage>http://search.cpan.org/dist/Sub-Uplevel/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Module to apparently run a function in a higher stack frame</Summary>
+        <Description>Like Tcl's uplevel() function, but not quite so dangerous. The idea is just to fool caller(). All the really naughty bits of Tcl's uplevel() are avoided.</Description>
+        <Archive sha1sum="7fb12ed2e8ebb815e6c69e503fd8ff98b3eb57d1" type="targz">http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/Sub-Uplevel-0.25.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Sub-Uplevel</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/perl-Sub-Uplevel</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.25</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

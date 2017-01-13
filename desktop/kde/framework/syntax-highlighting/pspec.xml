@@ -1,0 +1,57 @@
+
+<PISI>
+    <Source>
+        <Name>syntax-highlighting</Name>
+        <Homepage>https://community.kde.org/Frameworks</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <Summary>Syntax highlighting engine for structured text and code</Summary>
+        <Description>Syntax highlighting engine for structured text and code</Description>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>glibc-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="tarxz" sha1sum="e6a581647c6d6d8c0e353a5749891ce915700930">mirrors://kde/stable/frameworks/5.29/syntax-highlighting-5.29.0.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>syntax-highlighting</Name>
+        <Summary>Syntax highlighting engine for structured text and code</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>syntax-highlighting-devel</Name>
+        <Summary>Development files for syntax-highlighting</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">syntax-highlighting</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-12-20</Date>
+            <Version>5.29.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

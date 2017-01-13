@@ -1,0 +1,48 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Net-SSLeay</Name>
+        <Homepage>http://search.cpan.org/~flora/Net-SSLeay</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Net::SSLeay module for perl</Summary>
+        <Description>Net::SMPP is an implementation of Short Message Peer to Peer protocol over TCP. This protocol is frequently used in the telecoms and mobile operator world to pass short messages between systems that implement the short message service (SMS).</Description>
+        <Archive sha1sum="29c6cec280396df3f535a08a4fbdda62df783726" type="targz">http://search.cpan.org/CPAN/authors/id/M/MI/MIKEM/Net-SSLeay-1.72.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Test-Exception</Dependency>
+            <Dependency>openssl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Net-SSLeay</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/perl-Net-SSLeay</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>1.72</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

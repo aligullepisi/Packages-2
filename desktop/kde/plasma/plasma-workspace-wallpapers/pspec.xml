@@ -1,0 +1,50 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>plasma-workspace-wallpapers</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <IsA>app:gui</IsA>
+        <Summary>The KDE Plasma Workspace Components</Summary>
+        <Description>The KDE Plasma Workspace Components</Description>
+        <Archive sha1sum="c6aec40060bdc4bfebc760396adf86d76b5658b6" type="tarxz">mirrors://kde/stable/plasma/5.8.4/plasma-workspace-wallpapers-5.8.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>plasma-workspace-wallpapers</Name>
+        <RuntimeDependencies>
+              <!--<Dependency>libXcursor</Dependency>-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-26</Date>
+            <Version>5.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

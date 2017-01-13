@@ -1,0 +1,51 @@
+
+<?xml version="1.0"?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gimp-resynthesizer</Name>
+        <Homepage>http://www.logarithmic.net/pfh/resynthesizer</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>addon</IsA>
+        <Summary>Resynthesizer is a Gimp plug-in for texture synthesis</Summary>
+        <Description>Resynthesizer is a Gimp plug-in for texture synthesis. Given a sample of a texture, it can create more of that texture.</Description>
+        <Archive sha1sum="9a7a6318b18d9546d712441594041c4ca47952d7" type="targz">http://www.logarithmic.net/pfh-files/resynthesizer/resynthesizer-0.16.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gimp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>gimp-resynthesizer</Name>
+        <RuntimeDependencies>
+            <Dependency>gimp</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/gimp/2.0/plug-ins</Path>
+            <Path fileType="header">/usr/share/gimp/2.0/scripts</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.16</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

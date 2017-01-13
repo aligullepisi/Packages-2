@@ -1,0 +1,46 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>unoconv</Name>
+        <Homepage>http://dag.wieers.com/home-made/unoconv</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A document converter</Summary>
+        <Description>unoconv converts between any document format that OpenOffice / OpenOffice understands.</Description>
+        <Archive sha1sum="c4d764f9cd8461955ca1c3564a522449ed264c19" type="targz">http://dag.wieers.com/home-made/unoconv/unoconv-0.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>asciidoc</Dependency>
+            <Dependency>xmlto</Dependency>
+        </BuildDependencies>
+        
+    </Source>
+
+    <Package>
+        <Name>unoconv</Name>
+        <RuntimeDependencies>
+            <Dependency>asciidoc</Dependency>
+            <Dependency>xmlto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.7</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

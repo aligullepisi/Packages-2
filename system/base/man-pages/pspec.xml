@@ -1,0 +1,44 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>man-pages</Name>
+        <Homepage>http://www.win.tue.nl/~aeb/linux/man/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data:doc</IsA>
+        <Summary>A somewhat comprehensive collection of Linux man pages</Summary>
+        <Description>A large collection of man pages (documentation) from the Linux Documentation Project (LDP).</Description>
+        <Archive sha1sum="a8fe81cbea71d1b0bdf9e6d185dd5826da575010" type="tarxz">https://www.kernel.org/pub/linux/docs/man-pages/man-pages-4.04.tar.xz</Archive>
+        <Archive sha1sum="b9c65a46e2061a1b2d4ee7bcc3e46603517b1f42" target="man-pages-4.04" type="tarxz">http://www.kernel.org/pub/linux/docs/man-pages/man-pages-posix/man-pages-posix-2003-a.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>man-pages</Name>
+        <RuntimeDependencies>
+            <Dependency>man-db</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/getent.1">man1/getent.1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/sprof.1">man1/sprof.1</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>4.04</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

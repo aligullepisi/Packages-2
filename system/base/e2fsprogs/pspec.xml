@@ -1,0 +1,78 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>e2fsprogs</Name>
+        <Homepage>http://e2fsprogs.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Standard ext2/3/4 filesystem utilities</Summary>
+        <Description>e2fsprogs provides the filesystem utilities for use with the ext2 filesystem. It also supports the ext3/4 filesystem with journaling support.</Description>
+        <Archive sha1sum="77d1412472ac5a67f8954166ec16c37616074c37" type="targz">mirrors://sourceforge/e2fsprogs/e2fsprogs-1.42.13.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libutil-linux-devel</Dependency>
+            <!-- The first release shipped within util-linux -->
+<!--             <Dependency>libutil-linux</Dependency> -->
+            <Dependency>gettext-devel</Dependency>
+<!--             <Dependency>util-linux</Dependency> -->
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">ntfs-3g.patch</Patch>
+            <!-- strip references to workDir() from /usr/bin/mk_cmds and /usr/bin/compile_et -->
+            <!--<Patch level="1">e2fsprogs-1.41.8-strip-me.patch</Patch>-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>e2fsprogs</Name>
+        <RuntimeDependencies>
+            <Dependency>libutil-linux</Dependency>
+            <!-- The first release shipped within util-linux -->
+	    <!--<Dependency>libuuid</Dependency>-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/share/et</Path>
+            <Path fileType="data">/usr/share/ss</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>e2fsprogs-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for e2fsprogs</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">e2fsprogs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>1.42.13</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

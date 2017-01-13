@@ -1,0 +1,81 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>librsvg</Name>
+        <Homepage>http://librsvg.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Scalable Vector Graphics (SVG) rendering library</Summary>
+        <Description>librsvg is a component used within software applications to enable support for SVG-format scalable vector graphics.</Description>
+        <Archive sha1sum="e9f1fd895352de5d8b37f5c0269e3d53bce74ff3" type="tarxz">mirrors://gnome/librsvg/2.40/librsvg-2.40.13.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libcroco-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">bgo759084.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>librsvg</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gtk-2.0</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Rsvg-2.0.gir</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>librsvg-devel</Name>
+        <Summary>Development files for librsvg</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">librsvg</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.40.13</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

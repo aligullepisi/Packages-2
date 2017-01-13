@@ -1,0 +1,54 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>isl</Name>
+        <Homepage>http://www.kotnet.org/~skimo/isl/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Integer Set Library</Summary>
+        <Description>isl is a library for manipulating sets and relations of integer points bounded by linear constraints.</Description>
+        <Archive sha1sum="c5a2b201bf05229647e73203c0bf2d9679d4d21f" type="tarbz2">http://isl.gforge.inria.fr/isl-0.16.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gmp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>isl</Name>
+        <RuntimeDependencies>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>isl-devel</Name>
+        <Summary>Development files for isl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">isl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>0.16.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

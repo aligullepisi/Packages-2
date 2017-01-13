@@ -1,0 +1,43 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>emacs-color-theme</Name>
+        <Homepage>http://www.emacswiki.org/cgi-bin/wiki?ColorTheme</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>Emacs-Lisp color theme package</Summary>
+        <Description>Colortheme is an Emacs-Lisp package with more than 50 color themes for your use.</Description>
+        <Archive sha1sum="047d6cb207fdef66b25343479ebe09a1ed3954b5" type="targz">http://download.gna.org/color-theme/color-theme-6.6.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>emacs-color-theme</Name>
+        <RuntimeDependencies>
+            <Dependency>emacs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/etc/emacs/site-lisp</Path>
+            <Path fileType="data">/usr/share/emacs/site-lisp/color-theme</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/emacs/site-lisp/80-color-theme.el">80-color-theme.el</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>6.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

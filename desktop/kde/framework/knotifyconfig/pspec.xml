@@ -1,0 +1,78 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>knotifyconfig</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Configuration dialog for desktop notifications</Summary>
+        <Description>KNotifyConfig provides a configuration dialog for desktop notifications which can be embedded in your application..</Description>
+        <Archive sha1sum="a36d5520ab81c8c90726f58d41b91860b1989421" type="tarxz">mirrors://kde/stable/frameworks/5.29/knotifyconfig-5.29.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-phonon-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kauth-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kcompletion-devel</Dependency>
+            <Dependency versionFrom="5.29.0">ki18n-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kio-devel</Dependency>
+            <Dependency versionFrom="5.29.0">extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>knotifyconfig</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-phonon</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig</Dependency>
+            <Dependency versionFrom="5.29.0">kcompletion</Dependency>
+            <Dependency versionFrom="5.29.0">ki18n</Dependency>
+            <Dependency versionFrom="5.29.0">kio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>knotifyconfig-devel</Name>
+        <Summary>Development files for knotifyconfig</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">knotifyconfig</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-phonon-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kauth-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kcompletion-devel</Dependency>
+            <Dependency versionFrom="5.29.0">ki18n-devel</Dependency>
+            <Dependency versionFrom="5.29.0">kio-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-21</Date>
+            <Version>5.29.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

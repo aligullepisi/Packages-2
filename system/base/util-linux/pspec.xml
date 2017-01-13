@@ -1,0 +1,150 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>util-linux</Name>
+        <Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Various useful Linux utilities</Summary>
+        <Description>The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+        <Archive sha1sum="462bca6320535d39b62216d8609da5531bfef0bb" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.27/util-linux-2.27.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>shadow</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libcap-ng-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <!-- <Dependency releaseFrom="2">utempter-devel</Dependency>-->
+        </BuildDependencies>
+        <Patches>
+             <Patch level="1">upstream/util-linux-ng-2.21-login-lastlog.patch</Patch>
+         </Patches>
+    </Source>
+
+    <Package>
+        <Name>util-linux</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">libutil-linux</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>eudev</Dependency>
+            <!--<Dependency>utempter</Dependency>-->
+            <Dependency>libcap-ng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/misc</Path>
+            <Path fileType="data">/usr/share/getopt</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>uuidd</Name>
+        <IsA>service</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>util.misc</PartOf>
+        <Summary>Helper daemon to guarantee uniqueness of time-based UUIDs</Summary>
+        <RuntimeDependencies>
+            <Dependency>libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <!-- FIXME: Add COMAR service -->
+        <Files>
+            <Path fileType="executable">/usr/bin/uuidgen</Path>
+            <Path fileType="executable">/usr/sbin/uuidd</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/uuidd.conf</Path>
+            <Path fileType="man">/usr/share/man/man1/uuidgen.1</Path>
+            <Path fileType="man">/usr/share/man/man8/uuidd.8</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/lib/tmpfiles.d/uuidd.conf" permission="0644" owner="root">uuidd.tmpfiles</AdditionalFile>
+        </AdditionalFiles> 
+    </Package>
+
+    <Package>
+        <Name>libutil-linux</Name>
+        <IsA>library</IsA>
+        <Summary>util-linux runtime library</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libblkid</Package>
+            <Package>libuuid</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man/man3/uuid*</Path>
+            <Path fileType="man">/usr/share/man/man3/libblkid*</Path>
+            <Path fileType="man">/usr/share/man/man8/blkid*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libutil-linux-devel</Name>
+        <IsA>header</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>libutil-linux header files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libblkid-devel</Package>
+            <Package>libuuid-devel</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/*.pc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libutil-linux-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libutil-linux</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libblkid-32bit</Package>
+            <Package>libuuid-32bit</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="library">/usr/lib32/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-09-10</Date>
+            <Version>2.27.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

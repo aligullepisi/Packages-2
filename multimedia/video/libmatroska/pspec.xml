@@ -1,0 +1,57 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libmatroska</Name>
+        <Homepage>http://www.matroska.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Extensible multimedia container format based on EBML</Summary>
+        <Description>Matroska is an extensible open standard Audio/Video container. It aims to become THE standard of multimedia container formats. Matroska is usually found as .mkv files (matroska video) and .mka files (matroska audio).</Description>
+        <Archive sha1sum="546a761a763b2d1d15dbbccaa5495eb63dd87223" type="tarbz2">http://dl.matroska.org/downloads/libmatroska/libmatroska-1.4.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libebml-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libmatroska</Name>
+        <RuntimeDependencies>
+            <Dependency>libebml</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libmatroska-devel</Name>
+        <Summary>Development files for libmatroska</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libmatroska</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/pkgconfig</Path>
+            <!-- FIXME: Remove this if not necessary -->
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>1.4.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

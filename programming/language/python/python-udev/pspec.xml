@@ -1,0 +1,56 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-udev</Name>
+        <Homepage>http://packages.python.org/pyudev</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Python bindings for libudev library</Summary>
+        <Description>These bindings enable using of udev library in Python programs.</Description>
+        <Archive sha1sum="b36bc5c553ce9b56d32a5e45063a2c88156771c0" type="targz">https://pypi.python.org/packages/source/p/pyudev/pyudev-0.16.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>eudev-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-udev</Name>
+        <RuntimeDependencies>
+            <!--Dependency>python-pygobject</Dependency-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <!--Package>
+        <Name>python-udev-qt</Name>
+        <Summary>Qt bindings for libudev library</Summary>
+        <Description>These bindings provide udev capability for Python programs where Qt is used.</Description>
+        <RuntimeDependencies>
+            <Dependency>python-udev</Dependency>
+            <Dependency>python-qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*/site-packages/pyudev/pyqt4.py</Path>
+        </Files>
+    </Package-->
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.16.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

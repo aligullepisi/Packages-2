@@ -1,0 +1,76 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>eric6</Name>
+        <Homepage>http://eric-ide.python-projects.org/index.html</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>eric5</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>programming.environment.eric</PartOf>
+        <Summary>Full featured Python IDE</Summary>
+        <Description>Eric is a full featured Python and Ruby editor and IDE, written in python. 
+        It is based on the cross platform Qt4 gui toolkit, integrating the highly flexible
+        Scintilla editor control. It is designed to be usable as everdays' quick and dirty
+        editor as well as being usable as a professional project management tool integrating
+        many advanced features Python offers the professional coder.</Description>
+        <Archive sha1sum="5a47718bc493126ac8a3b373ca71c196717ce2ad" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="21faa494cfa43205a8af7899cb6432f1b5ec8a8c" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-cs-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="9f3339b7622aebabfa3b3a1179f6d473913eec05" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-de-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="738513565bb2e4b7ad6eca1af936f20e2e867274" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-es-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="06195913a0826e4f760b35459d7836ab9bdbaeb7" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-fr-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="2c18ddc99e765e218c9a7e5c0dc1c2cd7fc77cb7" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-it-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="0fd0929783f2610eb6a5969e5aa8247cbc2991b0" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-ru-6.1.4.tar.gz</Archive>
+        <Archive sha1sum="461985340593fdc43dfc81c4b9bf21999b7a4f70" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-tr-6.1.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency> 
+            <Dependency>qt5-sql-mysql</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>python3-qt5</Dependency>
+            <Dependency>qscintilla2-devel</Dependency>
+            <Dependency>qscintilla2-python3</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>python3-sip</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>eric6</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-qt5</Dependency>
+            <Dependency>qscintilla2-python3</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>qt5-svg</Dependency>            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python3.4/site-packages</Path>
+            <Path fileType="data">/usr/share/qt5/qsci/api</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>            
+        </Files>        
+    </Package>   
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>6.1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

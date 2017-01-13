@@ -1,0 +1,101 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>upower</Name>
+        <Homepage>http://upower.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Power Management Service</Summary>
+        <Description>upower provides a daemon, API and command line tools for managing power devices attached to the system.</Description>
+        <Archive sha1sum="70beb18c218e758586fb5d98d79b5121cc4a47b1" type="tarxz">http://upower.freedesktop.org/releases/upower-0.99.4.tar.xz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="po/tr.po">tr.po</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>libplist-devel</Dependency>
+            <Dependency>libimobiledevice-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">add-tr.patch</Patch>
+            <!--<Patch level="1">fix-segfault.patch</Patch>-->
+            <!--<Patch level="1">create-dir-runtime.patch</Patch>-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>upower</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libplist</Dependency>
+            <Dependency>libimobiledevice</Dependency>
+            <Dependency versionFrom="1.4.1">pm-utils</Dependency>
+            <Dependency>libusb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/etc/dbus-1</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/etc/UPower</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/var/lib/upower</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/*.xml</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0/*.typelib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>upower-devel</Name>
+        <Summary>Development files for upower</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">upower</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>libplist-devel</Dependency>
+            <Dependency>libimobiledevice-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.99.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

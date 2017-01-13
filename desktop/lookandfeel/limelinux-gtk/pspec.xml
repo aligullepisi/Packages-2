@@ -1,0 +1,36 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>limelinux-gtk</Name>
+        <Homepage>http://www.limelinux.com</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>library</IsA>
+        <Summary>limelinux-gtk</Summary>
+        <Description>Gtk uygulamaları için tema ve yapılandırma</Description>
+        <Archive sha1sum="bf961bbd740e75f8d7e4c8fb5c054983b3ffb57c" type="targz">https://sourceforge.net/projects/pisi-source/files/pisilinux-gtk-0.1.tar.gz</Archive> 
+    </Source>
+
+    <Package>
+        <Name>limelinux-gtk</Name>
+        <Files>
+            <Path fileType="data">/usr/share/themes/*</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2016-09-10</Date>
+            <Version>0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,40 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kdeedu-data</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:library</IsA>
+        <Summary>Common data for KDE Edu applications</Summary>
+        <Description>Common data for KDE Edu applications.</Description>
+        <Archive sha1sum="a400892594a5cdb8c98a8ce5bda72664566475b1" type="tarxz">mirrors://kde/stable/applications/16.12.0/src/kdeedu-data-16.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kdeedu-data</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-22</Date>
+            <Version>16.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

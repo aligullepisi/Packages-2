@@ -1,0 +1,141 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gdal</Name>
+        <Homepage>http://www.gdal.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>A translator library for raster geospatial data formats (includes OGR support)</Summary>
+        <Description>GDAL is a translator library for raster geospatial data formats which presents a single abstract data model to the calling application for all supported formats.</Description>
+        <Archive sha1sum="c7a264ae756bba4608b6a1d159ef7731e004f56a" type="targz">http://download.osgeo.org/gdal/2.0.2/gdal-2.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-numpy</Dependency>
+            <!--Dependency>perl-ExtUtils-MakeMaker</Dependency-->
+            <Dependency>geos-devel</Dependency>
+            <Dependency>hdf5-devel</Dependency>
+            <Dependency>ogdi-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>giflib-devel</Dependency>
+            <Dependency>jasper-devel</Dependency>
+            <Dependency>netcdf-devel</Dependency>
+            <Dependency>podofo-devel</Dependency>
+            <Dependency>cfitsio-devel</Dependency>
+            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>xerces-c-devel</Dependency>
+            <Dependency>libfreexl-devel</Dependency>
+            <Dependency>libgeotiff-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <!--Dependency>poppler-devel</Dependency-->
+            <Dependency>libxml2-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>gdal-python-install.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gdal</Name>
+        <RuntimeDependencies>
+            <Dependency>geos</Dependency>
+            <Dependency>hdf5</Dependency>
+            <Dependency>ogdi</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>webp</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>jasper</Dependency>
+            <Dependency>netcdf</Dependency>
+            <Dependency>podofo</Dependency>
+            <Dependency>cfitsio</Dependency>
+            <Dependency>unixODBC</Dependency>
+            <Dependency>xerces-c</Dependency>
+            <Dependency>libfreexl</Dependency>
+            <Dependency>libgeotiff</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python-gdal</Name>
+        <Summary>gdal python bindings</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gdal</Dependency>
+            <Dependency>python-numpy</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gdal-devel</Name>
+        <Summary>Development files for gdal</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gdal</Dependency>
+            <Dependency>geos-devel</Dependency>
+            <Dependency>hdf5-devel</Dependency>
+            <Dependency>ogdi-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>giflib-devel</Dependency>
+            <Dependency>jasper-devel</Dependency>
+            <Dependency>netcdf-devel</Dependency>
+            <Dependency>podofo-devel</Dependency>
+            <Dependency>cfitsio-devel</Dependency>
+            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>xerces-c-devel</Dependency>
+            <Dependency>libfreexl-devel</Dependency>
+            <Dependency>libgeotiff-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

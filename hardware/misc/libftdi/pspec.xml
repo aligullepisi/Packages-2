@@ -1,0 +1,83 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libftdi</Name>
+        <Homepage>http://www.intra2net.com/en/developer/libftdi/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>A library for accessing to FTDI USB chips</Summary>
+        <Description>libftdi allows access to eeprom and bitbang modes of FT232/245/2232 USB serial interface chips.</Description>
+        <Archive sha1sum="636b9fcc745bf4eeb027a1dd891f770158444f7a" type="tarbz2">http://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>swig</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!-- FIXME: GROUP conversion here (plugdev->pnp) -->
+            <Patch level="0">fix-udev-group_and_usb_name.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libftdi</Name>
+        <RuntimeDependencies>
+            <Dependency>libusb</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python-libftdi</Name>
+        <RuntimeDependencies>
+            <Dependency>libusb</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency release="current">libftdi</Dependency>
+        </RuntimeDependencies>
+        <Summary>Python bindings for libftdi</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libftdi-devel</Name>
+        <Summary>Development files for libftdi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libftdi</Dependency>
+            <Dependency>libusb-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/libftdi-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="doc">/usr/share/doc/libftdi/examples</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

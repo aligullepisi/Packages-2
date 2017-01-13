@@ -1,0 +1,70 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xsd</Name>
+        <Homepage>http://www.codesynthesis.com/products/xsd</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>An open-source, cross-platform W3C XML Schema to C++ data binding compiler</Summary>
+        <Description>CodeSynthesis XSD is an open-source, cross-platform W3C XML Schema to C++ data binding compiler. Provided with an XML instance specification (XML Schema), it generates C++ classes that represent the given vocabulary as well as parsing and serialization code. You can then access the data stored in XML using types and functions that semantically correspond to your application domain rather than dealing with intricacies of reading and writing XML.</Description>
+        <Archive sha1sum="ad3de699eb140e747a0a214462d95fc81a21b494" type="tarbz2">http://codesynthesis.com/download/xsd/4.0/xsd-4.0.0+dep.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xerces-c-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">xsdcxx.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>xsd</Name>
+        <RuntimeDependencies>
+            <Dependency>xerces-c</Dependency>
+            <Dependency>boost</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xsd-devel</Name>
+        <Summary>Development files for xsd</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xsd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xsd-docs</Name>
+        <Summary>Document files for xsd</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xsd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>4.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

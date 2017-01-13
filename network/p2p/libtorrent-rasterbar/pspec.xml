@@ -1,0 +1,67 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libtorrent-rasterbar</Name>
+        <Homepage>http://www.rasterbar.com/products/libtorrent</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Full featured torrent client library</Summary>
+        <Description>Rasterbar's C++ library that aims to be a good alternative to all the other bittorrent implementations around. It is a library and not a full featured client, although it comes with a working example client.</Description>
+        <Archive sha1sum="882646b5f3c44e912afa57c4a9f50c735fbf0cca" type="targz">https://github.com/arvidn/libtorrent/releases/download/libtorrent-1_0_9/libtorrent-rasterbar-1.0.9.tar.gz</Archive>  
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>boost-python</Dependency>
+            <Dependency>geoip-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libtool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libtorrent-rasterbar</Name>
+        <RuntimeDependencies>
+            <Dependency>openssl</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>geoip</Dependency>
+            <Dependency>boost-python</Dependency><!--revdep-rebuild eksik olarak buldu -->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/libtorrent-rasterbar</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtorrent-rasterbar-devel</Name>
+        <Summary>Development files for libtorrent-rasterbar</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtorrent-rasterbar</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="license">/usr/share/licenses</Path>
+            <Path fileType="doc">/usr/share/doc/libtorrent/html</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-14</Date>
+            <Version>1.0.9</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

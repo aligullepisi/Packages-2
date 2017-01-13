@@ -1,0 +1,87 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>ktp-accounts-kcm</Name>
+        <Homepage>https://projects.kde.org/projects/extragear/network/telepathy/ktp-accounts-kcm</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app</IsA>
+        <Summary>KCM Module for configuring Telepathy Instant Messaging Accounts</Summary>
+        <Description>KCM Module for configuring Telepathy Instant Messaging Accounts</Description>
+        <Archive sha1sum="bd56b1077714617cdac2ac5a713b9a137a8cc48a" type="tarxz">mirrors://kde/stable/applications/16.08.3/src/ktp-accounts-kcm-16.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-imageformats</Dependency>
+            <Dependency>kcmutils-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kcodecs-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kitemviews-devel</Dependency>
+            <Dependency>telepathy-qt5-devel</Dependency>
+            <Dependency>kaccounts-integration-devel</Dependency>
+            <Dependency>libaccounts-qt5-devel</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>kservice-devel</Dependency>
+            <Dependency>libaccounts-glib-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>kaccounts-providers</Dependency>
+            <Dependency>telepathy-haze</Dependency>
+            <Dependency>telepathy-gabble</Dependency>
+            <Dependency>signon-devel</Dependency>
+            <Dependency>ktp-common-internals-devel</Dependency>
+<!--             <Dependency>telepathy-mission-control-devel</Dependency> -->
+            <Dependency>gettext-devel</Dependency>
+<!--             <Dependency>telepathy-idle</Dependency> -->
+<!--             <Dependency>telepathy-salut</Dependency> -->
+<!--             <Dependency>telepathy-sunshine</Dependency> -->
+<!--             <Dependency>telepathy-butterfly</Dependency> -->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ktp-accounts-kcm</Name>
+        <RuntimeDependencies>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>signon</Dependency>
+            <Dependency>kcodecs</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>telepathy-qt5</Dependency>
+            <Dependency>libaccounts-qt5</Dependency>
+            <Dependency>kaccounts-integration</Dependency>
+        </RuntimeDependencies>
+
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-27</Date>
+            <Version>16.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

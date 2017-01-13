@@ -1,0 +1,43 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>foomatic-db-nonfree</Name>
+        <Homepage>http://www.linuxprinting.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>Custom</License>
+        <IsA>app:console</IsA>
+        <Summary>Foomatic printer database nonfree</Summary>
+        <Description>Foomatic - database extension consisting of manufacturer-supplied PPD files released under non-free licenses.</Description>
+        <Archive sha1sum="4bf4ce1788b4194c6ec617a37bb8b9c6317ab5fa" type="targz">http://www.openprinting.org/download/foomatic/foomatic-db-nonfree-20160609.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>foomatic-db</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>foomatic-db-nonfree</Name>
+        <RuntimeDependencies>
+            <Dependency>foomatic-db</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/foomatic/db/</Path>
+            <Path fileType="doc">/usr/share/doc/foomatic-db-nonfree</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>20160609</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

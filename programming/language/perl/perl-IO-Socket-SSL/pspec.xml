@@ -1,0 +1,45 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-IO-Socket-SSL</Name>
+        <Homepage>http://search.cpan.org/dist/IO-Socket-SSL/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Nearly transparent SSL encapsulation for IO::Socket::INET</Summary>
+        <Description>IO::Socket::SSL is a class implementing an object oriented interface to SSL sockets. The class is a descendent of IO::Socket::INET.</Description>
+        <Archive sha1sum="2c624f52d1c53c36f8cc0b21c15575e64114f53c" type="targz">http://search.cpan.org/CPAN/authors/id/S/SU/SULLR/IO-Socket-SSL-2.024.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl-Net-SSLeay</Dependency>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-IO-Socket-SSL</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-Net-SSLeay</Dependency>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/perl-IO-Socket-SSL</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.024</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

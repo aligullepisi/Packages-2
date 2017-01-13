@@ -1,0 +1,76 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gsm</Name>
+        <Homepage>http://kbs.cs.tu-berlin.de/~jutta/toast.html</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>OSI-Approved</License>
+        <IsA>library</IsA>
+        <Summary>Lossy speech compression library and tool</Summary>
+        <Description>Gsm is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding</Description>
+        <Archive sha1sum="668b0a180039a50d379b3d5a22e78da4b1d90afc" type="targz">http://osxwinebuilder.googlecode.com/files/gsm-1.0.13.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">gsm-1.0.10-dyn.patch</Patch>
+            <Patch level="1">gsm-1.0-pl10-includes.patch</Patch>
+            <Patch>gsm-1.0-pl10-shared.diff</Patch>
+            <Patch>gsm-1.0-pl10-add-includefile.patch</Patch>
+            <Patch level="1">pardusflags.patch</Patch>
+            <Patch level="1">gsm-1.0.12-64bit.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gsm</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gsm-devel</Name>
+        <Summary>Development files for gsm</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gsm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <!-- FIXME: Remove this if not necessary -->
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gsm-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for gsm</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">gsm</Dependency>
+            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>1.0.13</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

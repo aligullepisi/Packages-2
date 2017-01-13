@@ -1,0 +1,46 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pcmciautils</Name>
+        <Homepage>http://www.kernel.org/pub/linux/utils/kernel/pcmcia/pcmcia.html</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Various utilities dealing with the PCMCIA bus</Summary>
+        <Description>pcmciautils contains the initialization tools necessary to allow the PCMCIA subsystem to behave as every other hotpluggable bus system.</Description>
+        <Archive sha1sum="b1edd0f5640d4e413f730a607ae3bc15fd79f380" type="tarxz">https://sources.archlinux.org/other/pcmciautils/pcmciautils-018.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>sysfsutils-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pcmciautils</Name>
+        <RuntimeDependencies>
+            <Dependency>sysfsutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/lib/udev</Path>
+            <Path fileType="config">/etc/pcmcia</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>018</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

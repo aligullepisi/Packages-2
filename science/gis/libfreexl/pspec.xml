@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libfreexl</Name>
+        <Homepage>https://www.gaia-gis.it/fossil/freexl/index</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>science.gis</PartOf>
+        <IsA>library</IsA>
+        <Summary>Library to extract valid data from within an Excel (.xls) spreadsheet</Summary>
+        <Description>FreeXL is an open source library to extract valid data from within an Excel (.xls) spreadsheet.</Description>
+        <Archive sha1sum="9878a2dfb23ba00be34605557ac454539411071d" type="targz">http://www.gaia-gis.it/gaia-sins/freexl-1.0.2.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>libfreexl</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libfreexl-devel</Name>
+        <Summary>Development files for libfreexl</Summary>
+        <Files>
+            <Path fileType="header">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/freexl.pc</Path>
+            <Path fileType="library">/usr/lib/libfreexl.so</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libfreexl</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>1.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

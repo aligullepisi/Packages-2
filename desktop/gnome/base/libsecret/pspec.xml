@@ -1,0 +1,64 @@
+
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libsecret</Name>
+        <Homepage>http://projects.gnome.org/libsecret</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>The libsecret package contains a GObject based library</Summary>
+        <Description>The libsecret package contains a GObject based library for accessing the Secret Service API.</Description>
+        <Archive sha1sum="af62de3958bbe0ccf59a02101a6704e036378a6f" type="tarxz">mirrors://gnome/libsecret/0.18/libsecret-0.18.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>xmlto</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libsecret</Name>
+        <RuntimeDependencies>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>xmlto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>libsecret-devel</Name>
+        <Summary>Development files for libsecret</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libsecret</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.18</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

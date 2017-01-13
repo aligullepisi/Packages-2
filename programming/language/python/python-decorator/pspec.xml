@@ -1,0 +1,40 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-decorator</Name>
+        <Homepage>http://www.phyast.pitt.edu/~micheles/python/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Python module to simplify the usage of decorators</Summary>
+        <Description>python-decorator simplifies the usage of decorators for the average programmer.</Description>
+        <Archive sha1sum="9ca491f88a5b5456d0f0eb8d26cf6ebd780e2934" type="targz">http://pypi.python.org/packages/source/d/decorator/decorator-4.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-nose</Dependency>
+	    <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-decorator</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>4.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

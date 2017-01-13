@@ -1,0 +1,50 @@
+
+<PISI>
+    <Source>
+        <Name>breeze-plymouth</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Breeze theme for Plymouth.</Summary>
+        <Description>Breeze theme for Plymouth.</Description>
+        <Archive type="tarxz" sha1sum="34e4709fc480a5a7138a86307000bcc5a44d4335">mirrors://kde/stable/plasma/5.8.4/breeze-plymouth-5.8.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>plymouth-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>breeze-plymouth</Name>
+        <Summary>Breeze theme for Plymouth.</Summary>
+        <RuntimeDependencies>
+            <Dependency>plymouth</Dependency>
+            <Dependency>grub2</Dependency>
+            <Dependency>plymouth-core-libs</Dependency>
+            <Dependency>plymouth-theme-spinner</Dependency>
+            <Dependency>plymouth-graphics-libs</Dependency>
+            <Dependency>plymouth-plugin-script</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/plymouth/themes/breeze/images/pisi.logo.png">pisi.logo.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/plymouth/themes/breeze/images/16bit/pisi.logo.png">pisi.16bit.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2016-11-26</Date>
+            <Version>5.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

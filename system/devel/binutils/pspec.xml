@@ -1,0 +1,56 @@
+
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>binutils</Name>
+        <Homepage>http://www.gnu.org/software/binutils/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Assembler and linker tools</Summary>
+        <Description>Contains commands like as, ld, nm, objdump, ar, ranlib for compiling assembly code to the machine language, and for linking and manipulating the binary object files.</Description>
+        <Archive sha1sum="a637508cffeb2323b14bc8dd65378819768ad4ff" type="tarbz2">http://ftp.gnu.org/gnu/binutils/binutils-2.26.tar.bz2</Archive>
+        <Patches>
+            <Patch level="1">binutils-gdb.git-e20365c.patch</Patch>
+            <!--Patch>binutils-2.24-lto-testsuite.patch</Patch>
+            <Patch>binutils-2.24-gold-testsuite-plugin.patch</Patch>
+            <Patch>binutils-2.24-shared-pie.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8484.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8485.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8501.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8502.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8503.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8504.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8737.patch</Patch>
+            <Patch>binutils-2.24-CVE-2014-8738.patch</Patch>
+            <Patch>binutils-2.24-strings-all-default.patch</Patch>-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>binutils</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-26</Date>
+            <Version>2.26</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,61 @@
+
+<PISI>
+    <Source>
+        <Name>blinken</Name>
+        <Homepage>https://www.kde.org/applications/education/blinken/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>FDL</License>
+        <License>GPL</License>
+        <License>LGPL</License>
+        <IsA>gui</IsA>
+        <PartOf>desktop.kde.edu</PartOf>
+        <Summary>Blinken - Memory Enhancement Game</Summary>
+        <Description>Blinken is based on an electronic game released in 1978, which challenges players to remember sequences of increasing length. On the face of the device, there are 4 different color buttons, each one with their own distinctive sound.</Description>
+        <Archive sha1sum="9d07a0339c4cd18a06f188cfbde2af1fc066da64" type="tarxz">mirrors://kde/stable/applications/16.12.0/src/blinken-16.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kguiaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-phonon-devel</Dependency>
+        </BuildDependencies>
+
+    </Source>
+    <Package>
+        <Name>blinken</Name>
+        <Summary>Blinken - Memory Enhancement Game</Summary>
+        <RuntimeDependencies>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kguiaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-phonon</Dependency>
+            <Dependency>qt5-svg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-12-22</Date>
+            <Version>16.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

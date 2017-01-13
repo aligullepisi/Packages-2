@@ -1,0 +1,160 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cups</Name>
+        <Homepage>http://www.cups.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <Summary>Common Unix Printing System</Summary>
+        <Description>cups provides a portable printing layer for *nix-based operating systems.</Description>
+        <Archive sha1sum="bba3c97e58902f883f22784aff669968d1231dd7" type="tarbz2">http://www.cups.org/software/2.1.3/cups-2.1.3-source.tar.bz2</Archive>
+        <Archive sha1sum="062beea95c6f8dda0a5e7eed51604e22806ffad3" type="tar" target="cups-2.1.2">http://source.pisilinux.org/1.0/cups-tr.tar</Archive> -->
+        <BuildDependencies>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>avahi-libs</Dependency>
+            <Dependency>avahi-devel</Dependency><!--not needed? -->
+            <!--<Dependency>cups-filters-devel</Dependency>--><!--çember ? -->
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>libpaper-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!-- ARCH Linux patches -->
+            <Patch level="1">archlinux/cups-no-export-ssllibs.patch</Patch>
+            <Patch level="1">archlinux/cups-no-gzip-man.patch</Patch>
+            <Patch level="1">archlinux/cups-1.6.2-statedir.patch</Patch>
+            <Patch level="1">archlinux/cups-no-gcrypt.patch</Patch>
+            <Patch level="0">archlinux/cups-1.6.0-fix-install-perms.patch</Patch>
+
+
+            <!-- Debian patches -->
+
+            <!-- Fedora patches -->
+            <Patch level="1">fedora/cups-enum-all.patch</Patch>
+            <Patch level="1">fedora/cups-final-content-type.patch</Patch>
+            <Patch level="1">fedora/cups-res_init.patch</Patch>
+            <Patch level="1">fedora/cups-hp-deviceid-oid.patch</Patch>
+            <Patch level="1">fedora/cups-logrotate.patch</Patch>
+
+            <!-- Gentoo patches -->
+<!--             <Patch>gentoo/cups-1.6.0-fix-install-perms.patch</Patch> -->
+            <Patch >gentoo/cups-2.0.1-rename-systemd-service-files.patch</Patch>
+            <!--<Patch>gentoo/cups-2.0.1-fix-linkage-to-gnutls.patch</Patch>
+            <Patch>gentoo/cups-2.0.1-fix-compilation.patch</Patch>-->
+
+            <!-- Pisi Linux patches -->
+            <Patch>pisilinux/lib64.patch</Patch>
+            <Patch level="1">pisilinux/nostrip.patch</Patch>
+            <Patch level="1">pisilinux/cups-run.patch</Patch>
+
+            <!-- Pld-linux patches -->
+            <Patch>pld-linux/cups-avahi-address.patch</Patch>
+<!--             <Patch>pld-linux/cups-avahi-no-threaded.patch</Patch> -->
+
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>cups</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpaper</Dependency>
+            <Dependency>avahi</Dependency>
+            <Dependency>avahi-libs</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/cups/*conf</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/cups.conf</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/var/cache/cups/rss</Path>
+            <Path fileType="data">/var/spool/cups/tmp</Path>
+            <Path fileType="data">/run/cups/certs</Path>
+            <Path fileType="data">/var/log/cups</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="data">/lib/systemd/system</Path>
+            <Path fileType="data">/usr/share/cups</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/cups.conf">tmpfiles.conf</AdditionalFile>
+
+            <!-- logrotate file for CUPS logs -->
+            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/cups">cups.logrotate</AdditionalFile>
+
+            <!-- Generic textonly ppd from Fedora which is also used by Ubuntu -->
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/cups/model/textonly.ppd">fedora/textonly.ppd</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>cups-devel</Name>
+        <Summary>Development files for cups</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cups</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/bin/cups-config</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cups-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for cups</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>            
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>            
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency release="current">cups</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/cups-config-32bit</Path>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.1.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

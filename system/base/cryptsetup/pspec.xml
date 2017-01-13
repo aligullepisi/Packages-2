@@ -1,0 +1,94 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cryptsetup</Name>
+        <Homepage>https://gitlab.com/cryptsetup/cryptsetup</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>cryptsetup</Icon>
+        <IsA>app:cli</IsA>
+        <Summary>Userspace setup tool for transparent encryption of block devices using dm-crypt</Summary>
+        <Description>Userspace setup tool for transparent encryption of block devices using dm-crypt</Description>
+        <Archive sha1sum="0299b944441bc6665bce5f1dce6b9d6daf529bec" type="tarxz">https://www.kernel.org/pub/linux/utils/cryptsetup/v1.7/cryptsetup-1.7.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="2.02.118">device-mapper-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>popt-devel</Dependency>
+            <Dependency>popt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cryptsetup</Name>
+        <PartOf>util.crypt</PartOf>
+        <RuntimeDependencies>
+            <Dependency version="current">libcryptsetup</Dependency>
+            <Dependency>popt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="manfile">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libcryptsetup</Name>
+        <PartOf>util.crypt</PartOf>
+        <Summary>cryptsetup libraries</Summary>
+        <RuntimeDependencies>
+            <Dependency>device-mapper</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/lib/libcryptsetup.so*</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libcryptsetup-devel</Name>
+        <PartOf>programming.devel</PartOf>
+        <Summary>libcryptsetup devel files</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">libcryptsetup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/libcryptsetup.pc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python-pycryptsetup</Name>
+        <PartOf>programming.language.python</PartOf>
+        <Summary>Python backend for cryptsetup</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency version="current">libcryptsetup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/pycryptsetup.so</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>1.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

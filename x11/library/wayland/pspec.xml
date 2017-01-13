@@ -1,0 +1,120 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wayland</Name>
+        <Homepage>http://wayland.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Wayland Compositor Infrastructure</Summary>
+        <Description>Wayland is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol.</Description>
+        <Archive sha1sum="cf5c2719592ce324184a785b19a9547dc2d51377" type="tarxz">https://wayland.freedesktop.org/releases/wayland-1.11.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wayland</Name>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+            <Dependency>expat</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/wayland</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wayland-client</Name>
+        <Summary>Wayland client library</Summary>
+        <RuntimeDependencies>
+            <Dependency>libffi</Dependency>
+            <Dependency release="current">wayland</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libwayland-client*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wayland-cursor</Name>
+        <Summary>Wayland cursor library</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">wayland</Dependency>
+            <Dependency>wayland-client</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libwayland-cursor*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wayland-server</Name>
+        <Summary>Wayland server library</Summary>
+        <RuntimeDependencies>
+            <Dependency>libffi</Dependency>
+            <Dependency release="current">wayland</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libwayland-server*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wayland-devel</Name>
+        <Summary>Development files for wayland</Summary>
+        <RuntimeDependencies>
+            <Dependency>expat-devel</Dependency>
+            <Dependency release="current">wayland</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wayland-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for wayland</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libffi-32bit</Dependency>
+            <Dependency>expat-32bit</Dependency>
+            <Dependency>libxml2-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">wayland</Dependency>
+            <Dependency>expat-32bit</Dependency>
+            <Dependency>libffi-32bit</Dependency>
+            <Dependency>libxml2-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-04</Date>
+            <Version>1.11.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,84 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>konsole</Name>
+        <Homepage>https://projects.kde.org/projects/kde/applications/dolphin</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>KDE Konsole</Summary>
+        <Description>Konsole for KDE5</Description>
+        <Archive sha1sum="ed93fc6bb20a7114a4bdcc1b3c5e770e4191dbe6" type="tarxz">mirrors://kde/stable/applications/16.12.0/src/konsole-16.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>kpty-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kinit-devel</Dependency>
+            <Dependency>knotifyconfig-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>kdelibs4-support-devel</Dependency>
+            <Dependency>kdesignerplugin</Dependency>
+            <Dependency>kemoticons-devel</Dependency>
+            <Dependency>kitemmodels-devel</Dependency>
+            <Dependency>kunitconversion-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kcrash-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>konsole</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kdelibs4-support</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>knotifyconfig</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>kpty</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kbookmarks</Dependency>
+            <Dependency>kguiaddons</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kjobwidgets</Dependency>
+            <Dependency>ktextwidgets</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-21</Date>
+            <Version>16.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

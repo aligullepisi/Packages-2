@@ -1,0 +1,76 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>curl</Name>
+        <Homepage>http://curl.haxx.se/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>X11</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>A utility for getting files from remote servers</Summary>
+        <Description>curl is a command line tool for transferring data with URL syntax, supporting various protocols.</Description>
+        <Archive sha1sum="db57162affecaa320b462e35d2adbb37bf30bbe7" type="tarbz2">http://curl.haxx.se/download/curl-7.47.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libidn-devel</Dependency>
+            <Dependency>libssh2-devel</Dependency>
+            <Dependency>ca-certificates</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch>curl-krb5flags.patch</Patch> -->
+            <Patch>curl-ac.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>curl</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libidn</Dependency>
+            <Dependency>libssh2</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>ca-certificates</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+            <Path fileType="data">/usr/share/curl</Path>
+            <Path fileType="data">/usr/share/zsh</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>curl-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for curl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">curl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="executable">/usr/bin/curl-config</Path>
+            <Path fileType="header">/usr/include/curl</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>7.47.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

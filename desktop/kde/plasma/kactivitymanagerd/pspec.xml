@@ -1,0 +1,70 @@
+
+<PISI>
+    <Source>
+        <Name>kactivitymanagerd</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Core components for the KDE Activity concept.</Summary>
+        <Description>System service to manage user's activities, track the usage patterns etc.</Description>
+        <Archive type="tarxz" sha1sum="4c39afa2503999223507c4665b91eed10a94e62c">mirrors://kde/stable/plasma/5.8.4/kactivitymanagerd-5.8.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>qt5-sql-mysql</Dependency>
+            <Dependency>qt5-sql-odbc</Dependency>
+            <Dependency>qt5-sql-postgresql</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>kglobalaccel-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>kactivitymanagerd</Name>
+        <Summary>Core components for the KDE Activity concept.</Summary>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kglobalaccel</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/kservices5</Path>
+            <Path fileType="data">/usr/share/kservicetypes5</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2016-11-26</Date>
+            <Version>5.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

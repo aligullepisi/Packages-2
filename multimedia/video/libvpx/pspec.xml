@@ -1,0 +1,60 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libvpx</Name>
+        <Homepage>http://www.webmproject.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>WebM VP8 Codec SDK</Summary>
+        <Description>libvpx is the VP8 development library usually used in WebM and similiar formats.</Description>
+        <Archive sha1sum="82426a59ad34d72c762f9e4079e8e5197afc842d" type="targz">https://github.com/webmproject/libvpx/archive/v1.5.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>yasm-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">0001-Fix-for-issue-1114-compile-error.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libvpx</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/libvpx</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libvpx-devel</Name>
+        <Summary>libvpx header files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libvpx</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-12</Date>
+            <Version>1.5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

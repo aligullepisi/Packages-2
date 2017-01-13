@@ -1,0 +1,69 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>iputils</Name>
+        <Homepage>https://github.com/iputils/iputils</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Network monitoring tools including ping and ping6</Summary>
+        <Description>iputils contains network monitoring tools including ping and ping6.</Description>
+        <Archive sha1sum="14cd0f1cd87a21c60bf92fa6a18b56eeed55f459" type="targz">https://github.com/iputils/iputils/archive/s20150815.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libidn-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <!-- needed for generating man pages, see below
+            <Dependency>docbook-utils</Dependency>
+             -->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>iputils</Name>
+        <RuntimeDependencies>
+            <Dependency>libcap</Dependency>
+            <Dependency>libidn</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="data">/lib/systemd/system</Path>
+            <Path fileType="config">/etc/conf.d/rdisc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <!-- pregenerated man pages, update if necessary. -->
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/arping.8">man/arping.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/clockdiff.8">man/clockdiff.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/ping.8">man/ping.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/rarpd.8">man/rarpd.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/rdisc.8">man/rdisc.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/tracepath.8">man/tracepath.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/traceroute6.8">man/traceroute6.8</AdditionalFile>
+            
+            <AdditionalFile owner="root" permission="0644" target="/etc/xinetd.d/tftp">fedora/tftp.xinetd</AdditionalFile>
+            <!-- Add systemd files for rdisc daemon -->
+            <!--AdditionalFile owner="root" permission="0644" target="/etc/conf.d/rdisc">fedora/rdisc.sysconfig</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/lib/systemd/system/rdisc.service">fedora/rdisc.service</AdditionalFile-->
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>20150815</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,46 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>grep</Name>
+        <Homepage>http://www.gnu.org/software/grep/grep.html</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>GNU regular expression matcher</Summary>
+        <Description>The grep command searches one or more input files for lines containing a match to a specified pattern. By default, grep prints the matching lines.</Description>
+        <Archive sha1sum="76239b0c7f6d93acc820832b8241227619ff1cdb" type="tarxz">ftp://mirrors.kernel.org/gnu/grep/grep-2.23.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>grep</Name>
+        <RuntimeDependencies>
+            <Dependency>libpcre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>2.23</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

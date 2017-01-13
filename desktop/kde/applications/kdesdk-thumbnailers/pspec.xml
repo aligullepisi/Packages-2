@@ -1,0 +1,62 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kdesdk-thumbnailers</Name>
+        <Homepage>http://www.kde.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.kde.sdk</PartOf>
+        <Summary>Translation file thumbnail generators</Summary>
+        <Description>Translation file thumbnail generators</Description>
+        <Archive sha1sum="f08eba98458cd5db30ecbd364e32c17339456d0b" type="tarxz">mirrors://kde/stable/applications/16.12.0/src/kdesdk-thumbnailers-16.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kdesdk-thumbnailers</Name>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency> 
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>kdesdk</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>kdesdk</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="data">/usr/share/kservices5</Path>
+            <Path fileType="data">/usr/share/config.kcfg</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-22</Date>
+            <Version>16.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

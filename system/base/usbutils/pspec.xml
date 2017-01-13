@@ -1,0 +1,54 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>usbutils</Name>
+        <Homepage>http://linux-usb.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Linux USB utilities</Summary>
+        <Description>usbutils provides utilities for inspecting devices connected to a USB bus.</Description>
+        <Archive sha1sum="233dee6cd6829476be778554984045663b568b18" type="tarxz">https://www.kernel.org/pub/linux/utils/usb/usbutils/usbutils-008.tar.xz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="usb.ids">usb.ids</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>usbutils</Name>
+        <RuntimeDependencies>
+            <Dependency>libusb</Dependency>
+            <Dependency>eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/misc</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+        <AdditionalFiles>
+             <AdditionalFile owner="root" permission="0644" target="/usr/share/misc/usb.ids">usb.ids</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-16</Date>
+            <Version>008</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

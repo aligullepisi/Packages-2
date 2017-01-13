@@ -1,0 +1,75 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>telepathy-mission-control</Name>
+        <Homepage>http://telepathy.freedesktop.org/wiki/Mission_Control</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Telepathy component managing connection managers</Summary>
+        <Description>telepathy-mission-control, or Mission Control, is a Telepathy component providing a way for end user applications to abstract some of the details of connection managers, to provide a simple way to manipulate a bunch of connection managers at once, and to remove the need to have in each program the account definitions and credentials.</Description>
+        <Archive sha1sum="949e7b0431d9dea32b149d256307405a0148c110" type="targz">http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.16.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>NetworkManager-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>libaccounts-glib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>telepathy-mission-control</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>libaccounts-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libmission-control-plugins.so.0*</Path>
+            <Path fileType="library">/usr/lib/telepathy/mission-control-5</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>telepathy-mission-control-devel</Name>
+        <Summary>Development files for telepathy-mission-control</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">telepathy-mission-control</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/mission-control-5.5</Path>
+            <Path fileType="library">/usr/lib/libmission-control-plugins.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/mission-control-plugins.pc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/mission-control-plugins</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>5.16.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

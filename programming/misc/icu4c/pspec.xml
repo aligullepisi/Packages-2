@@ -1,0 +1,84 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>icu4c</Name>
+        <Homepage>http://site.icu-project.org/home</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>International Components for Unicode</Summary>
+        <Description>ICU is a mature, widely used set of C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n). This package contains the C/C++ libraries.</Description>
+        <!-- CAUTION! This package has a great potential to break API/ABI in minor version bumps, check for a file like:
+        http://source.icu-project.org/repos/icu/icu/tags/release-55-1/APIChangeReport.html -->
+        <Archive sha1sum="3bb301c11be0e239c653e8aa2925c53f6f4dc88d" type="targz">http://download.icu-project.org/files/icu4c/55.1/icu4c-55_1-src.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+        <Patches>
+        <!--Patch level="3">icu.8198.revert.icu5431.patch</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>icu4c</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/icu4c/html</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>icu4c-devel</Name>
+        <Summary>Development files for icu4c</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">icu4c</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/icu-config</Path>
+            <Path fileType="data">/usr/lib/icu</Path>
+            <Path fileType="data">/usr/share/icu</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>icu4c-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for icu4c</Summary>
+        <BuildType>_emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">icu4c</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libicu*</Path>
+            <Path fileType="library">/usr/lib32/icu</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>55.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

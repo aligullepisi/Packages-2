@@ -1,0 +1,40 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>nasm</Name>
+        <Homepage>http://nasm.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Groovy little assembler</Summary>
+        <Description>NASM is the Netwide Assembler, a free portable assembler for the Intel 80x86 microprocessor series.</Description>
+        <Archive sha1sum="ca90a23753ecd9e42bc416b9a7c65f6687a2d5ee" type="tarxz">http://www.nasm.us/pub/nasm/releasebuilds/2.12/nasm-2.12.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>texinfo</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>nasm</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>2.12</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

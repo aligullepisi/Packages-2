@@ -1,0 +1,38 @@
+
+<PISI>
+    <Source>
+        <Name>breeze-grub</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Breeze theme for GRUB.</Summary>
+        <Description>Breeze theme for GRUB.</Description>
+        <Archive sha1sum="39999cc3403fae39181fef66205727d46f0cfb67" type="tarxz">mirrors://kde/stable/plasma/5.8.4/breeze-grub-5.8.4.tar.xz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>breeze-grub</Name>
+        <Summary>Breeze theme for GRUB.</Summary>
+        <RuntimeDependencies>
+            <Dependency>grub2</Dependency>
+            <Dependency>noto-fonts</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2016-11-26</Date>
+            <Version>5.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

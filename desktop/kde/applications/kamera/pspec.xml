@@ -1,0 +1,61 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kamera</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.kde.graphics</PartOf>
+        <Summary>Webcam support for KDE</Summary>
+        <Description>Kamera is a plugin for KDE to use webcam.</Description>
+        <Archive sha1sum="1c453d80d0329ebcde1d4cbcb129b606f80859b2" type="tarxz">mirrors://kde/stable/applications/16.12.0/src/kamera-16.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>libgphoto2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kamera</Name>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-21</Date>
+            <Version>16.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

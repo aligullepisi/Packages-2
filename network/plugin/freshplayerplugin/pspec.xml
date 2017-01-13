@@ -1,0 +1,84 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>freshplayerplugin</Name>
+        <Homepage>https://github.com/i-rinat/freshplayerplugin</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:gui</IsA>
+        <Summary>ppapi2npapi compatibility layer</Summary>
+        <Description>PPAPI-host NPAPI-plugin adapter.</Description>
+        <Archive sha1sum="255dc4ad0dbad26ed92e1b7dbdd615e75096b05f" type="targz">https://github.com/i-rinat/freshplayerplugin/archive/v0.3.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>            
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>ragel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libva-devel</Dependency>
+            <Dependency>libv4l-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libvdpau-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libevent-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>freshplayerplugin</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXrender</Dependency> 
+            <Dependency>libva</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>libv4l</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libevent</Dependency>
+            <Dependency>libvdpau</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>pepperflash</Dependency> <!-- no remove -->
+            <Dependency>pulseaudio-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/freshplayerplugin/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-20</Date>
+            <Version>0.3.6</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,67 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>librecad</Name>
+        <Homepage>http://librecad.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>librecad</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A 2D CAD drawing tool based QCad</Summary>
+        <Description>LibreCAD is an application for computer aided design (CAD) in two dimensions (2D). With LibreCAD you can create technical drawings such as plans for buildings, interiors, mechanical parts or schemas and diagrams</Description>
+        <Archive sha1sum="061858a7e6476e45e321ba7ac2c75d2b384c8b0a" type="targz">https://github.com/LibreCAD/LibreCAD/archive/2.0.9.tar.gz</Archive>
+        <BuildDependencies>            
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-qdbusviewer</Dependency>
+            <Dependency>freetype-devel</Dependency>            
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>muparser-devel</Dependency>
+            <Dependency>imagemagick-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>librecad</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>muparser</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>qt5-assistant</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/librecad.desktop">librecad.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/librecad.png">librecad.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.0.9</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

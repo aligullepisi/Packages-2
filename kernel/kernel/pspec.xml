@@ -1,0 +1,176 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kernel</Name>
+        <Homepage>http://www.kernel.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>kernel</IsA>
+        <Summary>The Linux kernel (the core of the Linux operating system) for Pisi Linux</Summary>
+        <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
+        <Archive sha1sum="a85e6ca968b10ec0eace2daaaa59fc8734d0db74" type="targz">https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.8.tar.gz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
+            <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
+            <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>bc</Dependency>
+            <Dependency>pisi</Dependency>
+            <Dependency>cpio</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>diffutils</Dependency>
+            <Dependency>xmlto</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!-- Linux patches -->
+            <Patch level="1" compressionType="xz">patches/linux/patch-4.8.13.xz</Patch>
+            <!--stable patches-->
+            <!--other patches-->
+            <Patch level="1">patches/mageia/Revert-ipmi-Start-the-timer-and-thread-on-internal-m.patch</Patch>
+            <Patch level="1">patches/mageia/x86-pci-toshiba-equium-a60-assign-busses.patch</Patch>
+            <Patch level="1">patches/mageia/x86-boot-video-80x25-if-break.patch</Patch>
+            <Patch level="1">patches/mageia/x86-default_poweroff_up_machines.patch</Patch>
+            <Patch level="1">patches/mageia/x86-increase-default-minimum-vmalloc-area-by-64MB-to-192MB.patch</Patch>
+            <Patch level="1">patches/mageia/Revert-cpufreq-pcc-Enable-autoload-of-pcc-cpufreq-fo.patch</Patch>
+            <Patch level="1">patches/mageia/Revert-x86-mm-mtrr-Remove-kernel-internal-MTRR-inter.patch</Patch>
+            <Patch level="1">patches/mageia/base-cacheinfo-silence-DT-warnings.patch</Patch>
+            <Patch level="1">patches/mageia/pci-add-ALI-M5229-ide-compatibility-mode-quirk.patch</Patch>
+            <Patch level="1">patches/mageia/pci-quirks-drop-devinit-exit.patch</Patch>
+            <Patch level="1">patches/mageia/acpi-CLEVO-M360S-disable_acpi_irq.patch</Patch>
+            <Patch level="1">patches/mageia/acpi-processor-M720SR-limit-to-C2.patch</Patch>
+            <Patch level="1">patches/mageia/ACPI-video-Add-a-quirk-to-force-acpi-video-backlight.patch</Patch>
+            <Patch level="1">patches/mageia/scsi-megaraid-new-sysfs-name.patch</Patch>
+            <Patch level="1">patches/mageia/ide-pci-sis5513-965.patch</Patch>
+            <Patch level="1">patches/mageia/mpt-vmware-fix.patch</Patch>
+            <Patch level="1">patches/mageia/dm-raid-aliases.patch</Patch>
+            <Patch level="1">patches/mageia/block-floppy-disable-pnp-modalias.patch</Patch>
+            <Patch level="1">patches/mageia/ata-prefer-ata-drivers-over-ide-drivers-when-both-are-built.patch</Patch>
+            <Patch level="1">patches/mageia/block-Make-CFQ-default-to-IOPS-mode-on-SSDs.patch</Patch>
+            <Patch level="1">patches/mageia/linux-BFQ-v8r4.patch</Patch>
+            <Patch level="1">patches/mageia/nvmepatch1-V4.patch</Patch>
+            <Patch level="1">patches/mageia/nvmepatch2-V4.patch</Patch>
+            <Patch level="1">patches/mageia/nvmepatch3-V4.patch</Patch>
+            <Patch level="1">patches/mageia/fs-aufs-4.8.patch</Patch>
+            <Patch level="1">patches/mageia/fs-aufs-4.8-modular.patch</Patch>
+            <Patch level="1">patches/mageia/firewire-ieee1394-module-aliases.patch</Patch>
+            <Patch level="1">patches/mageia/char-agp-intel-new-Q57-id.patch</Patch>       
+            <Patch level="1">patches/mageia/input-i8042-quirks-for-Fujitsu-Lifebook-A544-and-Lif.patch</Patch>
+            <Patch level="1">patches/mageia/net-sis190-fix-list-usage.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-IFWLOG.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-IFWLOG-mdv.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-IFWLOG-2.6.35-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-IFWLOG-2.6.37-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/net-ipv4-netfilter-ipt_IFWLOG-3.6-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-IFWLOG-3.7-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-IFWLOG-remove-unused-label.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-psd.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-psd-mdv.patch</Patch>
+            <Patch level="1">patches/mageia/net-netfilter-psd-2.6.35-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/net-wireless-rtlwifi-Fix-regression-caused-by-commit-d86e64768859.patch</Patch>
+            <Patch level="1">patches/mageia/platform-x86-add-shuttle-wmi-driver.patch</Patch>
+            <Patch level="1">patches/mageia/platform-x86-shuttle-wmi-drop-devinit-exit.patch</Patch>
+            <Patch level="1">patches/mageia/platform-x86-shuttle-wmi-4.2-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/include-kbuild-export-pci_ids.patch</Patch>
+            <Patch level="1">patches/mageia/hid-usbhid-IBM-BladeCenterHS20-quirk.patch</Patch>
+            <Patch level="1">patches/mageia/usb-storage-unusual_devs-add-id.patch</Patch>
+            <Patch level="1">patches/mageia/usb-storage-unusual_devs-add-id-2.6.37-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/media-usb-pwc-lie-in-proc-usb-devices.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-3rdparty-1.0-tree.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-3rdparty-merge.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-0.5.35.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-kbuild.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-extra-cflags.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-proc_dir_entry-owner.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-fix-build-with-function-tracer.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-2.6.36-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-acerhk-fix-include.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-ndiswrapper-1.60.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-ndiswrapper-Kconfig.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-ndiswrapper-Makefile-build-fix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-ndiswrapper-4.7-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-rfswitch-1.3.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-rfswitch-build-fix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-rfswitch-3.0-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-viahss-0.92.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-viahss-config.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-viahss-module-license.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-viahss-2.6.35-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-viahss-3.0-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-rtl8723bs.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-rtl8723bs-4.7-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/3rd-rtl8723bs-4.8-buildfix.patch</Patch>
+            <Patch level="1">patches/mageia/tools-testing-selftest-Makefile-remove-powerpc-reference.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>kernel</Name>
+        <RuntimeDependencies>
+            <Dependency>pisi</Dependency>
+            <Dependency>linux-firmware</Dependency>
+            <Dependency>grub2</Dependency>
+            <Dependency>mkinitcpio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="true">/boot</Path>
+            <Path fileType="library" permanent="true">/lib/modules</Path>
+            <Path fileType="data">/etc/kernel</Path>
+            <Path fileType="config">/etc/mkinitcpio.d</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <Package>
+        <Name>kernel-module-headers</Name>
+        <Summary>Kernel header files for external module building</Summary>
+        <Description>kernel-module-headers includes the C header files and the necessary Kbuild files for being able to build external kernel modules.</Description>
+        <Files>
+            <Path fileType="header">/usr/src/linux-headers*</Path>
+            <Path fileType="header">/tmp-headers*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kernel-headers</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Header files for the Linux kernel for use by glibc</Summary>
+        <Description>kernel-headers includes the C header files that specify the interface between the Linux kernel and userspace libraries and programs. The header files define structures and constants that are needed for building most standard programs and are also needed for rebuilding the glibc package.</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kernel-docs</Name>
+        <Summary>Documentation and scripts for the Linux kernel</Summary>
+        <Description>kernel-docs includes several documentation files and scripts for managing several debugging and other tasks.</Description>
+        <Files>
+            <Path fileType="header">/usr/src/linux-headers*/Documentation</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-10</Date>
+            <Version>4.8.13</Version>
+            <Comment>First release</Comment>
+            <Type package="kernel">security</Type>
+            <Requires>
+                <Action package="kernel">systemRestart</Action>
+            </Requires>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,68 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kcalc</Name>
+        <Homepage>http://kde.org/applications/utilities/kcalc</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>kcalc</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.utils</PartOf>
+        <Summary>A scientific calculator</Summary>
+        <Description>KCalc is a calculator which offers many more mathematical functions than meet the eye on a first glance.</Description>
+        <Archive sha1sum="5f7b7ecf4f451a4b74d224255e154baeb23573b2" type="tarxz">mirrors://kde/stable/applications/16.12.0/src/kcalc-16.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kguiaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kinit-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kcalc</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kguiaddons</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>            
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-22</Date>
+            <Version>16.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

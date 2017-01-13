@@ -1,0 +1,62 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kdecorations</Name>
+        <Homepage>https://projects.kde.org/projects/kde/workspace/kdecoration</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Plugin based library to create window decorations</Summary>
+        <Description>Plugin based library to create window decorations</Description>
+        <Archive sha1sum="cec1066fb1b032adbbb0f16491b9f2a3ddf0fcf7" type="tarxz">mirrors://kde/stable/plasma/5.8.4/kdecoration-5.8.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kdecorations</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>kdecorations-devel</Name>
+        <Summary>Development files for kdecorations</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency release="current">kdecorations</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-26</Date>
+            <Version>5.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

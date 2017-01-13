@@ -1,0 +1,47 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-HTML-FormatText-WithLinks-AndTables</Name>
+        <Homepage>http://search.cpan.org/dist/HTML-FormatText-WithLinks-AndTables</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>PerlArtistic GPL</License>
+        <IsA>library</IsA>
+        <Summary>Converts HTML to Text with tables in tact.</Summary>
+        <Description>This module was inspired by HTML::FormatText::WithLinks which has proven to be a useful `lynx -dump` work-alike.</Description>
+        <Archive sha1sum="39c981d78b1b415e63eca18eca590d1157100160" type="targz">http://search.cpan.org/CPAN/authors/id/D/DA/DALEEVANS/HTML-FormatText-WithLinks-AndTables-0.06.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-URI</Dependency>
+            <Dependency>perl-HTML-FormatText-WithLinks</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-HTML-FormatText-WithLinks-AndTables</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-URI</Dependency>
+            <Dependency>perl-HTML-FormatText-WithLinks</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.06</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

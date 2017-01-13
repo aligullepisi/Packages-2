@@ -1,0 +1,53 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>foomatic-db-engine</Name>
+        <Homepage>http://www.linuxprinting.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Foomatic printer database engine</Summary>
+        <Description>foomatic-db-engine is the layer that provides the database engine to Foomatic.</Description>
+        <Archive sha1sum="c3b747113b6a64b998000774e7c2d03ce48654c1" type="targz">http://www.openprinting.org/download/foomatic/foomatic-db-engine-4.0.12.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="0">foomatic-db-engine-4.0.8-fix-sandbox.patch</Patch>
+            <Patch level="1">4.0.7-perl-module.patch</Patch>
+            <Patch level="1">4.0.7-respect-ldflag.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>foomatic-db-engine</Name>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="config">/etc/foomatic</Path>
+            <Path fileType="data">/usr/share/foomatic/templates</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>4.0.12</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

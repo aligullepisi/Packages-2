@@ -1,0 +1,122 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qscintilla2</Name>
+        <Homepage>http://www.riverbankcomputing.co.uk/qscintilla/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Qt port of Scintilla</Summary>
+        <Description>QScintilla2 is a port to Qt4 of Neil Hodgson's Scintilla C++ editor class.</Description>
+        <Archive type="targz" sha1sum="63f367af50fd73a8815e4ff4596932c7dad12e41">mirrors://sourceforge/pyqt/QScintilla2/QScintilla-2.9.1/QScintilla-gpl-2.9.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-qt5-devel</Dependency>
+            <Dependency>python3-qt5-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-sip</Dependency>
+            <Dependency>python-sip</Dependency>
+            <Dependency versionFrom="5.5.1">qt5-base-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>chrpath</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>configure.py.patch</Patch>
+            <Patch>libname.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>qscintilla2</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5/plugins</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/qt5/mkspecs</Path>
+            <Path fileType="localedata">/usr/share/qt5/translations</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qscintilla2-python-common</Name>
+        <Summary>Common python qscintilla bindings files shared between qscintilla2-python and qscintilla2-python3</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">qscintilla2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/qt5/qsci</Path>
+            <Path fileType="data">/usr/share/sip</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qscintilla2-python</Name>
+        <Summary>Python 2.x bindings for qscintilla2</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">qscintilla2</Dependency>
+            <Dependency version="current">qscintilla2-python-common</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qscintilla2-python3</Name>
+        <Summary>Python 3.x bindings for qscintilla2</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency version="current">qscintilla2</Dependency>
+            <Dependency version="current">qscintilla2-python-common</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qscintilla2-doc</Name>
+        <Summary>HTML documentation for qscintilla2</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qscintilla2/Scintilla</Path>
+            <Path fileType="doc">/usr/share/doc/qscintilla2/html</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qscintilla2-devel</Name>
+        <Summary>Development files for qscintilla2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qscintilla2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/qt5/Qsci</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

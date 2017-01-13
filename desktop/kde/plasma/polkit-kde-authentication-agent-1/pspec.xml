@@ -1,0 +1,67 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>polkit-kde-authentication-agent-1</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>The KDE Plasma Workspace Components</Summary>
+        <Description>The Polkit-KDE-Agent package contains a graphical Polkit authentication agent for the KDE Plasma Desktop.</Description>
+        <Archive sha1sum="d9c3fc8b15487f4541ae38f2ec0d82c2a8cb5b81" type="tarxz">mirrors://kde/stable/plasma/5.8.4/polkit-kde-agent-1-5.8.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>polkit-qt-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>polkit-kde-authentication-agent-1</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>polkit-qt</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-26</Date>
+            <Version>5.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

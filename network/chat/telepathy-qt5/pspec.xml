@@ -1,0 +1,75 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>telepathy-qt5</Name>
+        <Homepage>http://telepathy.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Qt based classes for Telepathy communication framework</Summary>
+        <Description>The Telepathy project is about building a unified framework for many different kinds of real-time communications. telepathy-qt contains Qt-based base and proxy classes for use in connection managers and clients.</Description>
+        <Archive sha1sum="a593e0d107c36ed4d79cb84e7eab81a7d9d85019" type="targz">http://telepathy.freedesktop.org/releases/telepathy-qt/telepathy-qt-0.9.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>qt5-doc</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>farstream-devel</Dependency>
+            <Dependency>telepathy-farstream-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">gstreamer-1.6.patch</Patch>
+            <Patch level="1">glibc-2.20.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>telepathy-qt5</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>telepathy-farstream</Dependency>
+            <Dependency>doxygen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>telepathy-qt5-devel</Name>
+        <Summary>Development files for telepathy-qt5</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">telepathy-qt5</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>telepathy-farstream-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.9.6</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,50 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>discount</Name>
+        <Homepage>https://github.com/Orc/discount</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>A Markdown implementation written in C</Summary>
+        <Description>implementation of the Markdown markup language in C</Description>
+        <Archive sha1sum="68dd1b6c61b7ad62ceef9ae2bd83eeb53a6939d5" type="targz">https://sourceforge.net/projects/pisilinux/files/source/discount-2.2.1.tar.gz</Archive>       
+    </Source>
+
+    <Package>
+        <Name>discount</Name>        
+        <Files>            
+            <Path fileType="executable">/usr/bin</Path>                        
+            <Path fileType="library">/usr/lib</Path>                        
+            <Path fileType="man">/usr/share/man</Path>            
+            <Path fileType="doc">/usr/share/doc</Path>            
+        </Files>        
+    </Package>
+
+    <Package>
+        <Name>discount-devel</Name>
+        <Summary>Development files for discount</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">discount</Dependency>                        
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>            
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2016-11-06</Date>
+            <Version>2.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,61 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>hdf5</Name>
+        <Homepage>http://www.hdfgroup.org/HDF5/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <License>NCSA-HDF</License>
+        <IsA>library</IsA>
+        <Summary>NCSA Hierarchical Data Format (HDF) Software Library and Utilities</Summary>
+        <Description>HDF5 is a general purpose library and file format for storing scientific data.</Description>
+        <Archive sha1sum="640f1a46cb1b353339695355b4fca42df05be765" type="tarbz2">http://www.hdfgroup.org/ftp/HDF5/current/src/hdf5-1.8.17.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>time</Dependency>
+            <Dependency>libgfortran</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>net-tools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>hdf5</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libgfortran</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/hdf5</Path>
+            <Path fileType="data">/usr/share/hdf5_examples</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>hdf5-devel</Name>
+        <Summary>Development files for hdf5</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">hdf5</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-10</Date>
+            <Version>1.8.17</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

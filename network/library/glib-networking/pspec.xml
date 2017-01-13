@@ -1,0 +1,51 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>glib-networking</Name>
+        <Homepage>http://git.gnome.org/browse/glib-networking/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Network-related giomodules for glib</Summary>
+        <Description>This package contains various network related extensions for the GIO library.</Description>
+        <Archive sha1sum="02e4eb212dd5a322ca726802c714dd4e5a143a74" type="tarxz">mirrors://gnome/glib-networking/2.38/glib-networking-2.38.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>p11-kit-devel</Dependency>
+            <Dependency>ca-certificates</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>glib-networking</Name>
+        <RuntimeDependencies>
+            <Dependency>gnutls</Dependency>
+            <Dependency>p11-kit</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>ca-certificates</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/gio/modules</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc/glib-networking</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>2.38.2</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

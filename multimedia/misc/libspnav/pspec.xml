@@ -1,0 +1,58 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libspnav</Name>
+        <Homepage>http://spacenav.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Open source alternative to 3DConnextion drivers</Summary>
+        <Description>The spacenav project provides a free compatible alternative, to the proprietary 3Dconnexion device driver and SDK, for their 6dof space navigation input devices. It provides both a replacement free user-space driver, and a replacement SDK library.</Description>
+        <Archive sha1sum="e308344cc2c86bb3f01cca308261a35aaa8c6318" type="targz">http://downloads.sourceforge.net/spacenav/libspnav-0.2.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+          <!--Patch level="1">libspnav-0.2.2-custom-flags.patch</Patch-->
+          <Patch>Makefile.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libspnav</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+   </Package>
+
+    <Package>
+        <Name>libspnav-devel</Name>
+        <Summary>Development files for libspnav</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libspnav</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/libspnav.so</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

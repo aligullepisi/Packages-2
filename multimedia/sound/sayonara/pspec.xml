@@ -1,0 +1,83 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sayonara</Name>
+        <Homepage>http://sayonara-player.com</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>sayonara</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Sayonara is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend.</Summary>
+        <Description>Although Sayoanra is considered as a lightweight player, it holds a lot of features to organize even big music collections.</Description>
+        <Archive sha1sum="36df8f274c0e528564ffba79fe17c2dc0720d632" type="targz">http://sayonara-player.com/sw/sayonara-player-0.9.2-git11-20161030.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-sql-mysql </Dependency>
+            <Dependency>qt5-sql-odbc</Dependency>
+            <Dependency>qt5-sql-postgresql</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>gstreamer-next-devel</Dependency>
+            <Dependency>taglib-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gst-plugins-bad-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gst-plugins-ugly-next</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libmtp-devel</Dependency>
+            <Dependency>gstreamer-next-devel</Dependency>
+            <Dependency>gst-plugins-base-next-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sayonara</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>gst-plugins-bad</Dependency>
+            <Dependency>gst-plugins-base-next</Dependency>
+            <Dependency>gst-plugins-good-next</Dependency>
+            <Dependency>gst-plugins-ugly-next</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libmtp</Dependency>
+            <Dependency>gstreamer-next</Dependency>
+            <Dependency>gst-plugins-base-next</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="icon">/usr/share/pixmaps</Path>
+            <Path fileType="application">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/sayonara.desktop">sayonara.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/sayonara.png">sayonara.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-04</Date>
+            <Version>20161030</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

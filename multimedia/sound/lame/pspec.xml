@@ -1,0 +1,64 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>lame</Name>
+        <Homepage>http://lame.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>A free MP3 encoder/decoder</Summary>
+        <Description>LAME is an MPEG Audio Layer III (MP3) encoder licensed under the LGPL.</Description>
+        <Archive sha1sum="03a0bfa85713adcc6b3383c12e2cc68a9cfbf4c4" type="targz">mirrors://sourceforge/lame/lame-3.99.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lame</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lame-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lame-devel</Name>
+        <Summary>Development files for lame</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lame</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <!-- FIXME: Remove this if not necessary -->
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>3.99.5</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

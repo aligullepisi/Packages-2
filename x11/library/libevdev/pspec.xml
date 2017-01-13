@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libevdev</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/libevdev/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Wrapper library for evdev devices</Summary>
+        <Description>Wrapper library for evdev devices</Description>
+        <Archive sha1sum="9bba13e9712b545f418fbe3344e807fb16b810de" type="tarxz">https://www.freedesktop.org/software/libevdev/libevdev-1.5.4.tar.xz</Archive>
+        <BuildDependencies>
+<!--             <Dependency>acl-devel</Dependency> -->
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch level="1">0001-Revert-Drop-deprecated-functions.patch</Patch> -->
+<!--             <Patch level="1">0001-Revert-Drop-some-leftover-deprecated-constants.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libevdev</Name>
+        <RuntimeDependencies>
+<!--             <Dependency>acl</Dependency> -->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-02</Date>
+            <Version>1.5.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

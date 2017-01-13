@@ -1,0 +1,44 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>foomatic-db</Name>
+        <Homepage>http://www.linuxprinting.org/foomatic.html</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>data</IsA>
+        <Summary>Database of printers and printer drivers</Summary>
+        <Description>foomatic-db contains the knowledge database for printers which are used by foomatic-db-engine to generate PPD files.</Description>
+        <Archive sha1sum="13ec613d50d3fbe675c9760c5d368c092a574a26" type="targz">http://www.openprinting.org/download/foomatic/foomatic-db-4.0-20160609.tar.gz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="cleanup-conflicts">cleanup-script</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <!--<Dependency>cups-filters</Dependency>-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>foomatic-db</Name>
+        <RuntimeDependencies>
+            <Dependency>pnm2ppa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>4.0.20160609</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

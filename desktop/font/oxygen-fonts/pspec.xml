@@ -1,0 +1,44 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>oxygen-fonts</Name>
+        <Homepage>https://projects.kde.org/projects/playground/artwork/oxygen-fonts</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>OFL</License>
+        <IsA>data:font</IsA>
+        <Summary>Oxygen font family</Summary>
+        <Description>Oxygen font family is a desktop / GUI font family for integrated use with KDE.</Description>
+        <Archive sha1sum="328ef4ea6d9d579c92e065aab53aa2f435adaa08" type="tarxz">http://download.kde.org/stable/plasma/5.4.3/oxygen-fonts-5.4.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>extra-cmake-modules</Dependency> 
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>fontforge</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>oxygen-fonts</Name>
+        <Files>
+            <Path fileType="data">/usr/share/fonts</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>5.4.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

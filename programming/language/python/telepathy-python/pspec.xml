@@ -1,0 +1,44 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>telepathy-python</Name>
+        <Homepage>http://telepathy.freedesktop.org/wiki</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Python libraries for Telepathy</Summary>
+        <Description>telepathy-python is the Python libraries for use in Telepathy client and connection managers.</Description>
+        <Archive sha1sum="a0cc066088f2fc25849c1d005baaea2b7c6409fd" type="targz">http://telepathy.freedesktop.org/releases/telepathy-python/telepathy-python-0.15.19.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxslt-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">telepathy-python-0.15.19-mkdir_p.patch</Patch>
+            <Patch level="1">dont-compile-py.patch</Patch>
+            <Patch level="1">python-telepathy-no_double_errors-py.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>telepathy-python</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>0.15.19</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

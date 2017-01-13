@@ -1,0 +1,74 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gperftools</Name>
+        <Homepage>http://code.google.com/p/gperftools/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Google Performance Tools</Summary>
+        <Description>Perf Tools is a collection of a high-performance multi-threaded malloc() implementation, plus some pretty nifty performance analysis tools.</Description>
+        <Archive sha1sum="13b904d0d1f220e43e4495f3403ee280c6da26ea" type="targz">https://github.com/gperftools/gperftools/releases/download/gperftools-2.4/gperftools-2.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libunwind-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gperftools</Name>
+        <RuntimeDependencies>
+            <Dependency>libunwind</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/gperftools/COPYING</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gperftools-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development headers for gperftools</Summary>
+        <Description>gperftools-devel provides development headers for gperftools.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">gperftools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gperftools-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for gperftools</Summary>
+        <Description>gperftools-docs provides documentation files for gperftools.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">gperftools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/gperftools</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-27</Date>
+            <Version>2.4</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>partitionmanager</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>LimeOs Admins</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>KDE Partition Manager is a utility program to help you manage the disk devices, partitions and file systems on your computer</Summary>
+        <Description>It allows you to easily create, copy, move, delete, resize without losing data, backup and restore partitions..</Description>
+        <Archive sha1sum="7b1980f4b1f5e2b4ab827ce72069de0dab399f2e" type="tarxz">https://sourceforge.net/projects/pisi-source/files/partitionmanager-2.9.91.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libatasmart-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>parted-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>kservice-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kjobwidgets-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kpmcore-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>partitionmanager</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kjobwidgets</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kpmcore</Dependency>
+            <Dependency>kcrash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-12-17</Date>
+            <Version>3.0.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

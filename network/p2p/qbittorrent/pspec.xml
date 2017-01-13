@@ -1,0 +1,59 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qbittorrent</Name>
+        <Homepage>http://www.qbittorrent.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <Icon>qbittorrent</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Qt4 based BitTorrent client</Summary>
+        <Description>qbittorrent is a BitTorrent client using the libtorrent library.</Description>
+        <Archive sha1sum="837e5f0032641636dac397f64c11a8e3646ffba8" type="targz">http://sourceforge.net/projects/qbittorrent/files/qbittorrent/qbittorrent-3.3.7/qbittorrent-3.3.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>libtorrent-rasterbar-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>geoip-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qbittorrent</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libtorrent-rasterbar</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-12</Date>
+            <Version>3.3.7</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>
