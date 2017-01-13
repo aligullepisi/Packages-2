@@ -16,7 +16,7 @@
         <Archive sha1sum="76239b0c7f6d93acc820832b8241227619ff1cdb" type="tarxz">ftp://mirrors.kernel.org/gnu/grep/grep-2.23.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
-            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libpcre</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -15,7 +15,7 @@
         <Description>pcmciautils contains the initialization tools necessary to allow the PCMCIA subsystem to behave as every other hotpluggable bus system.</Description>
         <Archive sha1sum="b1edd0f5640d4e413f730a607ae3bc15fd79f380" type="tarxz">https://sources.archlinux.org/other/pcmciautils/pcmciautils-018.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>sysfsutils-devel</Dependency>
+            <Dependency>sysfsutils</Dependency>
         </BuildDependencies>
     </Source>
 

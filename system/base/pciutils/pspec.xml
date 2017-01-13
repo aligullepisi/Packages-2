@@ -42,17 +42,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/misc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>pciutils-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for pciutils</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">pciutils</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
         </Files>

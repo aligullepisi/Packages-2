@@ -16,8 +16,8 @@
         <Archive sha1sum="77b95dd1c8cd9bc00b3b834b53d824409202acbb" type="tarbz2">mirrors://xorg/individual/lib/libXpm-3.5.11.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>util-macros</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXt</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,19 +33,8 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXpm-devel</Name>
-        <Summary>Development files for libXpm</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libXpm</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -69,6 +58,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

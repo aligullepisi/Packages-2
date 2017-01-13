@@ -27,22 +27,12 @@
         <Name>libXau</Name>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXau-devel</Name>
-        <Summary>Development files for libXau</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libXau</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
+
 
     <Package>
         <Name>libXau-32bit</Name>
@@ -57,6 +47,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

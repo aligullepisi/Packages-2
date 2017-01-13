@@ -14,8 +14,8 @@
         <Summary>A fast and lightweight key/value database library</Summary>
         <Description>LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.</Description>
         <BuildDependencies>
-            <Dependency>gperftools-devel</Dependency>
-            <Dependency>snappy-devel</Dependency>
+            <Dependency>gperftools</Dependency>
+            <Dependency>snappy</Dependency>
         </BuildDependencies>
         <Archive sha1sum="18684a0ad7a07920d10f5295b171fbf5eeec7337" type="targz">https://github.com/google/leveldb/archive/v1.18.tar.gz</Archive>
     </Source>

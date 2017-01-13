@@ -23,17 +23,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc/liblogging</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>liblogging-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for liblogging</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">liblogging</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/liblogging/stdlog.h</Path>
             <Path fileType="data">/usr/lib/pkgconfig/liblogging-stdlog.pc</Path>
         </Files>

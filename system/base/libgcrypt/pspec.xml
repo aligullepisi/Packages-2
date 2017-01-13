@@ -15,7 +15,7 @@
         <Description>Libgcrypt is a general purpose crypto library based on the code used in GNU Privacy Guard.</Description>
         <Archive sha1sum="fa485d854748fc06ea041b3057b2de2f12fbc17f" type="tarbz2">http://gd.tuwien.ac.at/pub/gnupg/libgcrypt/libgcrypt-1.7.5.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libgpg-error</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -31,22 +31,9 @@
             <Path fileType="config">/etc/gcrypt</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="info">/usr/share/info</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgcrypt-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libgcrypt</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgcrypt</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="executable">/usr/bin/*-config</Path>
         </Files>
     </Package>
@@ -67,6 +54,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

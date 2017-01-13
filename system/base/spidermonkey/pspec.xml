@@ -15,10 +15,10 @@
         <Description>Spidermonkey is Mozilla's C implementation of JavaScript.</Description>
         <Archive type="targz" sha1sum="7805174898c34e5d3c3b256117af9944ba825c89">http://ftp.mozilla.org/pub/mozilla.org/js/mozjs17.0.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>nspr-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>libffi</Dependency>
         </BuildDependencies>
         <Patches>
         </Patches>
@@ -36,18 +36,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>spidermonkey-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for spidermonkey</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">spidermonkey</Dependency>
-            <Dependency>nspr-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="executable">/usr/bin/js17-config</Path>

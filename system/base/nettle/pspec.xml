@@ -15,7 +15,7 @@
         <Description>The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.</Description>
         <Archive sha1sum="b2eb5b36e65a8d3ed60ff81ec897044dead6dae0" type="targz">ftp://ftp.gnu.org/gnu/nettle/nettle-3.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gmp-devel</Dependency>
+            <Dependency>gmp</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,21 +29,9 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/info</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>nettle-devel</Name>
-        <Summary>Nettle için geliştirme dosyaları</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">nettle</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="header">/usr/lib/pkgconfig/nettle.pc</Path>
             <Path fileType="header">/usr/lib/pkgconfig/hogweed.pc</Path>
-            <Path fileType="library">/usr/lib32/pkgconfig/nettle.pc</Path>
-            <Path fileType="library">/usr/lib32/pkgconfig/hogweed.pc</Path>
         </Files>
     </Package>
 
@@ -62,7 +50,7 @@
             <Dependency>gmp-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib32/</Path>
+            <Path fileType="library">/usr/lib32/*</Path>
         </Files>
     </Package>
 

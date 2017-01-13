@@ -19,7 +19,7 @@
             <AdditionalFile target="openssl-1.0.0-beta4-ca-dir.patch">openssl-1.0.0-beta4-ca-dir.patch</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>xorg-util</Dependency>
             <Dependency>perl</Dependency>
             <Dependency>sed</Dependency>
@@ -53,25 +53,13 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>openssl-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for openssl</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">openssl</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
-        </Files>
     </Package>
 
     <Package>
@@ -88,7 +76,7 @@
             
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="library">/usr/lib32/*</Path>
         </Files>
     </Package>
 

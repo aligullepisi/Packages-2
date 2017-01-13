@@ -25,15 +25,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libtxc-dxtn-devel</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">libtxc-dxtn</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="headers">/usr/include</Path>
         </Files>
     </Package>

@@ -15,61 +15,45 @@
         <Archive sha1sum="ff088ee29dee46a2d68925c8df3f0515ef15ec52" type="tarbz2">mirrors://xorg/individual/xserver/xorg-server-1.18.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>font-util</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>libdmx-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libXaw-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libXfont-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>libXmu-devel</Dependency>
-            <Dependency>libXpm-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libXres-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libXtst-devel</Dependency>
-            <Dependency>libXv-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libdmx</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libpciaccess</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXaw</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXfont</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXres</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>pixman</Dependency>
             <Dependency>xorg-app</Dependency>
-            <Dependency>nettle-devel</Dependency>
-            <Dependency>libepoxy-devel</Dependency>
-            <Dependency>xcb-util-devel</Dependency>
-            <Dependency>xcb-util-image-devel</Dependency>
-            <Dependency>xcb-util-wm-devel</Dependency>
-            <Dependency>xcb-util-keysyms-devel</Dependency>
-            <Dependency>xcb-util-renderutil-devel</Dependency>
+            <Dependency>nettle</Dependency>
+            <Dependency>libepoxy</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>xcb-util-image</Dependency>
+            <Dependency>xcb-util-wm</Dependency>
+            <Dependency>xcb-util-keysyms</Dependency>
+            <Dependency>xcb-util-renderutil</Dependency>
             <Dependency>util-macros</Dependency>
             <Dependency>xtrans</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
-            <Dependency>libunwind-devel</Dependency>
-            <Dependency>libXau-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libunwind</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
         </BuildDependencies>
         <!--Patches>
-            <Patch level="1">0001-dix-Add-unaccelerated-valuators-to-the-ValuatorMask.patch</Patch>
-            <Patch level="1">0002-dix-hook-up-the-unaccelerated-valuator-masks.patch</Patch>
-            <Patch>autoconfig-sis.patch</Patch>
-            <Patch level="1">xorg-server-1.17.1-add_prime_support-1.patch</Patch>
-            <Patch level="1">default-module-path.patch</Patch>
-            <Patch level="1">ubuntu/001_fedora_extramodes.patch</Patch>
-            <Patch level="1">ubuntu/03_static-nettle.diff</Patch>
-            <Patch level="1">ubuntu/05_Revert-Unload-submodules.diff</Patch>
-            <Patch level="1">ubuntu/105_nvidia_fglrx_autodetect.patch</Patch>
-            <Patch level="1">ubuntu/10_Include-missing-selection-h.diff</Patch>
-            <Patch level="1">ubuntu/188_default_primary_to_first_busid.patch</Patch>
-            <Patch level="1">ubuntu/226_fall_back_to_autoconfiguration.patch</Patch>
-            <Patch level="1">ubuntu/227_null_ptr_midispcur.patch</Patch>
-            <Patch level="1">ubuntu/include-selection-h.patch</Patch>
-            <Patch level="1">ubuntu/no-nv.patch</Patch>
-            <Patch level="1">ubuntu/xf86-inactive-gpuscreen.patch</Patch>
             <Patch level="1">ubuntu/xfree86-no-xv-for-gpuscreens.patch</Patch>
         </Patches-->
     </Source>
@@ -128,6 +112,10 @@
             <Path fileType="man">/usr/share/man/man4/fbdevhw.4</Path>
             <Path fileType="man">/usr/share/man/man5/xorg.conf.5</Path>
             <Path fileType="man">/usr/share/man/man5/xorg.conf.d.5</Path>
+            <Path fileType="header">/usr/include/xorg</Path>
+            <Path fileType="library">/usr/lib/libxf86config.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/usr/libexec/xorg-save-xkb-config.sh">xorg-save-xkb-config.sh</AdditionalFile>
@@ -254,26 +242,6 @@
         <Files>
             <Path fileType="executable">/usr/bin/Xnest</Path>
             <Path fileType="man">/usr/share/man/man1/Xnest.1</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>xorg-server-devel</Name>
-        <IsA>data</IsA>
-        <IsA>library</IsA>
-        <Summary>Headers and libraries for X server driver development</Summary>
-        <RuntimeDependencies>
-            <Dependency relase="current">xorg-server</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include/xorg</Path>
-            <Path fileType="library">/usr/lib/libxf86config.a</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
     </Package>
 

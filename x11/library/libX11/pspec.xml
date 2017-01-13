@@ -21,8 +21,6 @@
             <Dependency>xtrans</Dependency>
         </BuildDependencies>
         <Patches>
-            <!--<Patch level="1">fix_typo.diff</Patch>
-            <Patch level="1">fix-segfault.diff</Patch>
             <Patch level="1">fix-null-pointer.patch</Patch>-->
         </Patches>
     </Source>
@@ -37,21 +35,8 @@
             <Path fileType="data">/usr/lib/X11</Path>
             <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="doc">/usr/share/doc/libX11</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libX11-devel</Name>
-        <Summary>Development files for X11 library</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libX11</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
@@ -72,6 +57,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

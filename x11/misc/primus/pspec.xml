@@ -15,8 +15,8 @@
        <Description>Primus is a shared library that provides OpenGL and GLX APIs and implements low-overhead local-only client-side OpenGL offloading via GLX forking, similar to VirtualGL.</Description>
        <Archive sha1sum="07619d043cbb1e85a23499b25835aedb7921c480" type="targz">mirrors://sourceforge/pisilinux/source/primus-20160408.tar.gz</Archive>
        <BuildDependencies>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>mesa</Dependency>
         </BuildDependencies>
        <Patches>
             <Patch level="1">primus-nvidia-libs.patch</Patch>

@@ -15,30 +15,28 @@
         <Summary>Graphical Boot Animation and Logger</Summary>
         <Description>plymouth provides an attractive graphical boot animation in place of the text messages that normally get shown. Text messages are instead redirected to a log file for viewing after boot.</Description>
         <Archive sha1sum="d0b70929bc47899e03019c3fcd681dd043d7fb8c" type="targz">http://source.pisilinux.org/1.0/plymouth-0.8.8.tar.gz</Archive>
-        <Archive sha1sum="f12d053f015708646d0871332b4b9465e7b11cef" type="tarxz" target="plymouth-0.8.8/themes">https://sourceforge.net/projects/pisilinux/files/source/plymouth-theme-pisilinux-0.4.tar.xz</Archive>
+        <Archive sha1sum="4eb45a38491a31ed47fcf3f3ffc2f577ca66f370" type="targz" target="plymouth-0.8.8/themes">http://source.limelinux.com/1.0/limelinux_plymounth_theme-0.1.tar.gz</Archive>
         <AdditionalFiles>
-            <AdditionalFile permission="0755" target="generate-flist">pisilinux/generate-flist.py</AdditionalFile>
+            <AdditionalFile permission="0755" target="generate-flist">limelinux/generate-flist.py</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>kernel-headers</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>graphite2-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
+            <Dependency>kernel-module-headers</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>graphite2</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk2</Dependency>
         </BuildDependencies>
         <Patches>
-            <!-- Pisi Linux patches-->
-            <!--<Patch level="1">pisilinux/fix-fbdev-path.patch</Patch>-->
+            <!-- Lime Linux patches-->
             <Patch level="1">0008-show-delay.patch</Patch>
-            <Patch level="1">pisilinux/plymouth-update-initrd.patch</Patch>
-            <Patch level="1">pisilinux/disable-source-code-tracing.patch</Patch>
-            <Patch level="1">pisilinux/adapt-theme-script.patch</Patch>
-            <Patch level="1">pisilinux/add-pisilinux-theme.patch</Patch>
-            <!--<Patch level="1">pisilinux/implement-suspend-modes.patch</Patch>-->
+            <Patch level="1">limelinux/plymouth-update-initrd.patch</Patch>
+            <Patch level="1">limelinux/disable-source-code-tracing.patch</Patch>
+            <Patch level="1">limelinux/adapt-theme-script.patch</Patch>
+            <Patch level="1">limelinux/add-limelinux-theme.patch</Patch>
             <!--MaGeia patches-->
             <Patch level="1">mageia/plymouth-restore-suspend.patch</Patch>
             <Patch level="1">fedora/fix-crash.patch</Patch>
@@ -50,7 +48,7 @@
         <RuntimeDependencies>
             <Dependency>libdrm</Dependency>
             <Dependency>plymouth-core-libs</Dependency>
-            <Dependency>plymouth-theme-pisilinux</Dependency>
+            <Dependency>plymouth-theme-limelinux</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/bin</Path>
@@ -74,13 +72,15 @@
             <Path fileType="data">/var/lib/plymouth</Path>
             <Path fileType="data">/run/plymouth</Path>
             <Path fileType="data">/var/spool/plymouth</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/plymouth.conf</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/plymouth.conf">tmpfiles.conf</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/var/lib/plymouth/boot-duration">pisilinux/boot-duration</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/lib/initramfs/plymouth.list">pisilinux/initramfs.files</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/plymouth-pisilinux.png">pisilinux/images/white-head.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/var/lib/plymouth/boot-duration">limelinux/boot-duration</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/lib/initramfs/plymouth.list">limelinux/initramfs.files</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/plymouth-limelinux.png">limelinux/images/white-head.png</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/plymouth/themes/charge/charge.plymouth">fedora/charge.plymouth</AdditionalFile>
         </AdditionalFiles>
         <Provides>
@@ -111,17 +111,6 @@
         </Files>
     </Package>
 
-    <Package>
-        <Name>plymouth-devel</Name>
-        <Summary>Development headers and files for plymouth</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">plymouth</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-    </Package>
 
     <Package>
         <Name>plymouth-renderer-x11</Name>
@@ -311,14 +300,14 @@
     </Package>
 
     <Package>
-        <Name>plymouth-theme-pisilinux</Name>
-        <Summary>Plymouth Pisi Linux theme</Summary>
-        <Description>plymouth-theme-pisilinux contains a simple but elegant boot theme for Pisi Linux.</Description>
+        <Name>plymouth-theme-limelinux</Name>
+        <Summary>Plymouth Lime Linux theme</Summary>
+        <Description>plymouth-theme-limelinux contains a simple but elegant boot theme for Lime Linux.</Description>
         <RuntimeDependencies>
             <Dependency release="current">plymouth-plugin-script</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/share/plymouth/themes/pisilinux</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/limelinux</Path>
         </Files>
     </Package>
 

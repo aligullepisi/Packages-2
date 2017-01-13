@@ -15,7 +15,7 @@
         <Description>The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. Both Emacs and vi editing modes are available. The Readline library includes additional functions to maintain a list of previously-entered command lines, to recall and perhaps reedit those lines, and perform csh-like history expansion on previous commands.</Description>
         <Archive sha1sum="017b92dc7fd4e636a2b5c9265a77ccc05798c9e1" type="targz">mirrors://gnu/readline/readline-6.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
+            <Dependency>ncurses</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>readline63-001.patch</Patch>
@@ -34,17 +34,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="info">/usr/share/info</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>readline-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for readline</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">readline</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
         </Files>

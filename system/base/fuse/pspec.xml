@@ -15,7 +15,7 @@
         <Description>fuse is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
         <Archive sha1sum="bf71181cdc25f65e5757a8a14d352296722de2e3" type="targz">https://github.com/libfuse/libfuse/releases/download/fuse_2_9_5/fuse-2.9.5.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>gettext</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>skip_umount_test.patch</Patch>
@@ -34,17 +34,6 @@
             <Path fileType="library">/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>fuse-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for fuse</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">fuse</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

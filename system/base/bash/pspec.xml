@@ -15,7 +15,7 @@
         <Description>Bash is the GNU Project's Bourne Again SHell, a complete implementation of the IEEE POSIX and Open Group shell specification with interactive command line editing, csh-like features such as history substitution.</Description>
         <Archive sha1sum="33b1bcc5dca1b72f28b2baeca6efa0d422097964" type="targz">mirrors://gnu/bash/bash-4.3.30.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
+            <Dependency>ncurses</Dependency>
         </BuildDependencies>
         <Patches>
         <!-- Official Patches ftp://ftp.cwru.edu/pub/bash/bash-4.3-patches/ -->

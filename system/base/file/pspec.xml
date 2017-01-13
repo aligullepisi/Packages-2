@@ -16,9 +16,9 @@
         <Archive sha1sum="fea78106dd0b7a09a61714cdbe545135563e84bd" type="targz">ftp://ftp.astron.com/pub/file/file-5.25.tar.gz</Archive>
         <!-- An update to this package can easily break pisi, pay attention! -->
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>zlib</Dependency>
             <!-- remove python dependencies while bootstrap -->
-            <Dependency>python-devel</Dependency>
+            <Dependency>python</Dependency>
         </BuildDependencies>
         <!--<Patches>
             <Patch level="1">git_fixes.patch</Patch>

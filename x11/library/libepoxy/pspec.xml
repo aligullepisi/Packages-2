@@ -15,8 +15,8 @@
         <Description>Epoxy is a library for handling OpenGL function pointer management for you.</Description>
         <Archive sha1sum="94d98d83a50d2f607ee9986b622a48df00d5926c" type="targz">https://github.com/anholt/libepoxy/archive/v1.3.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>mesa</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
@@ -31,16 +31,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/man</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>libepoxy-devel</Name>
-	<Summary>Development files for libepoxy</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libepoxy</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="config">/usr/lib/pkgconfig</Path>
         </Files>

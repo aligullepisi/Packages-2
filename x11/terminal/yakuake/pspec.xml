@@ -16,27 +16,27 @@
         <Description>The name comes from Yet Another Kuake (thus YaKuake). Its behaviour is similar to the console of the Quake game.</Description>
         <Archive sha1sum="8e5b43995cc01a127364969d74e2272c40933176" type="tarxz">mirrors://kde/stable/yakuake/3.0.2/src/yakuake-3.0.2.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>qt5-x11extras-devel</Dependency>
-            <Dependency>knewstuff-devel</Dependency>
-            <Dependency>kio-devel</Dependency>
-            <Dependency>kparts-devel</Dependency>
-            <Dependency>knotifyconfig-devel</Dependency>
-            <Dependency>karchive-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>kconfig-devel</Dependency>
-            <Dependency>kcrash-devel</Dependency>
-            <Dependency>kdbusaddons-devel</Dependency>
-            <Dependency>kglobalaccel-devel</Dependency>
-            <Dependency>ki18n-devel</Dependency>
-            <Dependency>kiconthemes-devel</Dependency>
-            <Dependency>knewstuff-devel</Dependency>
-            <Dependency>knotifications-devel</Dependency>
-            <Dependency>kparts-devel</Dependency>
-            <Dependency>kwidgetsaddons-devel</Dependency>
-            <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>knewstuff</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>knotifyconfig</Dependency>
+            <Dependency>karchive</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kglobalaccel</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>knewstuff</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>gettext</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>

@@ -15,8 +15,8 @@
         <Description>CGManager is a central privileged daemon that manages all your cgroups for you through a simple DBus API.</Description>
         <Archive sha1sum="63d3f1fa8388484c4f8091b216ce4e9cd1988f54" type="targz">https://github.com/lxc/cgmanager/archive/v0.39.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libnih-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
+            <Dependency>libnih</Dependency>
+            <Dependency>pam</Dependency>
             <Dependency>help2man</Dependency>
         </BuildDependencies>
     </Source>
@@ -34,21 +34,12 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/cgmanager</Path>
             <Path fileType="library">/usr/lib/libcgmanager*</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
         <Provides>
             <COMAR script="service.py">System.Service</COMAR>
         </Provides>
-    </Package>
-    <Package>
-        <Name>cgmanager-devel</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">cgmanager</Dependency>
-            <Dependency>libnih</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

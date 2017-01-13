@@ -15,9 +15,9 @@
         <Description>Wayland is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol.</Description>
         <Archive sha1sum="cf5c2719592ce324184a785b19a9547dc2d51377" type="tarxz">https://wayland.freedesktop.org/releases/wayland-1.11.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxml2</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,6 +33,9 @@
             <Path fileType="data">/usr/share/aclocal</Path>
             <Path fileType="data">/usr/share/wayland</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -73,21 +76,6 @@
     </Package>
 
     <Package>
-        <Name>wayland-devel</Name>
-        <Summary>Development files for wayland</Summary>
-        <RuntimeDependencies>
-            <Dependency>expat-devel</Dependency>
-            <Dependency release="current">wayland</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
-            <Path fileType="data">/usr/share/pkgconfig</Path>
-        </Files>
-    </Package>
-
-    <Package>
         <Name>wayland-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for wayland</Summary>
@@ -105,6 +93,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

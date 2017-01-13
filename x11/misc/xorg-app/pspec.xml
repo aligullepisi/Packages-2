@@ -101,36 +101,36 @@
         <Archive sha1sum="179253e6b8266bc3e3b6496964077c9cdcb2dcba" type="tarbz2">mirrors://xorg/individual/app/xwininfo-1.1.3.tar.bz2</Archive>
         <Archive sha1sum="786cd4b18bf576fae3ffd417545b1394b27c7f06" type="tarbz2">mirrors://xorg/individual/app/xwud-1.0.4.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>fontconfig-devel</Dependency>
-            <Dependency>libdmx-devel</Dependency>
-            <Dependency>libfontenc-devel</Dependency>
-            <Dependency>libFS-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>libXaw-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
-            <Dependency>libXcursor-devel</Dependency>
-            <Dependency>libXdamage-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libXfont-devel</Dependency>
-            <Dependency>libXft-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>libXmu-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libXScrnSaver-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libXtst-devel</Dependency>
-            <Dependency>libXv-devel</Dependency>
-            <Dependency>libXxf86dga-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libdmx</Dependency>
+            <Dependency>libfontenc</Dependency>
+            <Dependency>libFS</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libXaw</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXfont</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>libXxf86dga</Dependency>
+            <Dependency>libXxf86vm</Dependency>
             <Dependency>xbitmaps</Dependency>
-            <Dependency>xcb-util-devel</Dependency>
-            <Dependency>libXxf86misc-devel</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libXxf86misc</Dependency>
             <Dependency>xorg-proto</Dependency>
             <Dependency>util-macros</Dependency>
             <Dependency>xtrans</Dependency>
@@ -186,20 +186,11 @@
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <Provides>
             <COMAR script="pakhandler.py">System.PackageHandler</COMAR>
         </Provides>
-    </Package>
-    <Package>
-        <Name>xorg-app-devel</Name>
-        <RuntimeDependencies>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency relase="current">xorg-app</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

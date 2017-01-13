@@ -23,9 +23,9 @@
             <Dependency>plyvel</Dependency>
             <Dependency>python</Dependency>
             <Dependency>gettext</Dependency>
-            <Dependency>libunwind-devel</Dependency>
+            <Dependency>libunwind</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency versionFrom="1.18">leveldb-devel</Dependency>
+            <Dependency versionFrom="1.18">leveldb</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>initialize_filesdb_once.patch</Patch>

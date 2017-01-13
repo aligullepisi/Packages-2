@@ -37,20 +37,8 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="executable">/usr/bin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>glew-devel</Name>
-        <Summary>Development files for glew</Summary>
-        <RuntimeDependencies>
-            <Dependency>mesa-glu-devel</Dependency>
-            <Dependency release="current">glew</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/GL</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -70,7 +58,8 @@
         </RuntimeDependencies>
 
         <Files>
-            <Path fileType="library">/usr/lib32</Path>            
+            <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>            
         </Files>
     </Package>
 

@@ -19,11 +19,11 @@
              <AdditionalFile target="config.cache">config.cache</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>libkmod-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libkmod</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxslt</Dependency>
             <Dependency>gperf</Dependency>
         </BuildDependencies>
     </Source>
@@ -50,6 +50,9 @@
             <Path fileType="data">/lib/udev/rules.d</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/udev.conf">tmpfiles.conf</AdditionalFile>
@@ -58,21 +61,7 @@
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
     </Package>
-    
-    <Package>
-        <Name>eudev-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for eudev</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">eudev</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include/</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/pkgconfig</Path> <!-- check this path usr/share/pkgconfig -->
-        </Files>
-    </Package>
-    
+
         <Package>
         <Name>eudev-32bit</Name>
         <PartOf>emul32</PartOf>

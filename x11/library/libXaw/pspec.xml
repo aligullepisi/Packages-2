@@ -15,14 +15,14 @@
         <Description>Xaw is a widget set based on the X Toolkit Intrinsics (Xt) Library.</Description>
         <Archive sha1sum="15f891fb88aae966b3064dcc1510790a0ebc75a0" type="tarbz2">mirrors://xorg/individual/lib/libXaw-1.0.13.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXmu-devel</Dependency>
-            <Dependency>libXpm-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libXt</Dependency>
             <Dependency>util-macros</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libX11</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -38,24 +38,8 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXaw-devel</Name>
-        <Summary>Development files for libXaw</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libXaw</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXmu-devel</Dependency>
-            <Dependency>libXpm-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-	    </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
@@ -84,6 +68,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

@@ -15,11 +15,11 @@
         <Description>libva is a library providing the VA API video acceleration API.</Description>
         <Archive sha1sum="a89680d34236fdc63adeec25cf431c005644b8c6" type="tarbz2">https://www.freedesktop.org/software/vaapi/releases/libva/libva-1.7.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
-            <Dependency>wayland-devel</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>wayland</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -37,20 +37,8 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libva-devel</Name>
-        <Summary>Development files for libva</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libva</Dependency>
-            <Dependency>wayland-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -78,6 +66,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

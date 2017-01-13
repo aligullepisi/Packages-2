@@ -25,20 +25,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="library">/usr/lib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>json-c-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for json-c</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">json-c</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -52,6 +40,7 @@
         <BuildType>emul32</BuildType>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

@@ -16,18 +16,18 @@
         <Archive sha1sum="d83ab893faab35f37ace772ca29b939e6a5aa6a7" type="tarbz2">http://gd.tuwien.ac.at/pub/gnupg/gnupg/gnupg-2.1.17.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>openldap-client</Dependency>
+            <Dependency>npth</Dependency>
+            <Dependency>libassuan</Dependency>
             <Dependency>pinentry</Dependency>
-            <Dependency>npth-devel</Dependency>
-            <Dependency>libassuan-devel</Dependency>
-            <Dependency>libksba-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>libksba</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>bzip2</Dependency>
-            <Dependency>texinfo</Dependency>
-            <Dependency>gnutls-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>libusb-compat</Dependency>
         </BuildDependencies>
         <Patches>
         <!--<Patch level="1">protect-tool-env.patch</Patch>-->

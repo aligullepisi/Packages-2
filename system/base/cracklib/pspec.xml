@@ -15,8 +15,8 @@
         <Description>CrackLib tests passwords to determine whether they match certain security-oriented characteristics, with the purpose of stopping users from choosing passwords that are easy to guess.</Description>
         <Archive sha1sum="9199e7b8830717565a844430653f5a90a04fcd65" type="targz">https://github.com/cracklib/cracklib/releases/download/cracklib-2.9.6/cracklib-2.9.6.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>python</Dependency>
             <Dependency>miscfiles</Dependency>
         </BuildDependencies>
     </Source>
@@ -34,17 +34,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/cracklib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>cracklib-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for cracklib</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">cracklib</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

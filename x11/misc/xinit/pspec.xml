@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>util-macros</Dependency>
             <Dependency>xorg-proto</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>libX11</Dependency>
         </BuildDependencies>
         <Patches>
             <!--Patch level="1">xinit-1.0.2-client-session.patch</Patch-->

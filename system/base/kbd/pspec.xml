@@ -20,7 +20,7 @@
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>gzip</Dependency>
-            <Dependency>pam-devel</Dependency>
+            <Dependency>pam</Dependency>
 	    <Dependency>check-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -35,13 +35,13 @@
             <Patch level="1">archlinux/fix-euro2.patch</Patch>
 
             <!-- Pisi Linux patches -->
-            <Patch level="1">pisilinux/unicode_start-default-font.patch</Patch>
-            <Patch level="1">pisilinux/tr-keypad-comma.patch</Patch>
-            <Patch level="1">pisilinux/tr-no-meta_space.patch</Patch>
-            <Patch level="1">pisilinux/trq-capslock-fix.patch</Patch>
-            <Patch level="1">pisilinux/currency.patch</Patch>
-            <Patch level="1">pisilinux/trf-keymap-fixes.patch</Patch>
-            <Patch level="1">pisilinux/trf-capslock-fix.patch</Patch>
+            <Patch level="1">limelinux/unicode_start-default-font.patch</Patch>
+            <Patch level="1">limelinux/tr-keypad-comma.patch</Patch>
+            <Patch level="1">limelinux/tr-no-meta_space.patch</Patch>
+            <Patch level="1">limelinux/trq-capslock-fix.patch</Patch>
+            <Patch level="1">limelinux/currency.patch</Patch>
+            <Patch level="1">limelinux/trf-keymap-fixes.patch</Patch>
+            <Patch level="1">limelinux/trf-capslock-fix.patch</Patch>
 	    
         </Patches>
     </Source>
@@ -63,9 +63,9 @@
             <Path fileType="data">/usr/share/kbd/consoletrans</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile permission="0644" target="/usr/share/kbd/consolefonts/lat5u-12.psf.gz">pisilinux/lat5u-12.psf.gz</AdditionalFile>
-            <AdditionalFile permission="0644" target="/usr/share/kbd/consolefonts/lat5u-14.psf.gz">pisilinux/lat5u-14.psf.gz</AdditionalFile>
-            <AdditionalFile permission="0644" target="/usr/share/kbd/consolefonts/lat5u-16.psf.gz">pisilinux/lat5u-16.psf.gz</AdditionalFile>
+            <AdditionalFile permission="0644" target="/usr/share/kbd/consolefonts/lat5u-12.psf.gz">limelinux/lat5u-12.psf.gz</AdditionalFile>
+            <AdditionalFile permission="0644" target="/usr/share/kbd/consolefonts/lat5u-14.psf.gz">limelinux/lat5u-14.psf.gz</AdditionalFile>
+            <AdditionalFile permission="0644" target="/usr/share/kbd/consolefonts/lat5u-16.psf.gz">limelinux/lat5u-16.psf.gz</AdditionalFile>
 
             <!-- Grabbed from ftp://ftp.linux-france.org/pub/macintosh -->
             <AdditionalFile permission="0644" target="/usr/share/kbd/keymaps/mac/all/mac-fr-ext_new.map.gz">mandriva/mac-fr-ext_new.kmap.gz</AdditionalFile>

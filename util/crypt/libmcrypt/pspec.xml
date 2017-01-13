@@ -26,16 +26,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/libmcrypt</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libmcrypt-devel</Name>
-        <Summary>Development files for libmcrypt</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libmcrypt</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/share/aclocal</Path>

@@ -18,7 +18,7 @@ movetobin = ["arch", "basename", "cat", "chgrp", "chmod", "chown", "cp", "cut", 
 symtousrbin = ["env", "cut", "readlink"]
 
 def setup():
-    pisitools.cflags.add("-fno-strict-aliasing -fPIC -D_GNU_SOURCE=1")
+   # pisitools.cflags.add("-fno-strict-aliasing -fPIC -D_GNU_SOURCE=1")
     #shelltools.export("gl_cv_func_printf_directive_n", "yes")
     #shelltools.export("gl_cv_func_isnanl_works", "yes")
     shelltools.export("DEFAULT_POSIX2_VERSION", "200112")
@@ -36,11 +36,6 @@ def setup():
 def build():
     autotools.make()
 
-def check():
-    # check does horrible things like modifying mtab or loop mounting
-    # use it if you are too curious
-    # autotools.make("check")
-    pass
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

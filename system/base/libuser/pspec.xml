@@ -15,10 +15,10 @@
         <Description>libuser implements a standardized interface for manipulating and administering user and group accounts. The library uses pluggable back-ends to interface to its data sources.</Description>
         <Archive sha1sum="e0fe60dd38f3b5777d0a4ad664725eddd18ef310" type="tarxz">https://fedorahosted.org/releases/l/i/libuser/libuser-0.62.tar.xz</Archive>
         <BuildDependencies>
-                <Dependency>pam-devel</Dependency>
-                <Dependency>popt-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>python-devel</Dependency>
+                <Dependency>pam</Dependency>
+                <Dependency>popt</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>python</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>libuser-0.56.15-fix_blowfish.patch</Patch>
@@ -44,33 +44,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib</Path>
-        </Files>
-    </Package>
-
-    <!-- WARNING: To be removed in Bootstrap -->
-    <!--Package>
-        <Name>libuser-ldap</Name>
-        <PartOf>server.misc</PartOf>
-        <Summary>LDAP library of libuser</Summary>
-        <RuntimeDependencies>
-            <Dependency>openldap-client</Dependency>
-            <Dependency>libuser</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/libuser/*ldap*</Path>
-        </Files>
-    </Package-->
-
-
-    <Package>
-        <Name>libuser-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libuser</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libuser</Dependency>
-	    <Dependency>glib2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

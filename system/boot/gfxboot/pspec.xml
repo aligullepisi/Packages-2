@@ -9,6 +9,7 @@
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Packager>
+        <ExcludeArch>armv7h</ExcludeArch>
         <License>GPLv2</License>
         <Icon>gfxboot</Icon>
         <IsA>app:console</IsA>
@@ -17,10 +18,9 @@
         <Archive sha1sum="fe0174f38b5001b6173c9cbea0108a332ea1628b" type="targz">https://github.com/openSUSE/gfxboot/archive/4.5.12.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>xmlto</Dependency>
-            <Dependency>freetype-devel</Dependency>
+            <Dependency>freetype</Dependency>
             <Dependency>util-linux</Dependency>
             <Dependency>libxslt</Dependency>
-            <Dependency>lynx</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="0">productname.patch</Patch>
@@ -44,9 +44,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-08</Date>
+            <Date>2016-12-21</Date>
             <Version>4.5.12</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

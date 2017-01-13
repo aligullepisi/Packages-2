@@ -20,8 +20,8 @@
         </AdditionalFiles>
         <BuildDependencies>
             <!--Dependency>gtk3-devel</Dependency-->
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>intltool</Dependency>
             <!--Dependency>qt5-base-devel</Dependency-->
         </BuildDependencies>
@@ -74,47 +74,10 @@
             <Path fileType="library">/usr/lib/libscim-*</Path>
             <Path fileType="library">/usr/lib/scim-1.0/*/Config</Path>
             <Path fileType="library">/usr/lib/scim-1.0/*/IMEngine</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>scim-devel</Name>
-        <Summary>Includes and pkgconfig for scim development</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">scim-core</Dependency>
-            <!--Dependency>gtk3-devel</Dependency-->
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-
-    <!--Package>
-        <Name>scim-immodule-gtk3</Name>
-        <Summary>IM Module for GTK3 applications</Summary>
-        <RuntimeDependencies>
-            <Dependency>gtk3</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>pango</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/gtk-3.0</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>scim-immodule-gtk2</Name>
-        <Summary>IM Module for GTK2 applications</Summary>
-        <RuntimeDependencies>
-            <Dependency>gtk2</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>pango</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/gtk-2.0</Path>
-        </Files>
-    </Package-->
 
     <History>
         <Update release="1">

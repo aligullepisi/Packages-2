@@ -19,23 +19,23 @@
             <Dependency>argyllcms</Dependency>
             <Dependency>vala-devel</Dependency>
             <Dependency>lcms2-devel</Dependency>
-            <Dependency>sane-backends-devel</Dependency>
+            <Dependency>sane-backends</Dependency>
             <Dependency>bash-completion</Dependency>
             <Dependency>eudev-devel</Dependency>
             <Dependency>libtool</Dependency>
             <Dependency>gtk-doc</Dependency>
             <Dependency>perl</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>icu4c-devel</Dependency>
-            <Dependency>libgusb-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libgusb</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>sqlite</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>gobject-introspection</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -71,35 +71,14 @@
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/bash-completion</Path>
             <Path fileType="data">/usr/libexec/colord-sane</Path>
-        </Files>
-        <Provides>
-            <COMAR script="service.py">System.Service</COMAR>
-        </Provides>
-    </Package>
-
-    <Package>
-        <Name>colord-devel</Name>
-        <Summary>Development files for colord</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">colord</Dependency>
-            <Dependency>lcms2-devel</Dependency>
-            <Dependency>libgusb-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/share/vala/vapi/colord.vapi</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
-    </Package>
- 
-    <Package>
-        <Name>shared-color-profiles</Name>
-        <Files>
-            <Path fileType="data">/usr/share/color</Path>
-        </Files>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
     </Package>
 
     <History>

@@ -14,9 +14,9 @@
         <Description>The Bumblebee Project proudly presents version 3.0 of Bumblebee, a project aiming to support NVIDIA Optimus technology under Linux. After two months of hard work this version has finally been considered stable enough for release.</Description>
         <Archive sha1sum="a715f4aa1b0c24dd4352ff7e0bc390f1e4e03cd9" type="targz">http://www.bumblebee-project.org/bumblebee-3.2.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libbsd-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>libbsd</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>glib2</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">bb-hexadecimal.patch</Patch> 

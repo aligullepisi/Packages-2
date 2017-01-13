@@ -45,24 +45,13 @@
             <Path fileType="config">/etc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/hosts.allow">hosts.allow</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/hosts.deny">hosts.deny</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>tcp-wrappers-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for tcp-wrappers</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">tcp-wrappers</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
-        </Files>
     </Package>
 
     <History>

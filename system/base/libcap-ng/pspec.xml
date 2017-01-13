@@ -16,8 +16,8 @@
         <Archive sha1sum="de8ea2c89cb1506a578de7cb032da34c970dd035" type="targz">http://people.redhat.com/sgrubb/libcap-ng/libcap-ng-0.7.7.tar.gz</Archive>
         <BuildDependencies>
             <!-- This is only a build dependency -->
-            <Dependency>attr-devel</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>python</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch level="1">libcap-ng-0.6.5-device.patch</Patch>-->
@@ -33,6 +33,10 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
     </Package>
 
@@ -58,21 +62,6 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="man">/usr/share/man/man8/*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libcap-ng-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libcap-ng</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libcap-ng</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="data">/usr/share/aclocal</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
     </Package>
 

@@ -15,13 +15,13 @@
         <Description>CMake, the cross-platform, open-source make system. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.</Description>
         <Archive sha1sum="d00c720847c0a2aff817c36377569efbb677fb08" type="targz">https://cmake.org/files/v3.7/cmake-3.7.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>curl-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>libarchive-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libuv-devel</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>libuv</Dependency>
         </BuildDependencies>
     </Source>
 

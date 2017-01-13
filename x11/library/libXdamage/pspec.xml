@@ -15,7 +15,7 @@
         <Description>LibXdamage provides an X Window System client interface to the DAMAGE extension to the X protocol. The Damage extension provides for notification of when on-screen regions have been 'damaged' (altered).</Description>
         <Archive sha1sum="c3fc0f4b02dce2239bf46c82a5f06b06585720ae" type="tarbz2">mirrors://xorg/individual/lib/libXdamage-1.1.4.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXfixes</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
@@ -29,21 +29,8 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXdamage-devel</Name>
-        <Summary>Development files for libXdamage</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libXdamage</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -65,6 +52,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

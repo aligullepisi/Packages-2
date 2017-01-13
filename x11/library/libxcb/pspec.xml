@@ -15,8 +15,8 @@
         <Description>The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint, latency hiding, direct access to the protocol, improved threading support, and extensibility.</Description>
         <Archive sha1sum="28e47aa699d2c2cffed31d1aa2473a9fefe77f17" type="tarbz2">http://xcb.freedesktop.org/dist/libxcb-1.11.1.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libXau-devel</Dependency>
-            <Dependency>libXdmcp-devel</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libXdmcp</Dependency>
             <Dependency>libxslt</Dependency>
             <Dependency>util-macros</Dependency>
             <Dependency versionFrom="1.11">xcb-proto</Dependency>
@@ -37,21 +37,8 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libxcb-devel</Name>
-        <Summary>Development files for libxcb</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libxcb</Dependency>
-            <Dependency>libXau-devel</Dependency>
-            <Dependency>libXdmcp-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/xcb</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile target="/usr/lib/pkgconfig/pthread-stubs.pc" permission="0644" owner="root">pthread-stubs.pc</AdditionalFile>
@@ -76,6 +63,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

@@ -15,11 +15,11 @@
         <Description>sudo allows certain users/groups to run commands with root user privileges.</Description>
         <Archive sha1sum="3ac48ff09c127e1b7f53983ac167a14ad3448eff" type="targz">http://www.sudo.ws/sudo/dist/sudo-1.8.18.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>nss-devel</Dependency>
-            <Dependency>audit-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency versionFrom="2.1.26">cyrus-sasl-devel</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>audit</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency versionFrom="2.1.26">cyrus-sasl</Dependency>
             <Dependency versionFrom="2.4.41">openldap-client</Dependency>
         </BuildDependencies>
     </Source>

@@ -26,16 +26,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libFS-devel</Name>
-        <Summary>Development files for libFS</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libFS</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

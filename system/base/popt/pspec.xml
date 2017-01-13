@@ -28,17 +28,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>popt-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for popt</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">popt</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/popt.h</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>

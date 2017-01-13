@@ -21,15 +21,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>ucl-devel</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">ucl</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

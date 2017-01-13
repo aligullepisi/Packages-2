@@ -15,7 +15,7 @@
         <Description>xorg-input-vesa contains the X.Org driver for Generic VESA cards.</Description>
         <Archive sha1sum="88e74ccc5c11fdb60539bd474ba978eeb4f28a23" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-vesa-2.3.4.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>xorg-server</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -16,17 +16,17 @@
         <Archive sha1sum="0922fc31f8fc82ac20e326a6c9eb33ed7d57ad87" type="tarbz2">https://www.x.org/releases/individual/app/xdpyinfo-1.3.2.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xorg-util</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libdmx-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libXxf86dga-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXtst-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libdmx</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libXxf86dga</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXcomposite</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -12,10 +12,10 @@
         <IsA>data</IsA>
         <Summary>Lime Linux gfxboot install theme</Summary>
         <Description>Gfxtheme install package for Lime Linux</Description>
-        <Archive sha1sum="d2f50e7222c71b23996f4e7542d4ff335a3595b2" type="targz">https://sourceforge.net/projects/pisi-source/files/limelinux/gfxboot-limelinux-install.tar.gz</Archive>
+        <Archive sha1sum="00e9e3fc65346a6d19584f7bee7c4c96c670c178" type="targz">https://sourceforge.net/projects/pisi-source/files/limelinux/gfxtheme-limelinux-install-0.8.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gfxboot</Dependency>
-            <Dependency>fribidi-devel</Dependency>
+            <Dependency>fribidi</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,7 +29,7 @@
     <History>
         <Update release="1">
             <Date>2014-08-04</Date>
-            <Version>0.4</Version>
+            <Version>0.8</Version>
             <Comment>First release</Comment>
             <Name>Ergün Salman</Name>
             <Email>poyraz76@limelinux.com</Email>

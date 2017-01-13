@@ -17,13 +17,13 @@
         <Archive sha1sum="20ec8daa09d2bd5bb2437628a2416f9a4ca0fa63" type="targz">https://sourceforge.net/projects/virtualgl/files/2.5.1/VirtualGL-2.5.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
-            <Dependency>fltk-devel</Dependency>
-            <Dependency>libXv-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>fltk</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -15,10 +15,10 @@
         <Description>Libxml2 is the XML C parser and toolkit developed for the Gnome project (but usable outside of the Gnome platform).</Description>
         <Archive sha1sum="0301ce933637e0ceda049047dbefd18714f59b6e" type="targz">ftp://xmlsoft.org/libxml2/libxml2-2.9.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
         <Patches>
 <!--             <Patch level="1">CVE-2014-0191.patch</Patch> -->
@@ -48,19 +48,7 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libxml2-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libxml2</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libxml2</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
@@ -86,6 +74,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

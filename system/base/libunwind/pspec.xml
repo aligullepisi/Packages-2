@@ -29,16 +29,6 @@
             <Path fileType="doc">/usr/share/doc/libunwind</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libunwind-devel</Name>
-        <Summary>Development files for libunwind</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libunwind</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>

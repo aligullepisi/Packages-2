@@ -16,8 +16,8 @@
         <Description>augeas is a library for programmatically editing configuration files. Augeas parses configuration files into a tree structure, which it exposes through its public API.</Description>
         <Archive sha1sum="27b563bb173eed6163d76b5b21f3a1566c82351b" type="targz">http://download.augeas.net/augeas-1.4.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -34,17 +34,6 @@
             <Path fileType="data">/usr/share/vim/vimfiles</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>augeas-devel</Name>
-        <Summary>Development files for augeas</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">augeas</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man/man3</Path>

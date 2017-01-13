@@ -16,14 +16,14 @@
         <Archive sha1sum="cd122d30f93db66f5153700500c3253653245542" type="tarxz">http://www.midnight-commander.org/downloads/mc-4.8.15.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gpm</Dependency>
-            <Dependency>check-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>check</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>slang-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>samba-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>slang</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>samba</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libutil-linux</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -17,8 +17,8 @@
         <Description>PisiYap is a simple graphical user interface for easily creating PiSi source files.</Description>
         <Archive sha1sum="dae877d5fbd0709803a503af7805d12928a69707" type="targz">https://github.com/mthnzbk/pisiyap/archive/pisiyap-beta2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>python-qt5-devel</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>python-qt5</Dependency>
             <Dependency>python-setuptools</Dependency>
             <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>        

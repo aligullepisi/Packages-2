@@ -15,8 +15,8 @@
         <Description>LibXScrnSaver allows using screensavers in X clients.</Description>
         <Archive sha1sum="7b8298eec371c33a71232e3653370a98f03c6c88" type="tarbz2">mirrors://xorg/individual/lib/libXScrnSaver-1.2.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
@@ -30,20 +30,8 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXScrnSaver-devel</Name>
-        <Summary>Development files for libXScrnSaver</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libXScrnSaver</Dependency>
-            <Dependency>libXext-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
@@ -66,6 +54,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

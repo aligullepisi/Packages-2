@@ -15,8 +15,8 @@
         <Description>strace intercepts and records the system calls called and received by a running process. strace can print a record of each system call, its arguments and its return value.</Description>
         <Archive sha1sum="5e6c78f0dc75e64814e5f8ef49c66823b7f00ae9" type="tarxz">mirrors://sourceforge/strace/strace-4.9.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libaio-devel</Dependency>
-	    <Dependency>libunwind-devel</Dependency>
+            <Dependency>libaio</Dependency>
+	    <Dependency>libunwind</Dependency>
         </BuildDependencies>
         <Patches>
 	  <!--<Patch level="1">strace-fix-ftbfs.patch</Patch> -->

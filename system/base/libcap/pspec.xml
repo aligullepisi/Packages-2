@@ -16,8 +16,8 @@
         <Description>libcap is a library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.</Description>
         <Archive sha1sum="f0b102e4a68e1bbdcb6b143b63c34a250e473088" type="tarxz">https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.25.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>pam</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -34,17 +34,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="config">/etc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libcap-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libcap</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libcap</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
         </Files>

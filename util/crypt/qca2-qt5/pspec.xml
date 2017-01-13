@@ -15,8 +15,8 @@
         <Description>QCA aims to provide a straightforward and cross-platform crypto API, using Qt datatypes and conventions. QCA separates the API from the implementation, using plugins known as Providers. QCA2 has been re-written for QT4.</Description>
         <Archive sha1sum="a4df34c2147c721109594c6dc822f693f572ad04" type="tarxz">http://download.kde.org/stable/qca/2.1.1/src/qca-2.1.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency versionFrom="5.5.1">qt5-base-devel</Dependency>
-            <Dependency>nss-devel</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>nss</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>cmake</Dependency>
         </BuildDependencies>
@@ -29,7 +29,7 @@
     <Package>
         <Name>qca2-qt5</Name>
         <RuntimeDependencies>
-            <Dependency versionFrom="5.5.1">qt5-base</Dependency>
+            <Dependency>qt5-base</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
@@ -40,16 +40,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/qca</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>qca2-qt5-devel</Name>
-        <Summary>Development files for qca2</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">qca2-qt5</Dependency>
-            <Dependency versionFrom="5.5.1">qt5-base-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/qt5/Qca-qt5/QtCrypto</Path>
             <Path fileType="data">/usr/lib/pkgconfig/qca2.pc</Path>
             <Path fileType="data">/usr/share/qt4/mkspecs/features</Path>

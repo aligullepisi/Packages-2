@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Pluggable Authentication Modules</Summary>
         <Description>PAM (Pluggable Authentication Modules) is a system security tool that allows system administrators to set authentication policy without having to recompile programs that handle authentication.</Description>
-        <Archive sha1sum="3620ab5f5e02272825c426622761a19a1a2facca" type="tarbz2">http://www.linux-pam.org/library/Linux-PAM-1.2.1.tar.bz2</Archive>
+        <Archive sha1sum="e956252e81d824c35a60c9b50919ca0767f8a8ec" type="tarbz2">http://www.linux-pam.org/library/Linux-PAM-1.3.0.tar.bz2</Archive>
         <AdditionalFiles>
             <AdditionalFile target="dlopen.sh" permission="0755">dlopen.sh</AdditionalFile>
             <AdditionalFile target="dlopen-test.sh" permission="0755">dlopen-test.sh</AdditionalFile>
@@ -21,8 +21,8 @@
         <BuildDependencies>
             <Dependency>perl</Dependency>
             <Dependency>gettext</Dependency>
-            <Dependency>cracklib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
+            <Dependency>cracklib</Dependency>
+            <Dependency>libxslt</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </BuildDependencies>
         <Patches>
@@ -49,6 +49,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/limit.d/90-nproc.conf">90-nproc.conf</AdditionalFile>
@@ -56,19 +58,6 @@
         <Provides>
             <COMAR script="postInstall.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>pam-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for pam</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">pam</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
-        </Files>
     </Package>
 
     <History>

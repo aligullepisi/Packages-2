@@ -27,21 +27,9 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/libgpg-error/</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgpg-error-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libgpg-error</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgpg-error</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="executable">/usr/bin/gpg-error-config</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
     </Package>
@@ -60,6 +48,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

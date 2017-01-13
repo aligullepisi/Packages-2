@@ -42,7 +42,7 @@
             <Dependency>baselayout</Dependency>
             <Dependency>util-linux</Dependency>
             <Dependency>wireless-tools</Dependency>
-            <Dependency>pisilinux-python</Dependency>
+            <Dependency>limelinux-python</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/conf.d</Path>

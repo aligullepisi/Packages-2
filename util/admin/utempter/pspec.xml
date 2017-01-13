@@ -27,21 +27,11 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>utempter-devel</Name>
-        <Summary>Development files for utempter</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">utempter</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-        </Files>
     </Package>
 
     <History>

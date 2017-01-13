@@ -18,14 +18,7 @@
             <Dependency>gettext</Dependency>
         </BuildDependencies>
         <Patches>
-            <!--<Patch level="1">gettext.patch</Patch>-->
             <Patch>tr.patch</Patch>
-            <Patch level="1">mingetty-utf8.patch</Patch>
-            <!-- Fixes the translation issues mentioned in # 5856 -->
-            <!--<Patch level="1">login-locale.patch</Patch>-->
-
-            <!-- Grab last modifications from openSUSE -->
-            <!--<Patch>mingetty-1.0.7s-suse.patch</Patch>-->
         </Patches>
     </Source>
 
@@ -44,9 +37,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-04-27</Date>
+            <Date>2016-12-21</Date>
             <Version>1.0.8</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

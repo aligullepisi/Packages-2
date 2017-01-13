@@ -14,20 +14,20 @@
         <Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
         <Archive sha1sum="b0af0701ef9d6c7ede9c578366b12a70ac47ab66" type="tarxz">mirrors://gnome/vte/0.28/vte-0.28.2.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>fontconfig-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>cairo</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>atk-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>graphite2-devel</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>graphite2</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">vte-0.28.2-limit-arguments.patch</Patch>
@@ -61,6 +61,8 @@
             <Path fileType="data">/usr/share/vte</Path>
             <Path fileType="data">/usr/share/pygtk</Path>
             <Path fileType="data">/usr/share/gir-1.0/Vte-0.0.gir</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -70,21 +72,6 @@
         <Summary>GTK reference documents for vte</Summary>
         <Files>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>vte-devel</Name>
-        <Summary>Development files for vte</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">vte</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 

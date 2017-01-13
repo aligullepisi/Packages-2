@@ -15,22 +15,18 @@
         <Description>Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)</Description>
         <Archive sha1sum="301f186c24afb882a3ca73d19a102a2ce6f456c3" type="tarxz">http://ftp.gnu.org/gnu/coreutils/coreutils-8.25.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>perl</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>attr</Dependency>
             <Dependency>shadow</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>libcap</Dependency>
             <Dependency>texinfo</Dependency>
         </BuildDependencies>
         <Patches>
-<!--             <Patch level="1">coreutils-8.22-shuf-segfault.patch</Patch> -->
-            <!-- PisiLinux patches -->
+            <!-- limelinux patches -->
             <Patch level="0">remove_am_silent_rules.patch</Patch>
-<!--             <Patch level="0">add-more-dircolors.patch</Patch> -->
-<!--             <Patch level="1">0001-cp-don-t-reserve-a-device-number.patch</Patch> -->
         </Patches>
     </Source>
 
@@ -40,10 +36,11 @@
             <Dependency>acl</Dependency>
             <Dependency>attr</Dependency>
             <Dependency>gmp</Dependency>
-            <Dependency>libcap</Dependency>            
+            <Dependency>libcap</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/libexec</Path>
@@ -53,13 +50,16 @@
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
+         <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/sbin/adduser">adduser</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-04-27</Date>
+            <Date>2016-12-21</Date>
             <Version>8.25</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

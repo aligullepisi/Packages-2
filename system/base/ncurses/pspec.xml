@@ -30,21 +30,9 @@
             <Path fileType="data">/usr/share/tabset</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>ncurses-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for ncurses</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">ncurses</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="library">/usr/lib/static</Path>
-            <Path fileType="library">/usr/lib32/static</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
             <Path fileType="data">/usr/share/pkgconfig</Path>
         </Files>
@@ -65,6 +53,7 @@
         <Files>
             <Path fileType="library">/usr/lib32</Path>
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/static</Path>
         </Files>
     </Package>
 

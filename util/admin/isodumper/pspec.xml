@@ -24,7 +24,7 @@
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>intltool</Dependency>
-            <Dependency>imagemagick-devel</Dependency>
+            <Dependency>imagemagick</Dependency>
         </BuildDependencies>
     </Source>
     

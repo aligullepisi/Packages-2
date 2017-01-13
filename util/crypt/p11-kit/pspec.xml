@@ -16,8 +16,8 @@
         <Description>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Description>
         <Archive sha1sum="b91c26cf4270ef8223c105016ea0eab581403af4" type="targz">http://p11-glue.freedesktop.org/releases/p11-kit-0.23.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency versionFrom="4.4">libtasn1-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
+            <Dependency versionFrom="4.4">libtasn1</Dependency>
+            <Dependency>libffi</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -34,19 +34,8 @@
             <Path fileType="doc">/usr/share/p11-kit</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="config">/etc/pkcs11</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>p11-kit-devel</Name>
-        <Summary>p11-kit için geliştirme dosyaları</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">p11-kit</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -66,6 +55,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

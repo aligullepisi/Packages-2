@@ -15,13 +15,13 @@
         <Description>Freeglut is the OpenGL Utility Toolkit, a window system independent toolkit for writing OpenGL programs. It implements a simple windowing application programming interface (API) for OpenGL. Freeglut makes it considerably easier to learn about and explore OpenGL Programming.</Description>
         <Archive sha1sum="fca52242f9344627a30f11487ee42002e6b0dacd" type="targz">mirrors://sourceforge/freeglut/freeglut-3.0.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>mesa-devel</Dependency>
-            <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrandr</Dependency>
             <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
@@ -38,16 +38,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/freeglut</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>freeglut-devel</Name>
-        <Summary>Development files for freeglut</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">freeglut</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
@@ -67,7 +57,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">freeglut</Dependency>
-            
             <Dependency>mesa-32bit</Dependency>
             <Dependency>libXi-32bit</Dependency>
             <Dependency>libXxf86vm-32bit</Dependency>

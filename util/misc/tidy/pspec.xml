@@ -22,16 +22,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>tidy-devel</Name>
-        <Summary>Development files for tidy</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">tidy</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

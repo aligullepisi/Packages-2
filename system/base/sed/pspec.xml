@@ -15,7 +15,7 @@
         <Description>Sed is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).</Description>
         <Archive sha1sum="2f24b4624d1a3080626b11610053996ec30ba0f1" type="targz">mirrors://gnu/sed/sed-4.2.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>gettext</Dependency>
         </BuildDependencies>
     </Source>
 

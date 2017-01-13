@@ -16,8 +16,8 @@
         <Archive sha1sum="da962c0affb27eae11aa9b6fbd751c3699717b36" type="tarbz2">http://upx.sourceforge.net/download/upx-3.91-src.tar.bz2</Archive>
         <Archive sha1sum="5ec1c4606fec88c770a9712073e83916f8aed173" type="tarbz2">http://downloads.sourceforge.net/sevenzip/lzma465.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>ucl-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>ucl</Dependency>
+            <Dependency>zlib</Dependency>
         </BuildDependencies>
     </Source>
 

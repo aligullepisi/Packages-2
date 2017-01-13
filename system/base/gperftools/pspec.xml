@@ -16,7 +16,7 @@
         <Description>Perf Tools is a collection of a high-performance multi-threaded malloc() implementation, plus some pretty nifty performance analysis tools.</Description>
         <Archive sha1sum="13b904d0d1f220e43e4495f3403ee280c6da26ea" type="targz">https://github.com/gperftools/gperftools/releases/download/gperftools-2.4/gperftools-2.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libunwind-devel</Dependency>
+            <Dependency>libunwind</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -31,18 +31,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/gperftools/COPYING</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gperftools-devel</Name>
-        <IsA>library</IsA>
-        <Summary>Development headers for gperftools</Summary>
-        <Description>gperftools-devel provides development headers for gperftools.</Description>
-        <RuntimeDependencies>
-            <Dependency release="current">gperftools</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

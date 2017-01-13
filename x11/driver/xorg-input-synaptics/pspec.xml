@@ -15,10 +15,10 @@
         <Description>xorg-input-synaptics contains the X.Org driver for Synaptics touchpad devices.</Description>
         <Archive sha1sum="aaeb19837e63f3c82dc202ece0abff20f98ceb1a" type="tarbz2">http://ftp.x.org/pub/individual/driver/xf86-input-synaptics-1.8.3.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libXtst-devel</Dependency>
-            <Dependency>libmtdev-devel</Dependency>
-            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libmtdev</Dependency>
+            <Dependency>xorg-server</Dependency>
             <Dependency>libevdev</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>      
@@ -42,23 +42,13 @@
             <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/xorg.conf.d/50-synaptics.conf">50-synaptics.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/70-touchpad-quirks.rules">70-touchpad-quirks.rules</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>xorg-input-synaptics-devel</Name>
-        <Summary>Development files for xorg-input-synaptics</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">xorg-input-synaptics</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

@@ -15,7 +15,7 @@
         <Description>libdrm is a library providing the userspace interface to kernel DRM services.</Description>
         <Archive sha1sum="5c9cd0c45d92bcd4809e42681494163ba9f31f3d" type="tarbz2">https://dri.freedesktop.org/libdrm/libdrm-2.4.71.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency versionFrom="0.13.4">libpciaccess-devel</Dependency>
+            <Dependency versionFrom="0.13.4">libpciaccess</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
@@ -31,6 +31,8 @@
             <Path fileType="data">/lib/udev/rules.d</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/91-drm-modeset.rules">91-drm-modeset.rules</AdditionalFile>
@@ -94,25 +96,6 @@
     </Package>
 
     <Package>
-        <Name>libdrm-devel</Name>
-        <Summary>Development files for libdrm</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libdrm</Dependency>
-            <Dependency release="current">libdrm-intel</Dependency>
-            <Dependency release="current">libdrm-nouveau</Dependency>
-            <Dependency release="current">libdrm-radeon</Dependency>
-            <Dependency release="current">libdrm-amd</Dependency>
-            <Dependency release="current">libkms</Dependency>
-            <!--Dependency>mesa-devel</Dependency--><!--circle dep-->
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
-        </Files>
-    </Package>
-
-    <Package>
         <Name>libdrm-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for libdrm</Summary>
@@ -128,6 +111,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libdrm.*</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

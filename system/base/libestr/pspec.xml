@@ -21,17 +21,6 @@
         <Files>
             <Path fileType="library">/usr/lib/libestr.so*</Path>
             <Path fileType="doc">/usr/share/doc/libestr</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libestr-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libestr</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libestr</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/libestr.h</Path>
             <Path fileType="data">/usr/lib/pkgconfig/libestr.pc</Path>
         </Files>

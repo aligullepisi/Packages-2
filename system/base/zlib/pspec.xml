@@ -30,19 +30,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libminizip*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>minizip-devel</Name>
-        <PartOf>util.archive</PartOf>
-        <Summary>Development files for minizip</Summary>
-        <BuildType>minizip</BuildType>
-        <RuntimeDependencies>
-            <Dependency release="current">minizip</Dependency>
-            <Dependency release="current">zlib-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/minizip</Path>
             <Path fileType="data">/usr/lib/pkgconfig/minizip.pc</Path>
         </Files>
@@ -55,19 +42,7 @@
             <Path fileType="library">/usr/lib/libz.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>zlib-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for zlib</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">zlib</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="data">/usr/lib/pkgconfig/zlib.pc</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="header">/usr/include/z*.h</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
             <Path fileType="doc">/usr/share/doc/zlib/algorithm.txt</Path>
@@ -89,6 +64,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libz.so*</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

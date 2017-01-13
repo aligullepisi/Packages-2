@@ -51,9 +51,6 @@ def setup():
 def build():
     autotools.make()
 
-# some tests fail. let's disable testing temporarily
-# def check():
-    #autotools.make("test")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "altinstall")
@@ -61,5 +58,11 @@ def install():
     pisitools.dosym("/usr/bin/python%s" % PythonVersion, "/usr/bin/python")
     pisitools.dosym("/usr/bin/python%s-config" % PythonVersion, "/usr/bin/python-config")
     pisitools.dosym("/usr/lib/python%s/pdb.py" % PythonVersion, "/usr/bin/pdb")
+
+    pisitools.remove("/usr/bin/idle")
+
+    pisitools.removeDir("/usr/lib/python2.7/lib-tk")
+    pisitools.removeDir("/usr/lib/python2.7/idlelib")
+
 
     pisitools.dodoc("LICENSE", "README")

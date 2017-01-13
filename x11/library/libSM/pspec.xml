@@ -16,7 +16,7 @@
         <Archive sha1sum="e6d5dab6828dfd296e564518d2ed0a349a25a714" type="tarbz2">mirrors://xorg/individual/lib/libSM-1.2.2.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libICE-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>libutil-linux</Dependency>
             <Dependency>util-macros</Dependency>
             <Dependency>xorg-proto</Dependency>
             <Dependency>xtrans</Dependency>
@@ -33,20 +33,8 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libSM-devel</Name>
-        <Summary>Development files for libSM</Summary>
-        <RuntimeDependencies>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency release="current">libSM</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="doc">/usr/share/doc/*.xml</Path>
         </Files>
     </Package>
@@ -69,6 +57,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

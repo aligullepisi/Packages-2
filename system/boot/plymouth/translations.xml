@@ -32,8 +32,8 @@
     </Package>
 
     <Package>
-        <Name>plymouth-theme-pisilinux</Name>
-        <Summary xml:lang="tr">plymouth için Pisi Linux teması</Summary>
+        <Name>plymouth-theme-limelinux</Name>
+        <Summary xml:lang="tr">plymouth için Lime Linux teması</Summary>
     </Package>
 
     <Package>

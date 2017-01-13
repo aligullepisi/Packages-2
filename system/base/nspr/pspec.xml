@@ -24,17 +24,6 @@
         <Name>nspr</Name>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>nspr-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for nspr</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">nspr</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="executable">/usr/bin</Path>

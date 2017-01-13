@@ -15,9 +15,9 @@
         <Description>LibXvMC is the X-Video Motion Compensation Library.</Description>
         <Archive sha1sum="8c50ee4a43aff84d807da2122ec6b0d8e3ce4635" type="tarbz2">mirrors://xorg/individual/lib/libXvMC-1.0.10.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libX11-devel</Dependency> 
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libXv-devel</Dependency>
+            <Dependency>libX11</Dependency> 
+            <Dependency>libXext</Dependency>
+            <Dependency>libXv</Dependency>
             <Dependency>xorg-proto</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>
@@ -32,23 +32,8 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXvMC-devel</Name>
-        <Summary>Development files for libXvMC</Summary>
-        <RuntimeDependencies>
-            <Dependency>libXv-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency release="current">libXvMC</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="doc">/usr/share/doc/libXvMC/XvMC_API.txt</Path>
         </Files>
     </Package>
@@ -70,6 +55,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

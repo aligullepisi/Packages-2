@@ -15,8 +15,8 @@
         <Description>libssh2 is a library implementing the SSH2 protocol as defined by Internet Drafts: SECSH-TRANS, SECSH-USERAUTH, SECSH-CONNECTION, SECSH-ARCH, SECSH-FILEXFER, SECSH-DHGEX, SECSH-NUMBERS, and SECSH-PUBLICKEY.</Description>
         <Archive sha1sum="02fef9bdafce3da466b36581a4ff53d519637aca" type="targz">https://www.libssh2.org/download/libssh2-1.7.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>zlib</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,17 +29,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libssh2-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libssh2</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libssh2</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>

@@ -23,17 +23,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="info">/usr/share/info</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libunistring-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libunistring</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libunistring</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

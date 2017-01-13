@@ -15,14 +15,14 @@
         <Description>gnutls is a project that aims to develop a library which provides a secure layer, over a reliable transport layer. Currently the GnuTLS library implements the proposed standards by the IETF's TLS working group.</Description>
         <Archive sha1sum="26076d3366e34991997ff02b052d5ea6a21bbcbd" type="tarxz">http://mirror.tje.me.uk/pub/mirrors/ftp.gnupg.org/gnutls/v3.3/gnutls-3.3.16.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>gc-devel</Dependency>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
-            <Dependency>autogen-devel</Dependency>
-            <Dependency>p11-kit-devel</Dependency>
-            <Dependency>libidn-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency versionFrom="3.4">libtasn1-devel</Dependency>
+            <Dependency>gc</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>nettle</Dependency>
+            <Dependency>autogen</Dependency>
+            <Dependency>p11-kit</Dependency>
+            <Dependency>libidn</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency versionFrom="3.4">libtasn1</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -42,24 +42,9 @@
             <Path fileType="data">/usr/share</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gnutls-devel</Name>
-        <Summary>Development files for gnutls</Summary>
-        <RuntimeDependencies>
-            <Dependency>nettle-devel</Dependency>
-            <Dependency>p11-kit-devel</Dependency>
-            <Dependency>libtasn1-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency release="current">gnutls</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
-            <Path fileType="library">/usr/lib32/pkgconfig</Path>
             <Path fileType="data">/usr/share/info/gnutls*</Path>
             <Path fileType="executable">/usr/bin/libgnutls*-config</Path>
         </Files>
@@ -92,6 +77,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

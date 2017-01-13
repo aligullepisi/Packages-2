@@ -16,14 +16,14 @@
         <Description>The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
         <Archive sha1sum="462bca6320535d39b62216d8609da5531bfef0bb" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.27/util-linux-2.27.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>readline</Dependency>
             <Dependency>shadow</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>libcap-ng-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libcap-ng</Dependency>
+            <Dependency>pam</Dependency>
             <!-- <Dependency releaseFrom="2">utempter-devel</Dependency>-->
         </BuildDependencies>
         <Patches>
@@ -98,26 +98,11 @@
             <Path fileType="man">/usr/share/man/man3/uuid*</Path>
             <Path fileType="man">/usr/share/man/man3/libblkid*</Path>
             <Path fileType="man">/usr/share/man/man8/blkid*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libutil-linux-devel</Name>
-        <IsA>header</IsA>
-        <PartOf>system.devel</PartOf>
-        <Summary>libutil-linux header files</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libutil-linux</Dependency>
-        </RuntimeDependencies>
-        <Replaces>
-            <Package>libblkid-devel</Package>
-            <Package>libuuid-devel</Package>
-        </Replaces>
-        <Files>
             <Path fileType="header">/usr/include/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/*.pc</Path>
         </Files>
     </Package>
+
 
     <Package>
         <Name>libutil-linux-32bit</Name>

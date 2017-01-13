@@ -16,7 +16,7 @@
         <Archive sha1sum="e2d300e4b24af5ecd67a1396488893fa44864e36" type="targz">http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz</Archive>
         <Archive sha1sum="9b58a0a48508103352144afee2e47469e74427ba" type="zip">http://www.sqlite.org/2016/sqlite-doc-3110000.zip</Archive>
         <BuildDependencies>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,20 +30,8 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc/sqlite/README</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>sqlite-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for sqlite</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">sqlite</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -62,40 +50,9 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
-
-
-    <!--<Package>
-        <Name>sqlite-tcl</Name>
-        <PartOf>programming.language.tcl</PartOf>
-        <Summary>sqlite Tcl Extension Architecture (TEA)</Summary>
-        <BuildDependencies>
-            <Dependency>tcl-devel</Dependency>
-        </BuildDependencies>
-        <RuntimeDependencies>
-            <Dependency>sqlite</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/sqlite3.8.10.2</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>sqlite-tcl-32bit</Name>
-        <PartOf>emul32</PartOf>
-        <Summary>sqlite-tcl-32bit için paylaşımlı kitaplıklar</Summary>
-        <BuildDependencies>
-            
-        </BuildDependencies>
-        <RuntimeDependencies>
-            
-            <Dependency>sqlite</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib32/sqlite3.8.10.2/</Path>
-        </Files>
-    </Package>-->
 
     <Package>
         <Name>sqlite-doc</Name>

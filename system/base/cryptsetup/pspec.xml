@@ -16,12 +16,11 @@
         <Description>Userspace setup tool for transparent encryption of block devices using dm-crypt</Description>
         <Archive sha1sum="0299b944441bc6665bce5f1dce6b9d6daf529bec" type="tarxz">https://www.kernel.org/pub/linux/utils/cryptsetup/v1.7/cryptsetup-1.7.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency versionFrom="2.02.118">device-mapper-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>popt-devel</Dependency>
+            <Dependency versionFrom="2.02.118">device-mapper</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libutil-linux</Dependency>
             <Dependency>popt</Dependency>
         </BuildDependencies>
     </Source>
@@ -38,6 +37,7 @@
             <Path fileType="manfile">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
     
@@ -53,18 +53,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/lib/libcryptsetup.so*</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>libcryptsetup-devel</Name>
-        <PartOf>programming.devel</PartOf>
-        <Summary>libcryptsetup devel files</Summary>
-        <RuntimeDependencies>
-            <Dependency version="current">libcryptsetup</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig/libcryptsetup.pc</Path>
         </Files>
     </Package>

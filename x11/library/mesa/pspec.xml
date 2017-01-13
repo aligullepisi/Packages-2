@@ -17,28 +17,28 @@
         <Archive sha1sum="e75013935c3bff4dacdbcb258183e15018697b13" type="tarxz">https://mesa.freedesktop.org/archive/13.0.0/mesa-13.0.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>xorg-proto</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>wayland-devel</Dependency>
-            <Dependency>wayland-server</Dependency>
-            <Dependency>wayland-client</Dependency>
-            <Dependency>libvdpau-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libtalloc-devel</Dependency>
-            <Dependency>libXdamage-devel</Dependency>
-            <Dependency>libomxil-bellagio-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
-            <Dependency>libXvMC-devel</Dependency>
-            <Dependency>libXv-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>libvdpau</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libtalloc</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libomxil-bellagio</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libXvMC</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>nettle</Dependency>
             <Dependency>python-mako</Dependency>
             <Dependency versionFrom="3.8.0">llvm</Dependency>
             <Dependency versionFrom="3.8.0">llvm-libs</Dependency>
-            <Dependency versionFrom="3.8.0">llvm-clang-devel</Dependency>
-            <Dependency versionFrom="1.2">libxshmfence-devel</Dependency>
+            <Dependency versionFrom="3.8.0">llvm-clang</Dependency>
+            <Dependency versionFrom="1.2">libxshmfence</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -76,6 +76,9 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/drirc">drirc</AdditionalFile>
@@ -83,29 +86,6 @@
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>mesa-devel</Name>
-        <Summary>Development files for mesa</Summary>
-        <RuntimeDependencies>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>wayland-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libXdamage-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
-            <Dependency>libxshmfence-devel</Dependency>
-            <Dependency release="current">mesa</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
-        </Files>
     </Package>
 
     <Package>
@@ -165,6 +145,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
         <Provides>
             <COMAR script="package-emul32.py">System.Package</COMAR>

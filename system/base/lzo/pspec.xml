@@ -21,16 +21,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>lzo-devel</Name>
-        <Summary>Development files for lzo</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">lzo</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

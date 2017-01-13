@@ -21,20 +21,8 @@
         <Files>
             <Path fileType="library">/usr/lib/libffi.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libffi-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libffi</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libffi</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/lib/libffi-*</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
@@ -54,6 +42,7 @@
         <Files>
             <Path fileType="library">/usr/lib32/libffi.*</Path>
             <Path fileType="header">/usr/lib32/libffi-*</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

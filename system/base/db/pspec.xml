@@ -28,19 +28,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/sbin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>db-devel</Name>
-        <Replaces>
-            <Package>db5-devel</Package>
-        </Replaces>
-        <Summary>Development files for db</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">db</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

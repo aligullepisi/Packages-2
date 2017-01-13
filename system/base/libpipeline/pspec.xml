@@ -21,17 +21,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libpipeline-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libpipeline</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libpipeline</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>

@@ -23,8 +23,8 @@
             <AdditionalFile permission="0755" target="generate-pc-config.sh">generate-pc-config.sh</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>sqlite</Dependency>
             <Dependency versionFrom="4.10.10">nspr-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -48,6 +48,10 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin/nss-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/nss/*.a</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/ld.so.conf.d/50-nss.conf">ld.so.conf</AdditionalFile>
@@ -57,21 +61,6 @@
             <AdditionalFile owner="root" target="/etc/pki/nssdb/key3.db" permission="0644">nssdb/key3.db</AdditionalFile>
             <AdditionalFile owner="root" target="/etc/pki/nssdb/secmod.db" permission="0644">nssdb/secmod.db</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>nss-devel</Name>
-        <Summary>Development files for nss</Summary>
-        <RuntimeDependencies>
-            <Dependency>nspr-devel</Dependency>
-            <Dependency release="current">nss</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/nss-config</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="library">/usr/lib/nss/*.a</Path>
-        </Files>
     </Package>
 
     <History>

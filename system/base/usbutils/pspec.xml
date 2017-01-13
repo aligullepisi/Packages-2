@@ -18,8 +18,8 @@
             <AdditionalFile target="usb.ids">usb.ids</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>eudev</Dependency>
         </BuildDependencies>
     </Source>
 

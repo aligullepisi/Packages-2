@@ -25,17 +25,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>attr-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for attr</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">attr</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
         </Files>

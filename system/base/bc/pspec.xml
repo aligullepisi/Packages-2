@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>flex</Dependency>
             <Dependency>texinfo</Dependency>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">fedora/bc-1.06.95-memleak.patch</Patch>

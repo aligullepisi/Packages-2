@@ -15,10 +15,10 @@
         <Description>X.Org X11 libXp runtime library</Description>
         <Archive sha1sum="9e10371ca8961b50c2d69150a88fc031455699d1" type="tarbz2">mirrors://xorg/individual/lib/libXp-1.0.3.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXext</Dependency>
             <Dependency>xorg-proto</Dependency>
-            <Dependency>libXau-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
@@ -34,22 +34,10 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libXp-devel</Name>
-        <Summary>Development files for libXp</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libXp</Dependency>
-            <Dependency>libXext-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="library">/usr/lib/libdeprecatedXp.so</Path>
             <Path fileType="library">/usr/lib32/libdeprecatedXp.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -70,6 +58,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

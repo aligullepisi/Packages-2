@@ -16,7 +16,7 @@
         <Archive sha1sum="0575ab35bba913d739267fbc1ed963fe7f8e386e" type="targz">https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-0.6.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>util-macros</Dependency>
-	    <Dependency>libxcb-devel</Dependency>
+	    <Dependency>libxcb</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -28,19 +28,8 @@
         <Files>
             <Path fileType="doc">/usr/share/doc/libxkbcommon/</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libxkbcommon-devel</Name>
-        <Summary>Development files for libxkbcommon</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libxkbcommon</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -58,6 +47,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 

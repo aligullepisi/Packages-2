@@ -17,8 +17,8 @@
         <Description>htop is an interactive text-mode process viewer for Linux. It aims to be a better 'top'.</Description>
         <Archive sha1sum="261492274ff4e741e72db1ae904af5766fc14ef4" type="targz">http://hisham.hm/htop/releases/1.0.3/htop-1.0.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>           
+            <Dependency>ncurses</Dependency>
+            <Dependency>gettext</Dependency>           
         </BuildDependencies>
         <Patches>
             <Patch>desktop_tr.patch</Patch>

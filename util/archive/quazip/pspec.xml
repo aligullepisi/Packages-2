@@ -17,8 +17,8 @@
         <Description>A Qt/C++ wrapper for Gilles Vollant's ZIP/UNZIP C package (minizip). Provides access to ZIP archives from Qt programs using QIODevice API.</Description>
         <Archive sha1sum="f34a1bbfff1d00b802e80175ef01ea6045c3818b" type="targz">http://sourceforge.net/projects/quazip/files/quazip/0.7.2/quazip-0.7.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
@@ -33,18 +33,8 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/cmake/Modules/FindQuaZip5.cmake</Path>            
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>quazip-devel</Name>
-        <Summary>Development files for quazip</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">quazip</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/cmake/Modules/FindQuaZip5.cmake</Path> 
+            <Path fileType="header">/usr/include</Path>           
         </Files>
     </Package>
 
