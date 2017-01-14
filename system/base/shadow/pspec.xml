@@ -19,7 +19,6 @@
             <Dependency>gettext</Dependency>
             <Dependency>acl</Dependency>
             <Dependency>attr</Dependency>
-            <Dependency>skey</Dependency>
         </BuildDependencies>
         <Patches>
              <Patch level="1">shadow-strncpy-usage.patch</Patch>
