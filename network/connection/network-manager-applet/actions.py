@@ -16,14 +16,13 @@ def setup():
                          --disable-static \
                          --disable-migration \
                          --disable-maintainer-mode \
-                         --with-modem-manager-1 \
                          --with-bluetooth \
                          --without-gnome \
-                         --enable-more-warnings=yes \
+                         --without-wwan \
+                         --without-team \
                          --sysconfdir=/etc \
                          --localstatedir=/var \
                          --prefix=/usr \
-                         --without-team \
                          --libexecdir=/usr/lib/NetworkManager")
 
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")

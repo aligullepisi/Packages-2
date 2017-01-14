@@ -14,14 +14,6 @@
         <Summary>A library for applications dealing with netlink sockets</Summary>
         <Description>libnl is a convenience library to simplify the usage of the Linux kernel's netlink sockets interface for network manipulation.</Description>
         <Archive sha1sum="b7a4981f7edf7398256d35fd3c0b87bc84ae27d1" type="targz">http://www.infradead.org/~tgr/libnl/files/libnl-3.2.25.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>glibc</Dependency>
-            <Dependency>flex</Dependency>
-            <Dependency>bison</Dependency>
-            <Dependency>pkgconfig</Dependency>
-            <Dependency>libtool</Dependency>
-            <Dependency>check</Dependency>
-        </BuildDependencies>   
     </Source>
 
     <Package>
@@ -32,16 +24,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="config">/etc/libnl</Path>
             <Path fileType="executable">/usr/sbin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libnl-devel</Name>
-        <Summary>Development files for libnl</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libnl</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -49,9 +31,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>3.2.25</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

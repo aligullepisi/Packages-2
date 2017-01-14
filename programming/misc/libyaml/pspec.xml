@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>YAML 1.1 parser and emitter written in C</Summary>
         <Description>libyaml is a YAML 1.1 parser and emitter written in C.</Description>
-        <Archive sha1sum="8b78cb9f759c7d80db8a7328c0ebecfe34fde737" type="targz">http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz</Archive>
+        <Archive sha1sum="e0e5e09192ab10a607e3da2970db492118f560f2" type="targz">http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -21,27 +21,17 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libyaml-devel</Name>
-        <Summary>Development headers for libyaml</Summary>
-        <Description>libyaml-devel provides development headers for libyaml.</Description>
-        <RuntimeDependencies>
-            <Dependency release="current">libyaml</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="doc">/usr/share/doc/libyaml/html/</Path>
         </Files>
     </Package>
 
+
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
-            <Version>0.1.5</Version>
-            <Comment>First release</Comment>
+            <Date>2016-12-21</Date>
+            <Version>0.1.4</Version>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

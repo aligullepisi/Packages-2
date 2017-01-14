@@ -9,26 +9,19 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-#WorkDir = "lloyd-yajl-f4b2b1a"
 
 def setup():
-    shelltools.makedirs("build")
-    shelltools.cd("build")
-    cmaketools.configure(sourceDir="..")
+    cmaketools.configure()
 
 def build():
-    shelltools.cd("build")
     cmaketools.make()
 
-#def check():
-    #shelltools.cd("test")
-    #shelltools.system("./run_tests.sh")
 
 def install():
-    shelltools.cd("build")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.remove("/usr/lib/*.a")
-
-    shelltools.cd("..")
     pisitools.dodoc("ChangeLog", "COPYING", "README")
+    
+    #pisitools.dosym("usr/share/pkgconfig/yajl.pc", "usr/lib/pkgconfig/yajl.pc")
+    
+    pisitools.domove("/usr/share/pkgconfig", "/usr/lib/")

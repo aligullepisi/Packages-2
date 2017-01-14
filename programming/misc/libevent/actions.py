@@ -7,12 +7,16 @@
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
+from pisi.actionsapi import shelltools
 
 #WorkDir = "libevent-%s-stable" % get.srcVERSION()
 
 def setup():
-    pisitools.dosed("Makefile.am", "libevent_extra_la_LIBADD =", "libevent_extra_la_LIBADD = libevent.la ")
-    autotools.autoreconf("-fi")
+    #pisitools.dosed("Makefile.am", "libevent_extra_la_LIBADD =", "libevent_extra_la_LIBADD = libevent.la ")
+    
+    #autotools.autoreconf("-fi")
+    shelltools.system("./autogen.sh")
+    
     autotools.configure("--disable-static")
     
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
@@ -23,4 +27,6 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("README")
+    pisitools.dodoc("LICENSE")
+    
+  #  pisitools.remove("/usr/include/event.h")

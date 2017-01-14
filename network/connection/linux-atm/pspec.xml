@@ -20,10 +20,6 @@
         </BuildDependencies>
         <Patches>
             <Patch level="1">man-pages.patch</Patch>
-            <!--<Patch level="1">linux-atm-2.5.0-open-macro.patch</Patch>
-            <Patch level="1">linux-atm-2.5.0-disable-ilmidiag.patch</Patch>
-            <Patch level="1">gcc43.patch</Patch>
-            <Patch level="1">netdevice.patch</Patch>-->
         </Patches>
     </Source>
 
@@ -40,25 +36,15 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>linux-atm-devel</Name>
-        <Summary>Development files for linux-atm</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">linux-atm</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>2.5.2</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

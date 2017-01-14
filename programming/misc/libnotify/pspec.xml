@@ -15,13 +15,8 @@
         <Description>libnotify sends desktop notifications to a notification daemon.</Description>
         <Archive sha1sum="956ce02a9f2c9fb74a81a765358131efdb7bf536" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/libnotify/0.7/libnotify-0.7.6.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>gnome-common</Dependency>
-            <Dependency>libepoxy-devel</Dependency>
-            <Dependency>at-spi2-core-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>gtk-doc</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,7 +24,6 @@
         <Name>libnotify</Name>
         <RuntimeDependencies>
             <Dependency>gdk-pixbuf</Dependency>
-	    <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -37,17 +31,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gir-1.0/</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libnotify-devel</Name>
-        <Summary>Development files for libnotify</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libnotify</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -55,9 +38,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>0.7.6</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

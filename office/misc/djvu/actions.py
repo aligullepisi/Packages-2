@@ -29,6 +29,5 @@ def install():
     pisitools.insinto("/usr/share/mime/packages", "desktopfiles/djvulibre-mime.xml")
 
     for size in ["22", "32", "48", "64"]:
-        pisitools.insinto("/usr/share/icons/hicolor/%sx%s/mimetypes" %(size, size), "desktopfiles/prebuilt-hi%s-djvu.png" % size, "image-vnd.djvu.png")
-
+		pisitools.insinto("/usr/share/icons/hicolor/%sx%s/mimetypes" %(size, size), "desktopfiles/prebuilt-hi%s-djvu.png" % size, "image-vnd.djvu.png")
     pisitools.dodoc("COPY*", "README", "NEWS")

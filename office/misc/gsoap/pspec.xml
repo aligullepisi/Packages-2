@@ -12,16 +12,11 @@
         <License>GPLv2</License>
         <Summary>Offers an XML language binding to ease the development of SOAP/XML Web services in C and C/C++</Summary>
         <Description>The gSOAP toolkit is an extensive suite of portable C and C++ software to develop XML Web services with powerful type-safe XML data bindings.</Description>
-        <Archive sha1sum="e66bbdeaa6b5bdcb11de5141e1f17343a023c5c4" type="zip">http://sourceforge.net/projects/gsoap2/files/gSOAP/gsoap_2.8.22.zip</Archive>
-	<BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
+        <Archive sha1sum="403fca53849b6281ccd2bd9d4d1d906f05e85aca" type="zip">https://sourceforge.net/projects/gsoap2/files/gsoap-2.8/gsoap_2.8.40.zip</Archive>
+	   <BuildDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
         </BuildDependencies>
-        <Patches>
-	  <!--<Patch level="1">gsoap-pad.patch</Patch> -->
-	  <!--<Patch level="1">gsoap-libtool.patch</Patch> -->
-	  <!--<Patch level="1">gsoap-private-lm.patch</Patch> -->
-        </Patches>
     </Source>
 
     <Package>
@@ -36,18 +31,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/gsoap</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gsoap-devel</Name>
-        <Summary>Development files for gsoap</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gsoap</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -55,9 +38,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
-            <Version>2.8.22</Version>
-            <Comment>First release</Comment>
+            <Date>2016-12-21</Date>
+            <Version>2.8.40</Version>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

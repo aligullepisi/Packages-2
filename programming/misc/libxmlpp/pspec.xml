@@ -13,57 +13,34 @@
         <IsA>library</IsA>
         <Summary>C++ wrapper for the libxml2 XML parser library</Summary>
         <Description>libxml++ is a C++ wrapper for the libxml XML parser library.</Description>
-        <Archive sha1sum="7d51f5173bc33dc024000fc4d5ec6f26a53d0c02" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/libxml++/2.38/libxml++-2.38.1.tar.xz</Archive>
+        <Archive sha1sum="d3b814d1e53335107655fdd35718d2b16921c3aa" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/libxml++/2.40/libxml++-2.40.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>glibmm-devel</Dependency>
-            <Dependency>libsigc++-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libsigc++</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libxmlpp</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>glibmm</Dependency>
-            <!--<Dependency>libsigc++</Dependency>-->
+            <Dependency>libsigc++</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libxmlpp-devel</Name>
-        <Summary>Development files for libxmlpp</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libxmlpp</Dependency>
-            <Dependency>glibmm-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="header">/usr/lib/libxml++-2.6</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libxmlpp-docs</Name>
-        <Summary>Development documents for libxmlpp in HTML</Summary>
-        <Files>
             <Path fileType="doc">/usr/share/doc/libxmlpp/html</Path>
             <Path fileType="doc">/usr/share/devhelp</Path>
+	    <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
+
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
-            <Version>2.38.1</Version>
-            <Comment>First release</Comment>
+            <Date>2016-12-21</Date>
+            <Version>2.40.1</Version>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

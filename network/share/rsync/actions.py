@@ -10,15 +10,12 @@ from pisi.actionsapi import get
 
 
 def setup():
-    autotools.configure("--without-included-zlib \
-                         --with-included-popt=no \
-                         --disable-debug")
+    autotools.configure("--without-included-popt \
+                         -disable-debug")
 
 def build():
     autotools.make()
 
-#def check():
-#    autotools.make("test")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

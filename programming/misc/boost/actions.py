@@ -11,8 +11,8 @@ from pisi.actionsapi import shelltools
 def setup():
     shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python2.7 --prefix=%s/usr" % get.installDIR())
     
-    shelltools.echo("project-config.jam","using python : 3.4 : /usr/bin/python3 : /usr/include/python3.4m : /usr/lib ;")
-    #shelltools.echo("project-config.jam","--without-mpi ;")
+    shelltools.echo("project-config.jam","using python : 3.5 : /usr/bin/python3 : /usr/include/python3.5m : /usr/lib ;")
+
 
 def build():
     shelltools.system("./b2 \

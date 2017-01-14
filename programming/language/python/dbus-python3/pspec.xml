@@ -16,11 +16,11 @@
         <Description>dbus-python provides a Python module which wraps the D-Bus programming API.</Description>
         <Archive sha1sum="7a00f7861d26683ab7e3f4418860bd426deed9b5" type="targz">http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libpcre</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">suppress-warnings.patch</Patch>

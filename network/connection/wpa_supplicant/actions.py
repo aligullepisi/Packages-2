@@ -16,7 +16,7 @@ def build():
     cflags = get.CFLAGS() + " -DCONFIG_DEBUG_SYSLOG"
     shelltools.export("CFLAGS", cflags)
 
-    autotools.make("V=1")
+    autotools.make("LIBDIR=/usr/lib BINDIR=/usr/sbin")
     autotools.make("eapol_test")
 
 def install():
@@ -28,7 +28,7 @@ def install():
     # Install dbus files
     pisitools.insinto("/usr/share/dbus-1/system-services", "dbus/*.service")
     pisitools.insinto("/etc/dbus-1/system.d", "dbus/dbus-wpa_supplicant.conf", "wpa_supplicant.conf")
-
+    
     pisitools.doman("doc/docbook/*.5")
     pisitools.doman("doc/docbook/*.8")
     pisitools.newdoc("wpa_supplicant.conf", "wpa_supplicant.conf.example")

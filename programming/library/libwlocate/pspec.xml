@@ -27,20 +27,10 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>libwlocate-devel</Name>
-        <Summary>Development files for libwlocate</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libwlocate</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>2016-06-09</Date>

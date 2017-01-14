@@ -14,27 +14,16 @@
         <IsA>library</IsA>
         <Summary>A system to store and display time-series data</Summary>
         <Description>RRD is the acronym for Round Robin Database. RRD is a system to store and display time-series data (i.e. network bandwidth, machine/room temperature, server load average).</Description>
-        <Archive sha1sum="38e7e8a382f7937c4344fce33dc15a88e9b2e48a" type="targz">http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.5.3.tar.gz</Archive>
+        <Archive sha1sum="4363f92565638d240f80f410a49014919f887508" type="targz">http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.5.6.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>lua-devel</Dependency>
-            <Dependency>tcl-devel</Dependency>
-            <Dependency>ruby-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libart_lgpl-devel</Dependency>
-            <Dependency>dejavu-fonts</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-	    <Dependency>tcp-wrappers-devel</Dependency>
-	    <Dependency>groff</Dependency>
+            <Dependency>lua</Dependency>
+            <Dependency>tcl</Dependency>
+            <Dependency>ruby</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>tcp-wrappers</Dependency>
         </BuildDependencies>
-        <Patches>
-            <!--Patch level="1">rrdtool-1.4.7-ruby-2-fix.patch</Patch-->
-<!--             <Patch level="1">0001_rrdtool-1.4.7-configure.ac.patch</Patch> -->
-<!--             <Patch level="1">rrdtool-1.4.5-automake-1.11.2.patch</Patch> -->
-        </Patches>
     </Source>
 
     <Package>
@@ -45,12 +34,8 @@
             <Dependency>ruby</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>libart_lgpl</Dependency>
-            <Dependency>dejavu-fonts</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>python</Dependency>
             <Dependency>libxml2</Dependency>
+	    <Dependency>libpng</Dependency>
             <Dependency>tcp-wrappers</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -58,16 +43,7 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/rrdtool</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>rrdtool-devel</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">rrdtool</Dependency>
-        </RuntimeDependencies>
-        <Files>
+            <Path fileType="data">/usr/share/rrdtool</Path>          
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -75,9 +51,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-15</Date>
-            <Version>1.5.3</Version>
-            <Comment>First release</Comment>
+            <Date>2016-12-21</Date>
+            <Version>1.5.6</Version>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

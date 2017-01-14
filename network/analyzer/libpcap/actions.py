@@ -13,8 +13,7 @@ def setup():
     shelltools.export("CFLAGS", "%s -fPIC" % get.CFLAGS())
     autotools.autoreconf("-vfi")
     autotools.configure("--prefix=/usr \
-                         --enable-ipv6 \
-                         --enable-bluetooth")
+                         --enable-ipv6")
 
 def build():
     autotools.make("all")

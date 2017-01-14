@@ -20,26 +20,15 @@
         <Name>libnfnetlink</Name>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libnfnetlink-devel</Name>
-        <Summary>Development files for libnfnetlink</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libnfnetlink</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig/libnfnetlink.pc</Path>
         </Files>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>1.0.1</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

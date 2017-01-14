@@ -13,7 +13,12 @@ shelltools.export("JOBS", get.makeJOBS().replace("-j", ""))
 
 def setup():
     shelltools.export("PYTHON","/usr/bin/python3")
+    shelltools.system("python3 ./waf --version")
+    
+    shelltools.system('sed -e "s/ctx.\(tool_options\|check_tool\)(/ctx.load(/" -i wscript')
+    
     shelltools.system("python3 ./waf configure --prefix=/usr --libdir=/usr/lib")
+
 
 def build():
     shelltools.system("python3 waf build -v")

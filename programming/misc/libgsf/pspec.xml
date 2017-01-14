@@ -15,30 +15,25 @@
         <Description>The libgsf is a library for reading and writing structured files (eg MS OLE and Zip).</Description>
         <Archive sha1sum="e813178d5726eed3f3461f9236235393bba7d6dc" type="tarxz">mirrors://gnome/libgsf/1.14/libgsf-1.14.31.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libbonobo-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>python-gtk-devel</Dependency>
-            <Dependency>orbit2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libbonobo</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>orbit2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>gettext</Dependency>
             <Dependency>perl</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gobject-introspection</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgsf</Name>
-        <IsA>app:console</IsA>
-        <IsA>library</IsA>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libxml2</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -47,62 +42,23 @@
             <Path fileType="data">/usr/share/thumbnailers/gsf-office.thumbnailer</Path>
             <Path fileType="data">/usr/share/gir-1.0/Gsf-1.gir</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgsf-gnome</Name>
-        <IsA>app:console</IsA>
-        <IsA>library</IsA>
-        <Summary>Gnome support for libgsf</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgsf</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>            
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin/gsf-office-thumbnailer</Path>
             <Path fileType="library">/usr/lib/libgsf-gnome*</Path>
             <Path fileType="library">/usr/lib/python*/site-packages/gsf/gnome*</Path>
             <Path fileType="man">/usr/share/man/man1/gst-office-thumbnailer*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgsf-docs</Name>
-        <IsA>data:doc</IsA>
-        <Summary>Libgsf reference documents</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgsf</Dependency>
-        </RuntimeDependencies>
-        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
     </Package>
 
-    <Package>
-        <Name>libgsf-devel</Name>
-        <IsA>library</IsA>
-        <Summary>Development files for libgsf</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgsf</Dependency>
-            <Dependency release="current">libgsf-gnome</Dependency>
-            <Dependency>libbonobo-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-    </Package>
-
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>1.14.31</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

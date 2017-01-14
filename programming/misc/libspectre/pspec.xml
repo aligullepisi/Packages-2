@@ -15,13 +15,8 @@
         <Description>libspectre is a small library for rendering Postscript documents. It provides a convenient easy to use API for handling and rendering Postscript documents.</Description>
         <Archive sha1sum="a7efd97b82b84ff1bb7a0d88c7e35ad10cc84ea8" type="targz">http://libspectre.freedesktop.org/releases/libspectre-0.2.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ghostscript-devel</Dependency>
-            <!-- Cairo is needed in tests only! -->
-            <Dependency>cairo-devel</Dependency>
+            <Dependency>ghostscript</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch>libspectre-0.2.7-gs918.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -32,45 +27,18 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libspectre-devel</Name>
-        <Summary>Development files for libspectre</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libspectre</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
-    <Package>
-        <Name>libspectre-32bit</Name>
-        <PartOf>emul32</PartOf>
-        <Summary>32-bit shared libraries for libspectre</Summary>
-        <BuildType>emul32</BuildType>
-        <BuildDependencies>
-            <Dependency>ghostscript-32bit</Dependency>
-            <Dependency>cairo-32bit</Dependency>
-        </BuildDependencies>
-        <RuntimeDependencies>
-            <Dependency release="current">libspectre</Dependency>
-            <Dependency>ghostscript-32bit</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib32</Path>
-        </Files>
-    </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>0.2.7</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

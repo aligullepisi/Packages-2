@@ -15,11 +15,6 @@
         <Summary>Lynx is the text web browser.</Summary>
         <Description>This is the top level page for the Lynx software distribution site hosted by the Internet Software Consortium.</Description>
         <Archive sha1sum="65bbf95627c88723bbb5880155e5fe01c2753d0c" type="tarbz2">http://invisible-mirror.net/archives/lynx/tarballs/lynx2.8.8rel.2.tar.bz2</Archive>
-        <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
-        </BuildDependencies>
         <Patches>
             <Patch level="1">lynx2-8-6-don-t-accept-command-line-args-to-telnet.patch</Patch>
             <Patch level="1">lynx2-8-6-fix-ugly-color.patch</Patch>
@@ -30,12 +25,6 @@
 
     <Package>
         <Name>lynx</Name>
-        <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>gettext</Dependency>
-        </RuntimeDependencies>
-
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc</Path>
@@ -46,9 +35,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>2.8.8</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

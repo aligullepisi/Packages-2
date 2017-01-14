@@ -25,24 +25,16 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/GeoIP</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>geoip-devel</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">geoip</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
 
+
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>1.6.2</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

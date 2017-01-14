@@ -43,24 +43,18 @@ def setup():
 
 def build():
     pisitools.dosed("Makefile", "^CC = .*$", "CC = %s" % get.CC())
-    autotools.make("all doc")
+    autotools.make("all")
 
 def install():
-    autotools.rawInstall("install-doc")
+    autotools.rawInstall()
 
     # Install bash completion
     pisitools.insinto("/etc/bash_completion.d", "contrib/completion/git-completion.bash", "git")
     shelltools.chmod("%s/etc/bash_completion.d/git" % get.installDIR(), 0644)
 
-    # for git-daemon
-    pisitools.dodir("/pub/scm")
-
-    # emacs support
-    #autotools.install("-C contrib/emacs")
-    #pisitools.insinto("/usr/share/doc/emacs-git", "contrib/emacs/README")
 
     # Some docs
-    pisitools.dodoc("README.md", "COPYING", "Documentation/SubmittingPatches")
+    pisitools.dodoc("README", "COPYING", "Documentation/SubmittingPatches")
 
     # remove .pod and .packlist files
     perlmodules.removePodfiles()

@@ -17,12 +17,8 @@ def setup():
     shelltools.export("EXTRA_LDFLAGS", get.LDFLAGS())
 
     autotools.configure("--disable-static \
-                         --with-jdk=/usr/lib/jvm/java-7-openjdk \
-                         --enable-javahl \
                          --with-apr=/usr \
                          --with-apr-util=/usr \
-                         --with-apache=/usr/lib/apache2/ \
-                         --with-apxs \
                          --with-serf=/usr \
                          --with-sqlite=/usr \
                          --with-zlib=/usr \
@@ -43,8 +39,6 @@ def build():
     # Sometimes parallel build breaks perl bindings
     autotools.make("-j1 swig-pl")
 
-    # java bindings
-    autotools.make("-j1 javahl")
 
 def install():
     # install svn
@@ -56,8 +50,6 @@ def install():
     # install swig-pl
     autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "install-swig-pl")
 
-    # install javahl
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "install-javahl")
 
     # Move py/c'into proper dir
     pisitools.domove("/usr/lib/svn-python/svn", "/usr/lib/%s/site-packages" % get.curPYTHON())

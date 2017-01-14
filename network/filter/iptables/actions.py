@@ -14,12 +14,9 @@ def setup():
                          --libexecdir=/usr/lib \
                          --without-kernel \
                          --enable-devel \
-                         --disable-nftables \
                          --enable-libipq \
                          --enable-shared \
                          --enable-static")
-
-    pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
     autotools.make("V=1")

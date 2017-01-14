@@ -15,12 +15,12 @@
         <Description>gst-python is a Python frontend to GStreamer.</Description>
         <Archive sha1sum="7012445d921ae1b325c162500750c9b0e777201f" type="tarbz2">http://gstreamer.freedesktop.org/src/gst-python/gst-python-0.10.22.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>python-gtk-devel</Dependency>
-            <Dependency>python-pygobject-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-pygobject</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -35,18 +35,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gst-python-devel</Name>
-        <Summary>Development files for gst-python</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gst-python</Dependency>
-            <Dependency>python-pygobject-devel</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
         </Files>

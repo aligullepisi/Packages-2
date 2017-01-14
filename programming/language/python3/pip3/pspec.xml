@@ -15,7 +15,7 @@
         <Archive sha1sum="910e2dd5c533d351a7dc84bc9091893659afcbb0" type="targz">https://github.com/pypa/pip/archive/8.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
+            <Dependency>python3</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -37,9 +37,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-18</Date>
+            <Date>2016-12-21</Date>
             <Version>8.1.2</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

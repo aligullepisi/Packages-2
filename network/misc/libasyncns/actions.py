@@ -11,8 +11,6 @@ def setup():
     autotools.configure("--enable-static=no \
                          --disable-lynx \
                          --disable-static")
-    
-    pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
     autotools.make()

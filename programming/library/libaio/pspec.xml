@@ -32,40 +32,17 @@
             <Path fileType="library">/lib</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libaio-32bit</Name>
-        <PartOf>emul32</PartOf>
-        <Summary>32-bit shared libraries for libaio</Summary>
-        <BuildType>emul32</BuildType>
-        <RuntimeDependencies>
-            <Dependency release="current">libaio</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib32</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libaio-devel</Name>
-        <Summary>Development files for libaio</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libaio</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
-            <!-- FIXME: Remove this if not necessary -->
             <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
     </Package>
 
+
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>0.3.109</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

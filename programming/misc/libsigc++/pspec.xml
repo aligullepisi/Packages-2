@@ -21,38 +21,16 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-        <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-        </RuntimeDependencies>
-    </Package>
-
-    <Package>
-        <Name>libsigc++-devel</Name>
-        <Summary>Development files for libsigc++</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libsigc++</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="doc">/usr/lib/sigc++*/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 
-    <Package>
-        <Name>libsigc++-docs</Name>
-        <Summary>Development documents for libsigc++</Summary>
-        <Files>
-            <Path fileType="doc">/usr/share/doc/libsigc++/html</Path>
-        </Files>33e0b0f162eababc310d927246627d62bb25cb63
-    </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>2.4.1</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

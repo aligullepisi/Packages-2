@@ -11,17 +11,15 @@ def setup():
     autotools.configure("--disable-static \
                          --disable-installed-tests \
                          --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt \
-                         --without-libproxy \
                          --with-gnutls \
                          --with-pkcs11")
 
 def build():
     autotools.make()
 
-def check():
-    autotools.make("check")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
+

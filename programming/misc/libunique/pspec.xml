@@ -16,13 +16,8 @@
         <!--<Archive sha1sum="32ab9849994da70f461fc78c59a2b930d294f8c7" type="tarbz2">ftp://ftp.gnome.org/pub/gnome/sources/libunique/2.90/libunique-2.90.1.tar.bz2</Archive>-->
         <Archive sha1sum="d44ad06503efaaa0c660c5f8a817e90fbe254d1f" type="tarbz2">ftp://ftp.gnome.org/pub/gnome/sources/libunique/1.1/libunique-1.1.6.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk2</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>intltool</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>docbook-xsl</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>99_ltmain_as-needed.patch</Patch>
@@ -38,29 +33,16 @@
         <Name>libunique</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libunique-devel</Name>
-        <Summary>libunique development files</Summary>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="current">libunique</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
+
 
     <Package>
         <Name>libunique-docs</Name>
@@ -76,9 +58,9 @@
 
     <History>
         <Update release="1">
-            <Date>2014-03-09</Date>
+            <Date>2016-12-21</Date>
             <Version>1.1.6</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

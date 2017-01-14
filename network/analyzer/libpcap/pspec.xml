@@ -15,10 +15,9 @@
         <Description>libpcap (Packet CAPture) provides a portable framework for low-level network monitoring. Applications include network statistics collection, security monitoring, network debugging, etc.</Description>
         <Archive sha1sum="3f31a7706c1487fca36b8379e511965a8d7cbd70" type="targz">http://www.tcpdump.org/release/libpcap-1.7.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>bluez-libs-devel</Dependency>
-            <Dependency>libnl-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>dbus</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch>libpcap-1.1-cross-linux.patch</Patch>-->
@@ -30,7 +29,6 @@
     <Package>
         <Name>libpcap</Name>
         <RuntimeDependencies>
-            <Dependency>bluez</Dependency>
             <Dependency>libnl</Dependency>
             <Dependency>dbus</Dependency>
             <Dependency>libusb</Dependency>
@@ -38,28 +36,18 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="man">/usr/share</Path>
+	    <Path fileType="executable">/usr/bin/pcap-config</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
 
-    <Package>
-        <Name>libpcap-devel</Name>
-        <Summary>Development files for libpcap</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libpcap</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/pcap-config</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
-        </Files>
-    </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>1.7.4</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

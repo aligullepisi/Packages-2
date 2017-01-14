@@ -16,8 +16,8 @@
         <Archive sha1sum="3b8d3dcb3ce2c15ed4305748eff251d5c90a1548" type="targz">https://github.com/rhinstaller/pyparted/archive/v3.10.5.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-decorator</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency versionFrom="3.2">parted-devel</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency versionFrom="3.2">parted</Dependency>
         </BuildDependencies>
     </Source>
 

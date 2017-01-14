@@ -17,8 +17,7 @@
         <Archive sha1sum="61edcbb18b106dfc240f151998e233c03bdbf9f3" type="targz">https://github.com/jbeder/yaml-cpp/archive/release-0.5.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>boost-devel</Dependency>
+            <Dependency>boost</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -32,9 +31,9 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2016-06-09</Date>
+            <Date>2016-12-21</Date>
             <Version>0.5.2</Version>
-            <Comment>First release</Comment>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

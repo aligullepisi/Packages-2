@@ -14,11 +14,6 @@ def build():
         pisitools.dosed(".", "\/lib$", r"/lib%s\n" % "32" if get.buildTYPE() == "emul32" else "", filePattern="Makefile")
     autotools.make()
 
-#def check():
-    #shelltools.cd("harness")
-    #pisitools.dodir("testdir")
-
-    #autotools.make("check prefix=../src libdir=../src")
 
 
 def install():
