@@ -15,16 +15,15 @@
         <Description>Framework which lets you access and manipulate bookmarks stored using XBEL format</Description>
         <Archive sha1sum="883edde2bea526ef1f860f0df696613d76aeaf70" type="tarxz">mirrors://kde/stable/frameworks/5.29/kbookmarks-5.29.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency versionFrom="5.29.0">kcoreaddons-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kauth-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kcodecs-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kconfig-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kconfigwidgets-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kiconthemes-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kwidgetsaddons-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kxmlgui-devel</Dependency>
+            <Dependency>qt5</Dependency>
+            <Dependency versionFrom="5.29.0">kcoreaddons</Dependency>
+            <Dependency versionFrom="5.29.0">kauth</Dependency>
+            <Dependency versionFrom="5.29.0">kcodecs</Dependency>
+            <Dependency versionFrom="5.29.0">kconfig</Dependency>
+            <Dependency versionFrom="5.29.0">kconfigwidgets</Dependency>
+            <Dependency versionFrom="5.29.0">kiconthemes</Dependency>
+            <Dependency versionFrom="5.29.0">kwidgetsaddons</Dependency>
+            <Dependency versionFrom="5.29.0">kxmlgui</Dependency>
             <Dependency versionFrom="5.29.0">extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -32,7 +31,7 @@
     <Package>
         <Name>kbookmarks</Name>
         <RuntimeDependencies>
-            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency versionFrom="5.29.0">kcoreaddons</Dependency>
             <Dependency versionFrom="5.29.0">kcodecs</Dependency>
@@ -48,23 +47,6 @@
             <Path fileType="library">/usr/lib/qt5</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>kbookmarks-devel</Name>
-        <Summary>Development files for kbookmarks</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">kbookmarks</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kcoreaddons-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kcodecs-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kconfig-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kiconthemes-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kwidgetsaddons-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kxmlgui-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/cmake</Path>
             <Path fileType="config">/usr/lib/pkgconfig</Path>

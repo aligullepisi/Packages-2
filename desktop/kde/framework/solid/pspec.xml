@@ -16,22 +16,19 @@
         <Description>Solid is a device integration framework.It provides a way of querying and interacting with hardware independently of the underlying operating system.</Description>
         <Archive sha1sum="2e73c05fb925e2d37ecdf1c128d9420e09befc8e" type="tarxz">mirrors://kde/stable/frameworks/5.29/solid-5.29.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>udisks2-devel</Dependency>
-            <Dependency>upower-devel</Dependency>
+            <Dependency>qt5</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>udisks2</Dependency>
+            <Dependency>upower</Dependency>
             <Dependency>media-player-info</Dependency>
-            <Dependency versionFrom="5.29.0">extra-cmake-modules</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>solid</Name>
         <RuntimeDependencies>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>qt5-declarative</Dependency>
+            <Dependency>qt5</Dependency>
             <Dependency>media-player-info</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>eudev</Dependency>
@@ -43,17 +40,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>solid-devel</Name>
-        <Summary>Development files for solid</Summary>
-        <RuntimeDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency release="current">solid</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/cmake</Path>
             <Path fileType="config">/usr/lib/pkgconfig</Path>

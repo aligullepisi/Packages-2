@@ -16,12 +16,10 @@
         <Description>KJobWIdgets provides widgets for showing progress of asynchronous jobs.</Description>
         <Archive sha1sum="6f7d152857352cdfe231eafbbbf17072de159e7c" type="tarxz">mirrors://kde/stable/frameworks/5.29/kjobwidgets-5.29.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency versionFrom="5.29.0">kcoreaddons-devel</Dependency>
-            <Dependency versionFrom="5.29.0">kwidgetsaddons-devel</Dependency>
-            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>qt5</Dependency>
+            <Dependency versionFrom="5.29.0">kcoreaddons</Dependency>
+            <Dependency versionFrom="5.29.0">kwidgetsaddons</Dependency>
             <Dependency versionFrom="5.29.0">extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -29,11 +27,10 @@
     <Package>
         <Name>kjobwidgets</Name>
         <RuntimeDependencies>
-            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency versionFrom="5.29.0">kcoreaddons</Dependency>
             <Dependency versionFrom="5.29.0">kwidgetsaddons</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>
@@ -41,17 +38,6 @@
             <Path fileType="library">/usr/lib/qt5</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>kjobwidgets-devel</Name>
-        <Summary>Development files for kjobwidgets</Summary>
-        <RuntimeDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency release="current">kjobwidgets</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/cmake</Path>
             <Path fileType="config">/usr/lib/pkgconfig</Path>

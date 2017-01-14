@@ -16,16 +16,14 @@
         <Description>KWindowSystem provides information about the state of the window manager and allows asking the window manager to change the using a more high-level interface than the NETWinInfo/NETRootInfo low-level classes.</Description>
         <Archive sha1sum="f11a249ad713de21878f692519e1396f4cebeffb" type="tarxz">mirrors://kde/stable/frameworks/5.29/kwindowsystem-5.29.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency>qt5-x11extras-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>qt5</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>xcb-util-devel</Dependency>
-            <Dependency>xcb-util-keysyms-devel</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>xcb-util-keysyms</Dependency>
             <Dependency versionFrom="5.29.0">extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -33,11 +31,10 @@
     <Package>
         <Name>kwindowsystem</Name>
         <RuntimeDependencies>
-            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
             <Dependency>libXfixes</Dependency>
             <Dependency>xcb-util-keysyms</Dependency>
         </RuntimeDependencies>
@@ -48,21 +45,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>kwindowsystem-devel</Name>
-        <Summary>Development files for kwindowsystem</Summary>
-        <RuntimeDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>xcb-util-devel</Dependency>
-            <Dependency>xcb-util-keysyms-devel</Dependency>
-            <Dependency release="current">kwindowsystem</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/cmake</Path>
             <Path fileType="config">/usr/lib/pkgconfig</Path>
