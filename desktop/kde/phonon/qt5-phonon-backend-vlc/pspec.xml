@@ -15,10 +15,10 @@
         <Description>phonon-backend-vlc allows Phonon (the KDE media library) to use VLC for audio and video playback.</Description>
         <Archive sha1sum="e874378f2e11715f0952fbdad8da4ed266d8e96e" type="tarxz">mirrors://kde/stable/phonon/phonon-backend-vlc/0.9.0/phonon-backend-vlc-0.9.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-phonon-devel</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-phonon</Dependency>
             <Dependency>pulseaudio</Dependency>
-            <Dependency>vlc-devel</Dependency>
+            <Dependency>vlc</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>

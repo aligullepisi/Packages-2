@@ -12,7 +12,8 @@ from pisi.actionsapi import shelltools
 def setup():
     # Make it build with libtool 1.5
     shelltools.system("rm -rf m4/lt* m4/libtool.m4")
-
+    pisitools.cxxflags.add(" -std=c++11")
+    
     shelltools.export("AUTOPOINT", "true")
     shelltools.system("./bootstrap")
     autotools.autoreconf("-vfi")
@@ -26,7 +27,7 @@ def setup():
                             --with-default-monospace-font=/usr/share/fonts/dejavu/DejaVuSansMono.ttf \
                             --with-x \
                               LUAC=luac  LUA_LIBS='`pkg-config --libs lua`' \
-                              RCC=/usr/bin/rcc-qt5 \
+                              RCC=/usr/bin/rcc \
                             --disable-asdcp \
                             --disable-coverage \
                             --disable-cprof \
@@ -63,14 +64,11 @@ def setup():
                             --enable-a52 \
                             --enable-aa \
                             --enable-alsa \
-                            --enable-bluray \
                             --enable-dc1394 \
                             --enable-dbus \
                             --enable-dca \
                             --enable-dvbpsi \
-                            --enable-dvdnav \
-                            --enable-dvdread \
-                            --enable-faad \
+                             --enable-faad \
                             --enable-fast-install \
                             --enable-flac \
                             --enable-freetype \
@@ -107,10 +105,9 @@ def setup():
                             --enable-twolame \
                             --enable-upnp \
                             --enable-v4l2 \
+			    --disable-atmo \
                             --enable-vlc \
-                            --enable-vcd \
                             --enable-mtp \
-                            --enable-vcdx \
                             --enable-vlm \
                             --enable-vorbis \
                             --enable-x264 \
