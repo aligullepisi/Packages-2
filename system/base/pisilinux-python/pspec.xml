@@ -3,7 +3,7 @@
 <!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>limelinux-python</Name>
+        <Name>pisilinuxlinux-python</Name>
         <Homepage>http://www.limelinux.com</Homepage>
         <Packager>
             <Name>Lime GNU/LINUX Community</Name>
@@ -24,7 +24,7 @@
     </Source>
 
     <Package>
-        <Name>limelinux-python</Name>
+        <Name>pisilinuxlinux-python</Name>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
 	    <!--<Dependency>libX11</Dependency>-->
@@ -37,7 +37,7 @@
     </Package>
     
         <Package>
-        <Name>limelinux-python-xorg</Name>
+        <Name>pisilinuxlinux-python-xorg</Name>
         <PartOf>x11.library</PartOf>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
