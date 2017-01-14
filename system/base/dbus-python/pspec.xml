@@ -33,7 +33,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Common dbus-python files shared between dbus-python and dbus-python3</Summary>
         <RuntimeDependencies>
-            <Dependency>dbus-devel</Dependency>
+            <Dependency>dbus</Dependency>
             <Dependency release="current">dbus-python</Dependency>
         </RuntimeDependencies>
         <Files>
