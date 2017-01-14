@@ -16,14 +16,14 @@
         <Archive sha1sum="189c2205df215fa497566a2338a52daa2e7034fa" type="targz">http://www.ffado.org/files/libffado-2.2.1.tgz</Archive>
         <BuildDependencies>
             <Dependency>xdg-utils</Dependency>
-            <Dependency>glibmm-devel</Dependency>
-            <Dependency>libxmlpp-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>dbus-c++-devel</Dependency>
-            <Dependency>libsigc++-devel</Dependency>
-            <Dependency>libconfig-devel</Dependency>
-            <Dependency>libraw1394-devel</Dependency>
-            <Dependency>libiec61883-devel</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libxmlpp</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>dbus-c++</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>libconfig</Dependency>
+            <Dependency>libraw1394</Dependency>
+            <Dependency>libiec61883</Dependency>
             <Dependency>scons</Dependency>
             <Dependency>doxygen</Dependency>
         </BuildDependencies>
@@ -63,24 +63,13 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <!-- Generated with Debian's generate-udev-rules.py which reads stdin from configuration file -->
             <!--<AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/60-ffado.rules">60-ffado.rules</AdditionalFile>-->
          </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>libffado-devel</Name>
-        <IsA>library</IsA>
-        <Summary>Development files for libffado</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libffado</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <Package>
@@ -99,7 +88,7 @@
             <Path fileType="data">/usr/share/pixmaps</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pisilinux-ffadomixer.desktop">pisilinux-ffadomixer.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pisilinux-ffadomixer.desktop">limelinux-ffadomixer.desktop</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

@@ -21,9 +21,9 @@
         -->
         <Archive sha1sum="d86b0be89f6e921b90e7230da40620dd16758fc1" type="tarxz">http://caml.inria.fr/pub/distrib/ocaml-4.02/ocaml-4.02.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libX11</Dependency>
 	    <Dependency>chrpath</Dependency>
         </BuildDependencies>
         <Patches>

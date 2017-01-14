@@ -15,14 +15,14 @@
         <Description>FSArchiver is a system tool that allows you to save the contents of a file-system to a compressed archive file.</Description>
         <Archive sha1sum="99a1c4375e01af4047c4e9778ada146ad6a23aab" type="targz">https://github.com/fdupoux/fsarchiver/releases/download/0.6.21/fsarchiver-0.6.21.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>lzo-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>lzo</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>bzip2</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>libutil-linux</Dependency>
         </BuildDependencies>
     </Source>
 

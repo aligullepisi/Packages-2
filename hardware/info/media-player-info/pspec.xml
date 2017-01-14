@@ -15,8 +15,8 @@
         <Archive sha1sum="4f0b94b0e456b8427168ce7414ea725d98daa984" type="targz">http://www.freedesktop.org/software/media-player-info/media-player-info-22.tar.gz</Archive>
         <BuildDependencies>
             <!-- For pkgconfig fixes in udev -->
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>python3</Dependency>
         </BuildDependencies>
     </Source>
 

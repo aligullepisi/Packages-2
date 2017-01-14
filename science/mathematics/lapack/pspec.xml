@@ -34,17 +34,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libblas.so*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>blas-devel</Name>
-        <Summary>Development files for blas</Summary>
-        <BuildType>static</BuildType>
-        <RuntimeDependencies>
-            <Dependency release="current">blas</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="library">/usr/lib/libblas.a</Path>
             <Path fileType="library">/usr/lib/pkgconfig/blas.pc</Path>
         </Files>
@@ -60,18 +49,6 @@
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="library">/usr/lib/liblapack.so*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>lapack-devel</Name>
-        <Summary>Development files for lapack</Summary>
-        <BuildType>static</BuildType>
-        <RuntimeDependencies>
-            <Dependency release="current">lapack</Dependency>
-            <Dependency release="current">blas-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="library">/usr/lib/cmake</Path>
             <Path fileType="library">/usr/lib/liblapack.a</Path>
             <Path fileType="library">/usr/lib/pkgconfig/lapack.pc</Path>

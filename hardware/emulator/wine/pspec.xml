@@ -15,53 +15,53 @@
         <Description>Wine allows running Windows 3.*, Windows 95/98 and Windows NT programs on a i386 (or compatible) machine running X11. It is still alpha level code; don't expect everything to work.</Description>
         <Archive sha1sum="738ef272b3faf898c47dfb64b93b80fcde7a0c24" type="tarbz2">https://dl.winehq.org/wine/source/1.9/wine-1.9.18.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>lcms2-devel</Dependency>
-            <Dependency>libao-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>mpg123-devel</Dependency>
-            <Dependency>openal-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>libao</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>mpg123</Dependency>
+            <Dependency>openal</Dependency>
+            <Dependency>libXext</Dependency>
             <Dependency>libxslt-32bit</Dependency>
-            <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>gstreamer</Dependency>
             <Dependency>openldap-client</Dependency>
-            <Dependency>libgphoto2-devel</Dependency>
-            <Dependency>pulseaudio-libs-devel</Dependency>
-            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
 
             <!-- Libraries used with dlopen() -->
-            <Dependency>cups-devel</Dependency>
-            <Dependency>gnutls-devel</Dependency>
-            <Dependency>libXcursor-devel</Dependency>
-            <Dependency>libXi-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
-            <Dependency>libXxf86vm-devel</Dependency>
-            <Dependency>sane-backends-devel</Dependency>
-            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>unixODBC</Dependency>
 
             <!-- configure script also checks for these librarires -->
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>fontconfig-devel</Dependency>
-            <Dependency>gsm-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>giflib-devel</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gsm</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>giflib</Dependency>
             <Dependency>v4l-utils</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>libtevent-devel</Dependency>
+            <Dependency>libtevent</Dependency>
 
             <!-- Audio servers are not necessary for runtime -->
-            <Dependency>jack-audio-connection-kit-devel</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
 
             <!-- fontforge is needed to build fonts -->
             <Dependency>fontforge</Dependency>
-            <Dependency>libpcap-devel</Dependency>
+            <Dependency>libpcap</Dependency>
             <Dependency>util-linux</Dependency>
-            <Dependency>ncurses-devel</Dependency>
+            <Dependency>ncurses</Dependency>
         </BuildDependencies>
         
         <Patches>

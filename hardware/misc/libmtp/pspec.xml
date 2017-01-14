@@ -16,8 +16,8 @@
         <Archive sha1sum="4f7e79e15e6a0d0a3d76adbd1ca6d6c27d4b8424" type="targz">mirrors://sourceforge/libmtp/1.1.11/libmtp-1.1.11.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>doxygen</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>libgcrypt</Dependency>
         </BuildDependencies>
         <Patches>
         </Patches>
@@ -35,17 +35,6 @@
             <Path fileType="executable">/lib/udev</Path>
             <Path fileType="data">/usr/share/hal</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libmtp-devel</Name>
-        <Summary>Development files for libmtp</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libmtp</Dependency>
-            <Dependency>libusb-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

@@ -24,15 +24,15 @@
             <AdditionalFile target="ppd-patches/002-hplip-ppd-ImageableArea.patch">fedora/hplip-ppd-ImageableArea.patch</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
             <Dependency>foomatic-db</Dependency>
-            <Dependency>net-snmp-devel</Dependency>
-            <Dependency>sane-backends-devel</Dependency>
-            <Dependency>cups-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
+            <Dependency>net-snmp</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>dbus</Dependency>
             <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
         <Patches>

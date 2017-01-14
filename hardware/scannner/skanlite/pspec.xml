@@ -16,16 +16,16 @@
         <Archive sha1sum="9ecf9c6bfcbf75b5ae3af65ec38ac1a8210b7c55" type="tarxz">http://download.kde.org/stable/skanlite/2.0/skanlite-2.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>ki18n-devel</Dependency>
-            <Dependency>kxmlgui-devel</Dependency>
-            <Dependency>kio-devel</Dependency>
-            <Dependency>kdoctools-devel</Dependency>
-            <Dependency>ktextwidgets-devel</Dependency>
-            <Dependency>libksane-devel</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>kdoctools</Dependency>
+            <Dependency>ktextwidgets</Dependency>
+            <Dependency>libksane</Dependency>
         </BuildDependencies>
     </Source>
 

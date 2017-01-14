@@ -15,8 +15,8 @@
         <Description>sshfs allows mounting remote SSH accounts as a filesystem.</Description>
         <Archive sha1sum="a28ed6c04847611816452441b14ad9a0bb6df842" type="targz">https://github.com/libfuse/sshfs/releases/download/sshfs_2_5/sshfs-fuse-2.5.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>fuse-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>fuse</Dependency>
+            <Dependency>glib2</Dependency>
         </BuildDependencies>
     </Source>
 

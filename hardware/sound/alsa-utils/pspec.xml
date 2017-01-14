@@ -18,9 +18,9 @@
             <Dependency>xmlto</Dependency>
             <Dependency>util-linux</Dependency>
             <Dependency>libxslt</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>libsamplerate-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libsamplerate</Dependency>
+            <Dependency>alsa-lib</Dependency>
         </BuildDependencies>
     </Source>
 

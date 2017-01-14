@@ -16,42 +16,42 @@
         <Archive sha1sum="6a3cb13ea4a369005f652ed5fb820455038c7e76" type="tarxz">http://anduin.linuxfromscratch.org/BLFS/k3b/k3b-2016-09-11.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>karchive-devel</Dependency>
-            <Dependency>kconfig-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>kdoctools-devel</Dependency>
-            <Dependency>kfilemetadata-devel</Dependency>
-            <Dependency>ki18n-devel</Dependency>
-            <Dependency>kiconthemes-devel</Dependency>
-            <Dependency>kjobwidgets-devel</Dependency>
-            <Dependency>kcmutils-devel</Dependency>
-            <Dependency>kio-devel</Dependency>
-            <Dependency>knotifications-devel</Dependency>
-            <Dependency>knewstuff-devel</Dependency>
-            <Dependency>knotifyconfig-devel</Dependency>
-            <Dependency>kservice-devel</Dependency>
-            <Dependency>solid-devel</Dependency>
-            <Dependency>kwidgetsaddons-devel</Dependency>
-            <Dependency>kxmlgui-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-webkit-devel</Dependency>
-            <Dependency>qt5-location-devel</Dependency>
-            <Dependency>libsamplerate-devel</Dependency>
-            <Dependency>cdparanoia-devel</Dependency>
-            <Dependency>libsndfile-devel</Dependency>
-            <Dependency>libdvdread-devel</Dependency>
+            <Dependency>karchive</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kdoctools</Dependency>
+            <Dependency>kfilemetadata</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kjobwidgets</Dependency>
+            <Dependency>kcmutils</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>knewstuff</Dependency>
+            <Dependency>knotifyconfig</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>solid</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>qt5-location</Dependency>
+            <Dependency>libsamplerate</Dependency>
+            <Dependency>cdparanoia</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libdvdread</Dependency>
             <Dependency>libkcddb</Dependency>
-            <Dependency>libmpcdec-devel</Dependency>
-            <Dependency>libvorbis-devel</Dependency>
-            <Dependency>vcdimager-devel</Dependency>
-            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>libmpcdec</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>vcdimager</Dependency>
+            <Dependency>ffmpeg</Dependency>
             <Dependency>dvd+rw-tools</Dependency>
-            <Dependency>libmad-devel</Dependency>
-            <Dependency>libogg-devel</Dependency>
-            <Dependency>taglib-devel</Dependency>
-            <Dependency>flac-devel</Dependency>
-            <Dependency>lame-devel</Dependency>
-            <Dependency>sox-devel</Dependency>
+            <Dependency>libmad</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>flac</Dependency>
+            <Dependency>lame</Dependency>
+            <Dependency>sox</Dependency>
             <Dependency>cdrkit</Dependency>
             <Dependency>cdrdao</Dependency>
         </BuildDependencies>

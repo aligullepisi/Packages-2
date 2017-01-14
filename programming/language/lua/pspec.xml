@@ -18,7 +18,7 @@
             <AdditionalFile target="lua.pc">lua.pc</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">liblua.so.patch</Patch>
@@ -36,22 +36,12 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/lua.png">lua.png</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>lua-devel</Name>
-        <Summary>Development files for lua</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">lua</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

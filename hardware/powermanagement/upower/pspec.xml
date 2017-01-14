@@ -19,15 +19,15 @@
             <AdditionalFile target="po/tr.po">tr.po</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>libplist-devel</Dependency>
-            <Dependency>libimobiledevice-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>libplist</Dependency>
+            <Dependency>libimobiledevice</Dependency>
+            <Dependency>gobject-introspection</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>intltool</Dependency>
         </BuildDependencies>
@@ -67,23 +67,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/*.xml</Path>
             <Path fileType="data">/usr/lib/girepository-1.0/*.typelib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>upower-devel</Name>
-        <Summary>Development files for upower</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">upower</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>libplist-devel</Dependency>
-            <Dependency>libimobiledevice-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

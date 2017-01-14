@@ -15,7 +15,7 @@
         <Description>lua51 is a powerful light-weight programming language designed for extending applications.</Description>
         <Archive sha1sum="b3882111ad02ecc6b972f8c1241647905cb2e3fc" type="targz">http://www.lua.org/ftp/lua-5.1.5.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">lua-5.1-cflags.diff</Patch>
@@ -38,23 +38,13 @@
             <Path fileType="data">/usr/share/lua5.1</Path>
             <Path fileType="data">/luac5.1.1/luac.1</Path>
             <Path fileType="data">/lua5.1.1/lua.1</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/lua51.png">lua.png</AdditionalFile>
             <AdditionalFile target="/usr/lib/pkgconfig/lua5.1.pc" permission="644">lua.pc</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>lua51-devel</Name>
-        <Summary>Development files for lua51</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">lua51</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

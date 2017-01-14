@@ -18,7 +18,7 @@
         <BuildDependencies>
             <Dependency>time</Dependency>
             <Dependency>libgfortran</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>net-tools</Dependency>
         </BuildDependencies>
     </Source>
@@ -35,16 +35,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/hdf5</Path>
             <Path fileType="data">/usr/share/hdf5_examples</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>hdf5-devel</Name>
-        <Summary>Development files for hdf5</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">hdf5</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

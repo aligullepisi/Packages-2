@@ -4,7 +4,7 @@
 <PISI>
     <Source>
         <Name>calamares</Name>
-        <Homepage>http://pisilinux.org</Homepage>
+        <Homepage>http://limelinux.org</Homepage>
         <Packager>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
@@ -14,43 +14,43 @@
         <Description>Calamares is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations.</Description>
         <Archive sha1sum="73f876bce31cd48d899154173a684520229506da" type="targz">https://sourceforge.net/projects/pisi-source/files/calamares-2.4.83.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>gettext</Dependency>
             <Dependency>yaml-cpp</Dependency>
-            <Dependency versionFrom="1.60">boost-devel</Dependency>
+            <Dependency versionFrom="1.60">boost</Dependency>
             <Dependency versionFrom="1.60">boost-python3</Dependency>
-            <Dependency>ki18n-devel</Dependency>
+            <Dependency>ki18n</Dependency>
             <Dependency>kcoreaddons</Dependency>
-            <Dependency>solid-devel</Dependency>
-            <Dependency>parted-devel</Dependency>
+            <Dependency>solid</Dependency>
+            <Dependency>parted</Dependency>
             <Dependency>qt5-linguist</Dependency>
-            <Dependency>qt5-svg-devel</Dependency>
-            <Dependency>udisks2-devel</Dependency>
-            <Dependency>libyaml-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>kconfig-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>polkit-qt-devel</Dependency>
-            <Dependency>qt5-webkit-devel</Dependency>
-            <Dependency>qt5-webengine-devel</Dependency>
-            <Dependency>libatasmart-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>qt5-designer-devel</Dependency>
-            <Dependency>qt5-assistant-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>udisks2</Dependency>
+            <Dependency>libyaml</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>polkit-qt</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>qt5-webengine</Dependency>
+            <Dependency>libatasmart</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>qt5-designer</Dependency>
+            <Dependency>qt5-assistant</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>e2fsprogs</Dependency>
             <Dependency>squashfs-tools</Dependency>
-            <Dependency>efibootmgr-devel</Dependency>
+            <Dependency>efibootmgr</Dependency>
             <Dependency>rsync</Dependency>
             <Dependency>gptfdisk</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>kpmcore-devel</Dependency>
-            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kpmcore</Dependency>
+            <Dependency>kiconthemes</Dependency>
             <Dependency>kio-devel</Dependency>
-            <Dependency>kservice-devel</Dependency>
-            <Dependency>kconfig-devel</Dependency>
-            <Dependency>kparts-devel</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kparts</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">pisi_locale.patch</Patch>
@@ -87,6 +87,7 @@
             <Dependency>dosfstools</Dependency>
             <Dependency>libutil-linux</Dependency>
             <Dependency>util-linux</Dependency>
+            <Dependency>libproxy</Dependency>
             <Dependency>kpmcore</Dependency>
             <Dependency>partitionmanager</Dependency>
             <Dependency>qt5-webengine</Dependency>

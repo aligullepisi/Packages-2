@@ -15,12 +15,12 @@
         <Description>Is a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1.</Description>
         <Archive sha1sum="8e9f05628461963623686d3ec53102214e233dd1" type="targz">https://bitbucket.org/Coin3D/coin/downloads/Coin-3.1.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>libglade-devel</Dependency>
+            <Dependency>libglade</Dependency>
         </BuildDependencies>
          <Patches>
             <Patch>clang-name-lookup.diff</Patch>
@@ -44,16 +44,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/Coin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>coin-devel</Name>
-        <Summary>Development files for coin</Summary>
-        <RuntimeDependencies>
-            <Dependency version="current">coin</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>

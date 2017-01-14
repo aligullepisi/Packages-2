@@ -25,16 +25,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libburn-devel</Name>
-        <Summary>Development files for libburn</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libburn</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig/libburn-1.pc</Path>
         </Files>

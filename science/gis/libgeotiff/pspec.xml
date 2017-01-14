@@ -37,20 +37,6 @@
             <Path fileType="data">/usr/share/epsg_csv</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgeotiff-devel</Name>
-        <Summary>Development files for libgeotiff</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgeotiff</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>proj-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

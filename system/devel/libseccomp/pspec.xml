@@ -15,8 +15,8 @@
         <Description>High level interface to the Linux Kernel's seccomp filter.</Description>
         <Archive sha1sum="38ba89d3bfe0faecb058727f797cd4f25c94ce73" type="targz">https://github.com/seccomp/libseccomp/archive/v2.3.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libutil-linux</Dependency>
         </BuildDependencies>
     </Source>
 

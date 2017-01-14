@@ -16,7 +16,7 @@
         <Archive sha1sum="271ce928f6d673cc16cbced2bfd14a5f2e5d3d37" type="targz">http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gnuconfig</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>glib2</Dependency>
         </BuildDependencies>
     </Source>
 

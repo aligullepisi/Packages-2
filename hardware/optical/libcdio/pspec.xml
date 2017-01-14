@@ -34,16 +34,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libcdio-devel</Name>
-        <Summary>Development files for libcdio</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libcdio</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

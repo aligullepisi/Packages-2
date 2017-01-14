@@ -34,16 +34,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>SuiteSparse-devel</Name>
-        <Summary>Development files for SuiteSparse</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">SuiteSparse</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

@@ -13,9 +13,9 @@
         <Description>A text-mode partitioning tool that works on GUID Partition Table (GPT) disks</Description>
         <BuildDependencies>
             <Dependency>util-linux</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>popt-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>popt</Dependency>
+            <Dependency>libutil-linux</Dependency>
         </BuildDependencies>
         <Archive sha1sum="ad28c511c642235815b83fffddf728c117057cba" type="targz">http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.1/gptfdisk-1.0.1.tar.gz</Archive>
     </Source>

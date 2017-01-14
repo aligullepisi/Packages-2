@@ -15,10 +15,10 @@
         <Description>cdrdao records audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents.</Description>
         <Archive sha1sum="70d6547795a1342631c7ab56709fd1940c2aff9f" type="tarbz2">mirrors://sourceforge/cdrdao/cdrdao-1.2.3.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>lame-devel</Dependency>
-            <Dependency>libao-devel</Dependency>
-            <Dependency>libmad-devel</Dependency>
-            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>lame</Dependency>
+            <Dependency>libmad</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>libao</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">cdrdao-1.2.3-version.patch</Patch>

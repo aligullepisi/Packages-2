@@ -16,19 +16,19 @@
         <Archive sha1sum="bba3c97e58902f883f22784aff669968d1231dd7" type="tarbz2">http://www.cups.org/software/2.1.3/cups-2.1.3-source.tar.bz2</Archive>
         <Archive sha1sum="062beea95c6f8dda0a5e7eed51604e22806ffad3" type="tar" target="cups-2.1.2">http://source.pisilinux.org/1.0/cups-tr.tar</Archive> -->
         <BuildDependencies>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libusb</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>avahi-libs</Dependency>
             <Dependency>avahi-devel</Dependency><!--not needed? -->
             <!--<Dependency>cups-filters-devel</Dependency>--><!--çember ? -->
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>libpaper-devel</Dependency>
+            <Dependency>libpaper</Dependency>
         </BuildDependencies>
         <Patches>
             <!-- ARCH Linux patches -->
@@ -99,6 +99,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/bin/cups-config</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/cups.conf">tmpfiles.conf</AdditionalFile>
@@ -113,18 +115,6 @@
             <COMAR script="service.py">System.Service</COMAR>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>cups-devel</Name>
-        <Summary>Development files for cups</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">cups</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="executable">/usr/bin/cups-config</Path>
-        </Files>
     </Package>
 
     <Package>

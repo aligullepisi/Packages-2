@@ -15,10 +15,10 @@
         <Description>suspend package allows users to suspend-to-ram, suspend-to-disk, and suspend-to-both.</Description>
         <Archive sha1sum="77d9ae2af73f5faffcec351910fcd9b015a9501c" type="tarxz">http://dev.gentoo.org/~bircoph/distfiles/suspend-1.0_p20120915.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>lzo-devel</Dependency>
-            <Dependency>pciutils-devel</Dependency>
-            <Dependency>libx86-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>lzo</Dependency>
+            <Dependency>pciutils</Dependency>
+            <Dependency>libx86</Dependency>
+            <Dependency>libgcrypt</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1" compressionType="xz">suspend-1.0_p20150810.patch.xz</Patch>

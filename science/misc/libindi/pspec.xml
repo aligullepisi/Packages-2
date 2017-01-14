@@ -16,15 +16,15 @@
         <Description>indilib is a distributed control protocol designed to operate astronomical instrumentation. indilib is small, flexible, easy to parse, and scalable.</Description>
         <Archive sha1sum="37b0cbb55e3dd67dc22843783b7feb6dbd09aa6b" type="targz">http://downloads.sourceforge.net/project/indi/libindi_1.2.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libnova-devel</Dependency>
-            <Dependency>cfitsio-devel</Dependency>
-            <Dependency>gsl-devel</Dependency>
-             <Dependency>curl-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-             <Dependency>boost-devel</Dependency>
-             <Dependency>zlib-devel</Dependency>
-             <Dependency>pkgconfig</Dependency>
+            <Dependency>libnova</Dependency>
+            <Dependency>cfitsio</Dependency>
+            <Dependency>gsl</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>gsl</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>cmake</Dependency>            
         </BuildDependencies>
         <Patches>
@@ -53,16 +53,6 @@
             <Path fileType="rules">/lib/udev/rules.d</Path>
             <Path fileType="data">/usr/share/indi</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libindi-devel</Name>
-        <Summary>Development files for libindi</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libindi</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

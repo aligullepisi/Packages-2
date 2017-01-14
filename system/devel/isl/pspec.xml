@@ -15,7 +15,7 @@
         <Description>isl is a library for manipulating sets and relations of integer points bounded by linear constraints.</Description>
         <Archive sha1sum="c5a2b201bf05229647e73203c0bf2d9679d4d21f" type="tarbz2">http://isl.gforge.inria.fr/isl-0.16.1.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>gmp-devel</Dependency>
+            <Dependency>gmp</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -27,16 +27,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>isl-devel</Name>
-        <Summary>Development files for isl</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">isl</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>

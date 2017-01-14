@@ -15,11 +15,11 @@
         <Description>libfreebob implements a userland driver for BeBoB-based firewire audio devices.</Description>
         <Archive sha1sum="cde4a90e2e23f1ba4ed4b665d1663520fef85980" type="targz">mirrors://sourceforge/freebob/libfreebob-1.0.11.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libraw1394-devel</Dependency>
-            <Dependency>libavc1394-devel</Dependency>
-            <Dependency>libiec61883-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libraw1394</Dependency>
+            <Dependency>libavc1394</Dependency>
+            <Dependency>libiec61883</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">libfreebob-1.0.11-includes.patch</Patch>
@@ -39,16 +39,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libfreebob-devel</Name>
-        <Summary>Development files for libfreebob</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libfreebob</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

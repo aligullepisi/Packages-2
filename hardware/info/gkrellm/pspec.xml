@@ -17,14 +17,15 @@
         <Description>A program to monitor system status, and to collect system information such as memory usage, cpu temperature etc.</Description>
         <Archive sha1sum="bcfc2efb5fd3f27e9bb703bda73f6a1d96b080df" type="tarbz2">http://gkrellm.srcbox.net/releases/gkrellm-2.3.5.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>gnutls-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libSM</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">drop_privileges.patch</Patch>
@@ -51,7 +52,9 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share</Path>
-            <Path fileType="man">/usr/share/man</Path>                        
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>                        
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/gkrellm.desktop">gkrellm.desktop</AdditionalFile>
@@ -60,19 +63,6 @@
         <Provides>
             <COMAR script="service.py">System.Service</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>gkrellm-devel</Name>
-        <Summary>Development files for gkrellm</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gkrellm</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

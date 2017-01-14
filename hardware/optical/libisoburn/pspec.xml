@@ -16,11 +16,11 @@
         <Description>Frontend for libraries libburn and libisofs</Description>
         <Archive sha1sum="dd82438b4fcf723ef72286449f0b27417714b5ba" type="targz">http://files.libburnia-project.org/releases/libisoburn-1.4.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libburn-devel</Dependency>
-            <Dependency>libisofs-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>acl-devel</Dependency>
+            <Dependency>libburn</Dependency>
+            <Dependency>libisofs</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>acl</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -39,16 +39,6 @@
             <Path fileType="data">/usr/share</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libisoburn-devel</Name>
-        <Summary>Development files for libisoburn</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libisoburn</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

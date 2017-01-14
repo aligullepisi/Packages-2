@@ -21,16 +21,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libspiro-devel</Name>
-        <Summary>Development files for libspiro</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libspiro</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
         </Files>

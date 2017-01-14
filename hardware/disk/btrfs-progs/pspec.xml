@@ -17,12 +17,12 @@
         <BuildDependencies>
             <Dependency>xmlto</Dependency>
             <Dependency>asciidoc</Dependency>
-            <Dependency>lzo-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>lzo</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libutil-linux</Dependency>
             <Dependency>util-linux</Dependency>
             <Dependency>libxslt</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>e2fsprogs</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -38,16 +38,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>btrfs-progs-devel</Name>
-        <Summary>Development files for btrfs-progs</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">btrfs-progs</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

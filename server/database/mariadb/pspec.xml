@@ -15,15 +15,15 @@
         <Description>MariaDB strives to be the logical choice for database professionals looking for a robust, scalable, and reliable SQL server.</Description>
         <Archive sha1sum="a9f055d7845b6a4896ad5e2fd62cef8531eefb32" type="targz">http://mirrors.syringanetworks.net/mariadb/mariadb-10.1.10/source/mariadb-10.1.10.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libevent-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libaio-devel</Dependency>
-            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>libevent</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libaio</Dependency>
+            <Dependency>unixODBC</Dependency>
             <Dependency>cmake</Dependency>
         </BuildDependencies>
         <Patches>

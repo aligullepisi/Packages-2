@@ -16,13 +16,13 @@
         <Description>OpenSSH is a FREE version of the SSH connectivity tools that technical users of the Internet rely on. Users of telnet, rlogin, and ftp may not realize that their password is transmitted across the Internet unencrypted, but it is. OpenSSH encrypts all traffic (including passwords) to effectively eliminate eavesdropping, connection hijacking, and other attacks.</Description>
         <Archive sha1sum="70e35d7d6386fe08abbd823b3a12a3ca44ac6d38" type="targz">http://ftp.icm.edu.pl/pub/OpenBSD/OpenSSH/portable/openssh-7.2p2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libedit-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
+            <Dependency>libedit</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
             <Dependency>mit-kerberos</Dependency>
             <!--Dependency>skey-devel</Dependency-->
-            <Dependency>pam-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>e2fsprogs</Dependency>
         </BuildDependencies>
         <Patches>
 <!--             <Patch>curve25519pad.patch</Patch> -->

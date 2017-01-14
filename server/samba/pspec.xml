@@ -16,38 +16,38 @@
         <Archive sha1sum="4420f3da0ce00090e6ae74ffbc3043d6eb53b566" type="targz">http://us1.samba.org/samba/ftp/stable/samba-4.4.5.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>keyutils</Dependency>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>popt-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libbsd-devel</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>popt</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libbsd</Dependency>
             <Dependency>avahi-libs</Dependency>
-            <!--Dependency>ctdb-devel</Dependency-->
-            <Dependency>cups-devel</Dependency>
-            <Dependency>avahi-devel</Dependency>
-            <Dependency>dmapi-devel</Dependency>
-            <!--Dependency>gamin-devel</Dependency-->
-            <Dependency>gnutls-devel</Dependency>
-            <Dependency>libaio-devel</Dependency>
-            <!--Dependency>libldb-devel</Dependency-->
+            <Dependency>ctdb-devel</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>avahi</Dependency>
+            <Dependency>dmapi</Dependency>
+            <Dependency>gamin-devel</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libaio</Dependency>
+            <Dependency>libldb-devel</Dependency>
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>iniparser-devel</Dependency>
-            <Dependency>libtalloc-devel</Dependency>
-            <Dependency>libtevent-devel</Dependency>
-            <Dependency>openldap-client</Dependency>
-            <Dependency>libarchive-devel</Dependency>
-            <Dependency>nss-devel</Dependency>
+            <Dependency>iniparser</Dependency>
+            <Dependency>libtalloc</Dependency>
+            <Dependency>libtevent</Dependency>
+            <Dependency>openldap</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>nss</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>libxslt</Dependency>
-            <Dependency versionFrom="1.2.12">libtdb-devel</Dependency>
-            <Dependency versionFrom="2.1.26">cyrus-sasl-devel</Dependency>
+            <Dependency versionFrom="1.2.12">libtdb</Dependency>
+            <Dependency versionFrom="2.1.26">cyrus-sasl</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -103,6 +103,8 @@
 	        <Path fileType="data">/var/run/ctdb</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/samba.conf</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/samba/lmhosts">lmhosts</AdditionalFile>
@@ -117,21 +119,6 @@
             <COMAR script="package.py">System.Package</COMAR>
             <COMAR script="service.py">System.Service</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>samba-devel</Name>
-        <Summary>Development files for samba</Summary>
-        <RuntimeDependencies>
-            <!--Dependency>libldb-devel</Dependency-->
-            <Dependency>libtalloc-devel</Dependency>
-            <Dependency>libtevent-devel</Dependency>
-            <Dependency release="current">samba</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <History>

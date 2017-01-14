@@ -15,8 +15,8 @@
         <Description>vbetools is a real-mode video BIOS code to alter hardware state. Vbetool uses lrmi in order to run code from the video BIOS. It is able to alter DPMS states, save/restore video card state and attempt to initialize the video card from scratch.</Description>
         <Archive sha1sum="c7ba7c0635160c47fb1b94fd7c7cbe39cb717d22" type="targz">http://www.codon.org.uk/~mjg59/vbetool/download/vbetool-1.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libx86-devel</Dependency>
-            <Dependency>pciutils-devel</Dependency>
+            <Dependency>libx86</Dependency>
+            <Dependency>pciutils</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">vbetool-1.0-build-as-needed.patch</Patch>

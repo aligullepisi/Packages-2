@@ -15,19 +15,19 @@
         <Archive sha1sum="4c33d82adc763169aca24429f5cbc5a4dcd1df09" type="targz">https://github.com/papylhomme/diskmonitor/archive/0.3.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>kconfigwidgets-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>ki18n-devel</Dependency>
-            <Dependency>kiconthemes-devel</Dependency>
-            <Dependency>knotifications-devel</Dependency>
-            <Dependency>kxmlgui-devel</Dependency>
-            <Dependency>plasma-workspace-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-quick1-devel</Dependency>
-            <Dependency>udisks2-devel</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>plasma-workspace-</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-quick1</Dependency>
+            <Dependency>udisks2</Dependency>
+            <Dependency>qt5-declarative</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">ki18n.patch</Patch>            

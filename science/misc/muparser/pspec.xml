@@ -24,15 +24,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>muparser-devel</Name>
-        <Summary>Development files for muparser</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">muparser</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

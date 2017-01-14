@@ -24,26 +24,9 @@
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man/man1/checkmk.1</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>check-devel</Name>
-        <Summary>Development files for check</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">check</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>check-docs</Name>
-        <Summary>Documents for check</Summary>
-        <Files>
             <Path fileType="doc">/usr/share/doc/check/example</Path>
         </Files>
     </Package>

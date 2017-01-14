@@ -15,9 +15,9 @@
         <Description>libmicrohttpd is a small C library that is supposed to make it easy to run an HTTP server as part of another application.</Description>
         <Archive sha1sum="36ff5be9e6f50f0ba71025f21c026254ece7197b" type="targz">http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.49.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gnutls-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libgpg-error</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -35,19 +35,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libmicrohttpd-devel</Name>
-        <Summary>Development files for libmicrohttpd</Summary>
-	<BuildDependencies>
-            <Dependency>gnutls-devel</Dependency>
-        </BuildDependencies>
-        <RuntimeDependencies>
-            <Dependency release="current">libmicrohttpd</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man/man3</Path>

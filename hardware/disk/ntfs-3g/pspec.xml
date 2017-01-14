@@ -17,8 +17,8 @@
         <Description>ntfs-3g allows regular users read/write access to NTFS filesystems.</Description>
         <Archive sha1sum="382df40c366711003cf24d2342033c23e2580b42" type="targz">https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2016.2.22.tgz</Archive>
         <BuildDependencies>
-            <Dependency>fuse-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>fuse</Dependency>
+            <Dependency>libutil-linux</Dependency>
         </BuildDependencies>
         <!--Patches>
             <Patch level="1">ntfsprogs_destdir.patch</Patch>

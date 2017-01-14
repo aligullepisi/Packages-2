@@ -15,12 +15,12 @@
         <Description>GLib wrapper around libusb1.</Description>
         <Archive sha1sum="9116ead26ad89180c151709b711a9a7f97f4ba08" type="tarxz">https://people.freedesktop.org/~hughsient/releases/libgusb-0.2.9.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>vala-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>gobject-introspection</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -41,16 +41,6 @@
             <Path fileType="doc">/usr/share/gtk-doc</Path>
             <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgusb-devel</Name>
-        <Summary>Development files for libgusb</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libgusb</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

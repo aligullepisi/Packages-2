@@ -16,9 +16,9 @@
         <Description>cloog is CLooG is a free software and library to generate code for scanning Z-polyhedra. It is used by the GCC Graphite optimization framework.</Description>
         <Archive sha1sum="8f7568ca1873f8d55bb694c8b9b83f7f4c6c1aa5" type="targz">http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>ppl-devel</Dependency>
-            <Dependency>isl-devel</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>ppl</Dependency>
+            <Dependency>isl</Dependency>
         </BuildDependencies>
         <Patches>
 <!--             <Patch level="1">cloog-0.18.1-isl-compat.patch</Patch> -->

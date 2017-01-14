@@ -19,26 +19,25 @@
             <Dependency>wget</Dependency>
             <Dependency>rhino</Dependency>
             <Dependency>fastjar</Dependency>
-            <Dependency>nss-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>attr</Dependency>
             <Dependency>xorg-proto</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>cups-devel</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cups</Dependency>
             <Dependency>eclipse-ecj</Dependency>
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>lcms2-devel</Dependency>
-            <Dependency>jdk7-openjdk</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>giflib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>libXtst-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <!--<Dependency>pulseaudio-libs-devel</Dependency>--><!-- for bootstrap -->
+            <Dependency>libXt</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency><!-- for bootstrap -->
         </BuildDependencies>
         <AdditionalFiles>
             <AdditionalFile target="patches/giflib_5.1.diff">giflib_5.1.diff</AdditionalFile>

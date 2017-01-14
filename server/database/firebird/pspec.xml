@@ -18,9 +18,9 @@
         <Description>Firebird is an open source relational database management system offering many ANSI SQL-99 features.</Description>
         <Archive sha1sum="e8f33daf8211666eac5b7a5eecc133f599e3bc9f" type="tarbz2">http://sourceforge.net/projects/firebird/files/firebird/2.5.4-Release/Firebird-2.5.4.26856-0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>icu4c-devel</Dependency>
+            <Dependency>icu4c</Dependency>
             <Dependency>btyacc</Dependency>
-            <Dependency>libedit-devel</Dependency>
+            <Dependency>libedit</Dependency>
         </BuildDependencies>
         <Patches>
             <!--Patch>hosts_equiv.patch</Patch>
@@ -49,6 +49,7 @@
             <Path fileType="library">/opt/firebird/lib/libgds.*</Path>
             <Path fileType="library">/opt/firebird/lib/libib_util.*</Path>
             <Path fileType="library">/opt/firebird/plugins/libfbtrace.so</Path>
+            <Path fileType="header">/usr/include/firebird</Path>
         </Files>
     </Package>
 
@@ -89,17 +90,6 @@
             <COMAR script="service.py">System.Service</COMAR>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>firebird-devel</Name>
-        <Summary>Development files for firebird</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">firebird-client</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include/firebird</Path>
-        </Files>
     </Package>
 
     <History>

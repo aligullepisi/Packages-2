@@ -19,7 +19,7 @@
         <BuildDependencies>
             <Dependency>groff</Dependency>
             <Dependency>openldap-client</Dependency>
-            <Dependency>bind-devel</Dependency>
+            <Dependency>bind</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch level="1">dhcp-4.2.0-errwarn-message.patch</Patch>-->
@@ -106,24 +106,14 @@
             <Path fileType="man">/usr/share/man/man5/dhcp-options*</Path>
             <Path fileType="man">/usr/share/man/man5/dhcp-eval*</Path>
             <Path fileType="doc">/usr/share/doc/dhcp/dhclient*</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/dhcp/dhclient.conf">dhclient.conf</AdditionalFile>
             <!--<AdditionalFile owner="root" permission="0644" target="/etc/NetworkManager/dispatcher.d/11-dhclient">11-dhclient</AdditionalFile>-->
             <!--<AdditionalFile owner="root" permission="0644" target="/usr/lib/pm-utils/sleep.d/56dhclient">56dhclient</AdditionalFile>-->
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>dhcp-devel</Name>
-        <Summary>Development files for dhcp</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">dhcp</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
-        </Files>
     </Package>
 
     <History>

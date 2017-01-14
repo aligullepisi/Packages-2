@@ -28,16 +28,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>cdparanoia-devel</Name>
-        <Summary>Development files for cdparanoia</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">cdparanoia</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

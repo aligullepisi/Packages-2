@@ -15,8 +15,8 @@
         <Description>libmpc is a library for arithmetic of complex numbers with arbitrarily high precision and correct rounding.</Description>
         <Archive sha1sum="b8be66396c726fdc36ebb0f692ed8a8cca3bcc66" type="targz">ftp://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>mpfr-devel</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>mpfr</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,16 +30,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/libmpc</Path>
             <Path fileType="info">/usr/share/info</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libmpc-devel</Name>
-        <Summary>Development files for libmpc</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libmpc</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

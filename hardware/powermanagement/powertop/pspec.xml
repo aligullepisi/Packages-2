@@ -15,9 +15,10 @@
         <Description>PowerTOP is a Linux tool that finds the software component(s) that make your computer use more power than necessary while it is idle.</Description>
         <Archive sha1sum="60da464a0c5d39c64b5d4a0e854bc6c480f8927a" type="targz">https://01.org/sites/default/files/downloads/powertop/powertop-2.8.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libnl-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>pciutils-devel</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>pciutils</Dependency>
         </BuildDependencies>
     </Source>
 

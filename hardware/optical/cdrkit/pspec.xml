@@ -15,9 +15,9 @@
         <Description>Suite of programs for CD/DVD recording, ISO image creation, and audio CD extraction.</Description>
         <Archive sha1sum="3f7ddc06db0272942e1a4cd98c3c96462df77387" type="targz">http://pkgs.fedoraproject.org/repo/pkgs/cdrkit/cdrkit-1.1.11.tar.gz/efe08e2f3ca478486037b053acd512e9/cdrkit-1.1.11.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cdparanoia-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>cdparanoia</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>zlib</Dependency>
             <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>

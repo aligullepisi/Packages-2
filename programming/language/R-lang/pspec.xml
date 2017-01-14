@@ -16,22 +16,22 @@
         <Description>This package includes the core R userspace and all R development components.</Description>
         <Archive sha1sum="df853188d3e2b1c2d32393016401c432a5192c4d" type="targz">http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libXmu-devel</Dependency>
-            <Dependency>icu4c-devel</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>icu4c</Dependency>
             <Dependency>jdk7-openjdk</Dependency>
             <Dependency>xdg-utils</Dependency>
-            <Dependency>blas-devel</Dependency>
-            <Dependency>lapack-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
+            <Dependency>blas</Dependency>
+            <Dependency>lapack</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>tiff</Dependency>
             <Dependency>libgfortran</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>curl</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch level="1">Rscript.patch</Patch>-->
@@ -75,6 +75,12 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/R</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/libR.pc</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/libRmath.pc</Path>
+            <Path fileType="doc">/usr/share/doc/R</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include/Rmath.h</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile target="/etc/env.d/99R" owner="root" permission="0644">99R</AdditionalFile>
@@ -83,41 +89,6 @@
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>R-mathlib</Name>
-        <IsA>library</IsA>
-        <Summary>Math library for R</Summary>
-        <RuntimeDependencies>
-            <Dependency version="current">R</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="header">/usr/include/Rmath.h</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>R-docs</Name>
-        <IsA>data:doc</IsA>
-        <Summary>Documents for R</Summary>
-        <Files>
-            <Path fileType="doc">/usr/share/doc/R</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>R-devel</Name>
-        <Summary>Development files for R</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">R</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig/libR.pc</Path>
-            <Path fileType="library">/usr/lib/pkgconfig/libRmath.pc</Path>
-        </Files>
     </Package>
 
     <History>

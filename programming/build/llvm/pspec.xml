@@ -18,15 +18,15 @@
        <Archive sha1sum="6d503cea94c131b6bfcf5254e62d32fcce1ebcc8" type="binary">http://llvm.org/releases/3.8.0/lldb-3.8.0.src.tar.xz</Archive>  
        <Archive sha1sum="480ea09e369dac6de1f3759b27fa19417b26b69e" type="binary">http://llvm.org/releases/3.8.0/compiler-rt-3.8.0.src.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>ncurses</Dependency>
             <Dependency>ocaml</Dependency>
-            <Dependency>libffi-devel</Dependency>
+            <Dependency>libffi</Dependency>
             <Dependency>groff</Dependency>
             <Dependency>swig</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>libedit-devel</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libedit</Dependency>
             <Dependency>cmake</Dependency>
             <!-- Use new plugin-api.h header file from binutils to enable LLVM gold plugin -->
             <Dependency>binutils</Dependency>
@@ -101,20 +101,9 @@
             <Path fileType="library">/usr/lib/liblldb</Path>
             <Path fileType="library">/usr/lib/python2.7/site-packages/readline.so</Path>
             <Path fileType="library">/usr/lib/python2.7/site-packages/lldb/*</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>lldb-devel</Name>
-        <Summary>Development headers lldb</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">lldb</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/lldb/*</Path>
         </Files>
     </Package>
-    
 
     <Package>
         <Name>llvm-clang-analyzer</Name>
@@ -149,31 +138,10 @@
             <Path fileType="library">/usr/lib/clang/libclang.so</Path>
             <Path fileType="man">/usr/share/man/man1/clang.1</Path>
             <Path fileType="data">/usr/share/clang</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>llvm-clang-devel</Name>
-        <Summary>Development headers for llvm-clang</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">llvm-clang</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/clang</Path>
             <Path fileType="header">/usr/include/clang-c</Path>
         </Files>
     </Package>
-
-    <!--Package>
-        <Name>llvm-docs</Name>
-        <PartOf>programming.docs</PartOf>
-        <IsA>data:doc</IsA>
-        <Summary>Documentation for LLVM</Summary>
-        <Files>
-            <Path fileType="doc">/usr/share/doc/llvm/html</Path>
-            <Path fileType="doc">/usr/share/doc/llvm/ocamldoc</Path>
-        </Files>
-    </Package-->
 
     <Package>
         <Name>llvm-32bit</Name>

@@ -17,17 +17,17 @@
         <Description>Scanner Access Now Easy (SANE) is a universal scanner interface. The SANE application programming interface provides standardized access to any raster image scanner hardware.</Description>
         <Archive sha1sum="05824922d91571e1fc2f5cdd270745783d593754" type="targz">https://sources.archlinux.org/other/sane/sane-backends-1.0.25.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libieee1284-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
-            <Dependency>libnl-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>cups-devel</Dependency>
-            <Dependency>libgphoto2-devel</Dependency>
-            <Dependency>libv4l-devel</Dependency>
-            <Dependency>avahi-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>net-snmp-devel</Dependency>
+            <Dependency>libieee1284</Dependency>
+            <Dependency>libusb-compat</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>libv4l</Dependency>
+            <Dependency>avahi</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>net-snmp</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">sane-backends-1.0.20-open-macro.patch</Patch>
@@ -69,23 +69,13 @@
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="data">/lib/udev/rules.d</Path>
             <Path fileType="data">/usr/share/sane</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/sane.png">sane.png</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/env.d/30sane">30sane</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>sane-backends-devel</Name>
-        <Summary>Development files for sane-backends</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">sane-backends</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <Package>

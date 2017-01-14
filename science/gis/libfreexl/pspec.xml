@@ -21,22 +21,12 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>libfreexl-devel</Name>
-        <Summary>Development files for libfreexl</Summary>
-        <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/freexl.pc</Path>
             <Path fileType="library">/usr/lib/libfreexl.so</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency release="current">libfreexl</Dependency>
-        </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>2016-06-09</Date>

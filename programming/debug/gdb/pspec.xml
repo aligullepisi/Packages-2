@@ -16,10 +16,10 @@
         <Archive sha1sum="04ba2906279b16b5f99c4f6b25942843a3717cdb" type="tarxz">mirrors://gnu/gdb/gdb-7.9.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>texinfo</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>ncurses</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -39,21 +39,11 @@
             <Path fileType="data">/usr/share/gdb</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/gstack.1">gstack.1</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>gdb-devel</Name>
-        <Summary>Development files for gdb</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gdb</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-        </Files>
     </Package>
 
     <History>

@@ -14,10 +14,10 @@
         <Description>mkinitcpio is a generic, modular, cross-distribution initramfs generation tool.</Description>
         <Archive sha1sum="678efaad52901aeb66f84e99f2ea86b24d2eea22" type="targz">https://github.com/bferturk/mkinitcpio/archive/19.1.tar.gz</Archive>     
         <BuildDependencies>
-            <Dependency>libkmod-devel</Dependency>
+            <Dependency>libkmod</Dependency>
             <Dependency>kmod</Dependency>
             <Dependency>asciidoc</Dependency>
-            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libxslt</Dependency>
             <Dependency>man-pages</Dependency>
             <Dependency>man-db</Dependency>
         </BuildDependencies>

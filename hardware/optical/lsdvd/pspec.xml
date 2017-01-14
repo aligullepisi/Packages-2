@@ -15,7 +15,7 @@
         <Description>lsdvd is a small application which lists the contents of DVDs to your terminal.</Description>
         <Archive sha1sum="aa44b8c33c66df2a131e469988ced2b11ebf9aab" type="targz">mirrors://sourceforge/lsdvd/lsdvd-0.17.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libdvdread-devel</Dependency>
+            <Dependency>libdvdread</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch level="1">lsdvd-0.16-types.patch</Patch>-->

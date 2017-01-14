@@ -17,17 +17,17 @@
         <Description>bluez contains the tools and libraries that provides support for the core Bluetooth layers and protocols.</Description>
         <Archive sha1sum="d8644269530b6bca1647f0c4cfbb284d88dfe949" type="tarxz">https://www.kernel.org/pub/linux/bluetooth/bluez-5.33.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cups-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libnl-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
-            <Dependency>libsndfile-devel</Dependency>
-            <!--Dependency>gst-plugins-base-devel</Dependency-->
-            <Dependency>libical-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">0001-Allow-using-obexd-without-systemd-in-the-user-session.patch</Patch>
@@ -60,6 +60,8 @@
             <Path fileType="data">/usr/share/alsa/bluetooth.conf</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="config">/etc</Path>
+            <Path fileType="header">/usr/include/bluetooth</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <Provides>
             <COMAR script="service.py">System.Service</COMAR>
@@ -76,20 +78,6 @@
             <Path fileType="library">/usr/lib/libbluetooth.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-    </Package>
-
-    <Package>
-        <Name>bluez-libs-devel</Name>
-        <Summary>Development files for bluez-libs</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">bluez-libs</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include/bluetooth</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-        <Provides>
-        </Provides>
     </Package>
 
     <History>

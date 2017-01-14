@@ -16,17 +16,18 @@
         <Description>Apache HTTP Server is a free software/open source web server for Unix-like systems, Microsoft Windows, Novell NetWare and other operating systems. Apache is notable for playing a key role in the initial growth of the World Wide Web, and continues to be the most popular web server in use, serving as the de facto reference platform against which other web servers are designed and judged.</Description>
         <Archive sha1sum="cefe8ea4a3f81c7a08e36c80ebbd792c67ab361b" type="tarbz2">http://archive.apache.org/dist/httpd/httpd-2.4.20.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>apr-devel</Dependency>
-            <Dependency>nss-devel</Dependency>
-            <Dependency>lua-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>db-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>apr-util-devel</Dependency>
-            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>apr</Dependency>
+            <Dependency>lua</Dependency>
+            <Dependency>apr-util</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libxml2</Dependency>
+	        <Dependency>libpcre</Dependency>
+            <Dependency>db</Dependency>
+            <Dependency>expat</Dependency>
 	 </BuildDependencies>
     </Source>
 
@@ -42,7 +43,7 @@
             <Dependency>zlib</Dependency>
             <Dependency>openssl</Dependency>
             <Dependency>libxml2</Dependency>
-	    <Dependency>libpcre</Dependency>
+	        <Dependency>libpcre</Dependency>
             <Dependency>db</Dependency>
             <Dependency>expat</Dependency>
         </RuntimeDependencies>

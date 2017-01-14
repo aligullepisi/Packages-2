@@ -16,19 +16,20 @@
         <Archive sha1sum="5022f51933d8888965c5f7a3b78813a41ec0b72d" type="targz">https://github.com/opencv/opencv/archive/2.4.13.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>libv4l-devel</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>jasper</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libv4l</Dependency>
+            <Dependency>ilmbase</Dependency>
             <Dependency>openexr-libs</Dependency>
-            <Dependency>jasper-devel</Dependency>
-            <Dependency>lapack-devel</Dependency>
-            <Dependency>ilmbase-devel</Dependency>
-            <Dependency>openexr-devel</Dependency>
-            <Dependency>lapack-devel</Dependency>
-            <Dependency>xine-lib-devel</Dependency>
-            <Dependency>libdc1394-devel</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>xine-lib</Dependency>
+            <Dependency>libdc1394</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -55,6 +56,8 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/OpenCV</Path>
             <Path fileType="data">/usr/share/opencv</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -67,17 +70,6 @@
         </Files>
     </Package>
 
-    <Package>
-        <Name>opencv-devel</Name>
-        <Summary>Development files for opencv</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">opencv</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-    </Package>
 
     <History>
         <Update release="1">

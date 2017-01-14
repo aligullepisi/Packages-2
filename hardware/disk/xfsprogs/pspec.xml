@@ -15,8 +15,8 @@
         <Description>xfsprogs contains a number of administrative utilities to work with and manage XFS filesystems.</Description>
         <Archive sha1sum="84d03a49a1c493ed68687c45ca57a777af26b772" type="targz">ftp://oss.sgi.com/projects/xfs/cmd_tars/xfsprogs-3.2.4.tar.gz</Archive>
         <BuildDependencies>
-           <Dependency>libutil-linux-devel</Dependency>
-           <Dependency>readline-devel</Dependency>
+           <Dependency>libutil-linux</Dependency>
+           <Dependency>readline</Dependency>
         </BuildDependencies>
     </Source>
 

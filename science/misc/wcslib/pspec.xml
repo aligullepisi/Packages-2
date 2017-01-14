@@ -18,7 +18,7 @@
             <Dependency>gcc</Dependency>
             <Dependency>flex</Dependency>
             <Dependency>libgfortran</Dependency>
-            <Dependency>cfitsio-devel</Dependency>            
+            <Dependency>cfitsio</Dependency>            
         </BuildDependencies>  
     </Source>
 
@@ -32,16 +32,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man/man1</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>wcslib-devel</Name>
-        <Summary>Development files for wcslib</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">wcslib</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

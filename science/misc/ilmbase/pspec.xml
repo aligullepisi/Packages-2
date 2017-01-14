@@ -29,18 +29,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>ilmbase-devel</Name>
-        <Summary>Development files for ilmbase</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">ilmbase</Dependency>
-            <!--Dependency>mesa-glu-devel</Dependency>
-            <Dependency>mesa-devel</Dependency-->
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

@@ -15,11 +15,11 @@
         <Description>libqalculate underpins the Qalculate! multi-purpose desktop calculator for GNU/Linux.</Description>
         <Archive sha1sum="c15f7f3a97995decf62cc964956fc1e374ecd78c" type="targz">mirrors://sourceforge/qalculate/libqalculate-0.9.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cln-devel</Dependency>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>cln</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gettext</Dependency>
             <Dependency>intltool</Dependency>
         </BuildDependencies>
         <Patches>
@@ -42,19 +42,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/qalculate</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libqalculate-devel</Name>
-        <Summary>Development files for libqalculate</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libqalculate</Dependency>
-            <Dependency>cln-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>

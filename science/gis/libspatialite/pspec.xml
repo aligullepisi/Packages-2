@@ -16,12 +16,12 @@
         <Description>SpatiaLite is an open source library intended to extend the SQLite core to support fully fledged Spatial SQL capabilities.</Description>
         <Archive sha1sum="698bf70bec669ddcbf1b0cc48f40c2e03776bffc" type="targz">http://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-4.2.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>geos-devel</Dependency>
-            <Dependency>libfreexl-devel</Dependency>
-            <Dependency>proj-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
+            <Dependency>geos</Dependency>
+            <Dependency>libfreexl</Dependency>
+            <Dependency>proj</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -38,28 +38,12 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>
-        </Files>
-    </Package>
-    
-    <Package>
-        <Name>libspatialite-devel</Name>
-        <Summary>Development files for libspatialite</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libspatialite</Dependency>
-            <Dependency>geos-devel</Dependency>
-            <Dependency>libfreexl-devel</Dependency>
-            <Dependency>proj-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>
             <Path fileType="library">/usr/lib/libspatialite.so</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>2016-06-09</Date>

@@ -16,7 +16,7 @@
         <Description>The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage collecting replacement for C malloc or C++ new.</Description>
         <Archive sha1sum="cd4a54620c38a2c361b3ee99dd134dbffb57c313" type="targz">http://www.hboehm.info/gc/gc_source/gc-7.4.2.tar.gz</Archive>
         <BuildDependencies>
-          <Dependency>libatomic_ops-devel</Dependency>
+          <Dependency>libatomic_ops</Dependency>
         </BuildDependencies>
         <Patches>
           <Patch level="1">noelision.patch</Patch>
@@ -28,16 +28,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gc-devel</Name>
-        <Summary>Development files for gc</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gc</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

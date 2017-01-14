@@ -26,16 +26,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>djbfft-devel</Name>
-        <Summary>Development files for djbfft</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">djbfft</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

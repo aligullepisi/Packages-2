@@ -4,15 +4,17 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from pisi.actionsapi import pythonmodules
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
-
-WorkDir="pip-%s" % get.srcVERSION()
+from pisi.actionsapi import cmaketools
 
 def setup():
-    pythonmodules.compile()
-        
-def install():    
-    pythonmodules.install()
+    cmaketools.configure()
+
+def build():
+    cmaketools.make()
+
+def install():
+    cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc("README", "COPYING")

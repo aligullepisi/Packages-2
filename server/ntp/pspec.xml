@@ -21,34 +21,16 @@
             <AdditionalFile permission="0755" target="fix-man-pages">fix-man-pages.sh</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>avahi-compat-libdns_sd-devel</Dependency>
-            <Dependency>libedit-devel</Dependency>
-            <Dependency>net-snmp-devel</Dependency>
+            <Dependency>avahi-compat-libdns_sd</Dependency>
+            <Dependency>libedit</Dependency>
+            <Dependency>net-snmp</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libevent-devel</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libevent</Dependency>
         </BuildDependencies>
         <!--<Patches>
             <Patch level="1">fedora/ntp-4.2.6p1-sleep.patch</Patch>
-	   <Patch level="1">fedora/ntp-4.2.6p1-droproot.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p1-bcast.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p1-cmsgalign.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p2-tentative.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p1-retcode.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p1-rtnetlink.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p2-html2man.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p2-htmldoc.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p2-mlock.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p1-nano.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.4p7-getprecision.patch</Patch>
-            <Patch level="1">fedora/ntp-4.2.6p1-logdefault.patch</Patch>
-
-             ntpstat patches -->
-            <!--<Patch level="0">fedora/ntpstat-0.2-clksrc.patch</Patch>
-            <Patch level="0">fedora/ntpstat-0.2-multipacket.patch</Patch>
-            <Patch level="0">fedora/ntpstat-0.2-sysvars.patch</Patch>
-           <Patch level="0">fedora/ntpstat-0.2-maxerror.patch</Patch>
             </Patches>-->
     </Source>
 

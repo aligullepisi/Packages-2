@@ -20,14 +20,14 @@
         <BuildDependencies>
             <Dependency>util-linux</Dependency>
             <Dependency>xmlto</Dependency>
-            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libxslt</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>cups-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
             <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
         <Patches>

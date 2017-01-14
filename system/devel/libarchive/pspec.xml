@@ -15,15 +15,15 @@
         <Description>libarchive includes a library and command-line tools for reading and writing tar, cpio, zip, ISO, and other archive formats.</Description>
         <Archive sha1sum="6a991777ecb0f890be931cec4aec856d1a195489" type="targz">http://www.libarchive.org/downloads/libarchive-3.1.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>nettle</Dependency>
+            <Dependency>attr</Dependency>
             <Dependency>bzip2</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>lzo-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>lzo</Dependency>
+            <Dependency>zlib</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -44,16 +44,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc/libarchive</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libarchive-devel</Name>
-        <Summary>Development files for libarchive</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libarchive</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man/man3</Path>

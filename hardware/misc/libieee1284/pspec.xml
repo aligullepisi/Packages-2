@@ -15,7 +15,7 @@
         <Description>Library is intended to be used by applications that need to communicate with (or at least identify) devices that are attached via a parallel port.</Description>
         <Archive sha1sum="600e6f8a5c79b435ee81df3618cd82e2b74812de" type="tarbz2">mirrors://sourceforge/libieee1284/libieee1284-0.2.11.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python</Dependency>
             <Dependency>chrpath</Dependency>
         </BuildDependencies>
         <Patches>
@@ -30,6 +30,8 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
     </Package>
 
@@ -41,18 +43,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libieee1284-devel</Name>
-        <Summary>Development files for libieee1284</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libieee1284</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
     </Package>
 

@@ -18,21 +18,21 @@
             <AdditionalFile owner="root" permission="0644" target="src/cups/cups-genppdupdate.in">fedora/cups-genppdupdate.py.in</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>cups-devel</Dependency>
+            <Dependency>cups</Dependency>
             <Dependency>foomatic-db</Dependency>
-            <Dependency releaseFrom="3">ghostscript-devel</Dependency>
+            <Dependency releaseFrom="3">ghostscript</Dependency>
             <Dependency>cups</Dependency>
 
             <!-- For gutenprint-foomaticppdupdate script -->
             <Dependency>python-cups</Dependency>
             <Dependency releaseFrom="3">ghostscript</Dependency>
-            <Dependency>atk-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libusb</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">fedora/gutenprint-build.patch</Patch>
@@ -72,6 +72,9 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/include/gutenprintui2/</Path>
             <Path fileType="data"> /etc/cups/command.types</Path>
+            <Path fileType="header">/usr/include/gutenprint</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/usr/sbin/gutenprint-foomaticppdupdate">fedora/gutenprint-foomaticppdupdate</AdditionalFile>
@@ -79,19 +82,6 @@
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-    </Package>
-
-    <Package>
-        <Name>gutenprint-devel</Name>
-        <Summary>Development files for gutenprint</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gutenprint</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include/gutenprint</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
-        </Files>
     </Package>
 
     <History>

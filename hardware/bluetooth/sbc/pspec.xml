@@ -23,16 +23,6 @@
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/sbc/*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>sbc-devel</Name>
-        <Summary>Development files for sbc</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">sbc</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

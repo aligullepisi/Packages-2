@@ -16,9 +16,9 @@
         <Archive sha1sum="142be1db41cb7c62afb9f6d3304769a39dd0b5ac" type="tarbz2">http://download.osgeo.org/geos/geos-3.5.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>doxygen</Dependency>
-            <Dependency>ruby-devel</Dependency>
+            <Dependency>ruby</Dependency>
             <Dependency>swig</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="0">geos-gcc43.patch</Patch>
@@ -35,18 +35,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc/geos</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>geos-devel</Name>
-        <Summary>Development files for geos</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">geos</Dependency>
-            <Dependency>ruby-devel</Dependency>
-            <Dependency>python-devel</Dependency>        
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

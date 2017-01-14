@@ -14,17 +14,17 @@
         <Description>OpenLDAP is an open-source suite of LDAP (Lightweight Directory Access Protocol) applications and development tools</Description>
         <Archive sha1sum="016a738d050a68d388602a74b5e991035cdba149" type="targz">ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-2.4.44.tgz</Archive>
         <BuildDependencies>
-            <Dependency>nss-devel</Dependency>
-            <Dependency>db-devel</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>db</Dependency>
             <Dependency>openssl-devel</Dependency>
-            <Dependency>tcp-wrappers-devel</Dependency>
-            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>tcp-wrappers</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
             <Dependency>libtool-ltdl</Dependency>
-            <Dependency>icu4c-devel</Dependency>
-            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>unixODBC</Dependency>
             <Dependency>mariadb-server</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>e2fsprogs</Dependency>
             <Dependency>chrpath</Dependency>
             <Dependency>groff</Dependency>
         </BuildDependencies>

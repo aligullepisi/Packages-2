@@ -20,16 +20,16 @@
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>parted-devel</Dependency>
-            <Dependency>libatasmart-devel</Dependency>
-            <Dependency>device-mapper-devel</Dependency>
-            <Dependency>lvm2-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>sg3_utils-devel</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>parted</Dependency>
+            <Dependency>libatasmart</Dependency>
+            <Dependency>device-mapper</Dependency>
+            <Dependency>lvm2</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>sg3_utils</Dependency>
             <Dependency>ntfsprogs</Dependency>      <!-- For mkntfs -->
             <Dependency>dosfstools</Dependency>     <!-- For mkfs.vfat -->
             <Dependency>docbook-xsl</Dependency>
@@ -57,10 +57,10 @@
             <Dependency>device-mapper</Dependency>
             <Dependency>ntfsprogs</Dependency>      <!-- For mkntfs -->
             <Dependency>dosfstools</Dependency>     <!-- For mkfs.vfat -->
-            <!--Dependency>mtools</Dependency-->         <!-- For mlabel -->
-            <!--Dependency>xfsprogs</Dependency>       < For mkfs.xfs, xfs_admin -->
+            <Dependency>mtools</Dependency>         <!-- For mlabel -->
+            <Dependency>xfsprogs</Dependency>       <!--For mkfs.xfs, xfs_admin -->
             <Dependency>sg3_utils</Dependency>
-            <!--Dependency>smp_utils</Dependency>      <For smp_rep_manufacturer -->
+            <Dependency>smp_utils</Dependency>      <!--For smp_rep_manufacturer -->
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/udisks2</Path>
@@ -81,16 +81,6 @@
             <Path fileType="data">/var/lib/</Path>
             <Path fileType="data">/run/udisks</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/*.xml</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>udisks2-devel</Name>
-        <Summary>Development files for udisks2</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">udisks2</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

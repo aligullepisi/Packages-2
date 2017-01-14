@@ -16,7 +16,7 @@
         <Description>Cython is a language that makes writing C extensions for the Python language as easy as Python itself.</Description>
         <Archive sha1sum="fc574c5050cd5a8e34435432e2a4a693353ed807" type="targz">http://cython.org/release/Cython-0.23.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -19,7 +19,7 @@
             <Patch level="1">libatasmart-uninitialized-var.patch</Patch>
         </Patches>
         <BuildDependencies>
-             <Dependency>eudev-devel</Dependency>
+             <Dependency>eudev</Dependency>
          </BuildDependencies>
     </Source>
 
@@ -34,17 +34,6 @@
             <Path fileType="library">/usr/lib/libatasmart.so*</Path>
             <Path fileType="data">/usr/share/doc/libatasmart/README</Path>
             <Path fileType="data">/usr/share/doc/libatasmart/LGPL</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libatasmart-devel</Name>
-        <Summary>Development files for libatasmart</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libatasmart</Dependency>
-            <Dependency>eudev-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>

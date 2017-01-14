@@ -15,9 +15,9 @@
         <Description>Daemon to balance IRQs across multiple CPUs on systems.This can lead to better performance and I/O balance on SMP systems.</Description>
         <Archive sha1sum="bffafb547dd24a15645dbd1968c440218de6425d" type="targz">https://github.com/Irqbalance/irqbalance/archive/v1.1.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>numactl-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libcap-ng-devel</Dependency>
+            <Dependency>numactl</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libcap-ng</Dependency>
         </BuildDependencies>
     </Source>
 

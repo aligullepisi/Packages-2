@@ -12,7 +12,7 @@
         <License>Apache-2.0</License>
         <Summary>A daemon to control runC, built for performance and density.</Summary>
         <Description>is a daemon with an API and a command line client, to manage containers on one machine. It uses runC to run containers according to the OCI specification.</Description>
-        <Archive sha1sum="db3ec28d045109952e0615f5a3bea39816dfac17" type="targz">https://github.com/docker/containerd/archive/v0.2.2.tar.gz</Archive>
+        <Archive sha1sum="77b6887b091baf703565adcc266cd37feffcf8e0" type="targz">https://github.com/docker/containerd/archive/v0.2.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>golang</Dependency>
             <Dependency>git</Dependency>
@@ -21,9 +21,6 @@
 
     <Package>
         <Name>containerd</Name>
-        <RuntimeDependencies>
-            <Dependency>runc</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/doc</Path>
@@ -32,9 +29,9 @@
 
     <History>
         <Update release="1">
-            <Date>2016-07-12</Date>
-            <Version>0.2.2</Version>
-            <Comment>First release</Comment>
+            <Date>2016-12-21</Date>
+            <Version>0.2.3</Version>
+            <Comment>First Release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
             <Email>admin@limelinux.com</Email>
         </Update>

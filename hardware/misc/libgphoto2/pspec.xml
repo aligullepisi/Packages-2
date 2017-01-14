@@ -16,12 +16,12 @@
         <Archive sha1sum="976feb07d51026e6ca647f9fa333c500c5e0c041" type="tarbz2">mirrors://sourceforge/gphoto/libgphoto2-2.5.8.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>doxygen</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>gd-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>libexif-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libtool-ltdl</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>gd</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -46,6 +46,11 @@
             <Path fileType="data">/lib/udev/rules.d</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin/gphoto2-config*</Path>
+            <Path fileType="executable">/usr/bin/gphoto2-port-config</Path>
+            <Path fileType="header">/usr/include/gphoto2</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
@@ -60,22 +65,6 @@
             <Path fileType="doc">/usr/share/doc/libgphoto2/camlibs</Path>
             <Path fileType="doc">/usr/share/doc/libgphoto2/apidocs.html</Path>
             <Path fileType="doc">/usr/share/doc/libgphoto2/linux-hotplug</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libgphoto2-devel</Name>
-        <Summary>Development files for libgphoto2</Summary>
-        <RuntimeDependencies>
-            <Dependency>libexif-devel</Dependency>
-            <Dependency release="current">libgphoto2</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/gphoto2-config*</Path>
-            <Path fileType="executable">/usr/bin/gphoto2-port-config</Path>
-            <Path fileType="header">/usr/include/gphoto2</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
     </Package>
 

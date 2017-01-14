@@ -17,8 +17,8 @@
         <Archive sha1sum="b994f2f31e6638415d7f8a3c0c7e04e6bc4ca4a9" type="tarbz2">https://fedorahosted.org/releases/e/l/elfutils/0.165/elfutils-0.165.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>bzip2</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
         </BuildDependencies>
     </Source>
 

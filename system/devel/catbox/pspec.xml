@@ -16,7 +16,7 @@
         <Archive sha1sum="665015a412bec41abf18e6126f2d0fbb6b1c094a" type="targz">https://github.com/baris/catbox/archive/catbox-1.6.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python</Dependency>
         </BuildDependencies>
     </Source>
 

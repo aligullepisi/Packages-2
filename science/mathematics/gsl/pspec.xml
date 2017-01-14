@@ -24,16 +24,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gsl-devel</Name>
-        <Summary>Development files for gsl</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gsl</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
             <Path fileType="man">/usr/share/man/man3</Path>

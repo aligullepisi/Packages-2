@@ -27,9 +27,9 @@ def setup():
                          --enable-gold \
                          --enable-plugins \
                          --with-pkgversion="Pisi Linux" \
-                         --with-bugurl=http://bugs.pisilinux.org/ \
-                         %s \
+                         --with-bugurl=http://bugs.limelinux.com/ \
                          --with-pic \
+                          %s \
                          --disable-nls \
                          --disable-werror' % (get.HOST(), multilib))
                          #--enable-targets="i386-linux" \
@@ -38,9 +38,6 @@ def build():
     autotools.make("configure-host")
     autotools.make()
 
-# check fails because of LD_LIBRARY_PATH
-#def check():
-#    autotools.make("check -j1")
 
 def install():
     autotools.rawInstall("DESTDIR=%s tooldir=/usr" % get.installDIR())

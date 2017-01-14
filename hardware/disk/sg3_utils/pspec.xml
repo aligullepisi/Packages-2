@@ -25,21 +25,11 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/rescan-scsi-bus.sh">rescan-scsi-bus.sh</AdditionalFile>
         </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>sg3_utils-devel</Name>
-        <Summary>Development files for sg3_utils</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">sg3_utils</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-        </Files>
     </Package>
 
     <History>

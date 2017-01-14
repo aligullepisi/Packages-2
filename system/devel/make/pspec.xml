@@ -18,8 +18,8 @@
             <Dependency>gettext</Dependency>
             <Dependency>gnuconfig</Dependency>
             <Dependency>patch</Dependency>
-            <Dependency>gc-devel</Dependency>
-            <Dependency>guile-devel</Dependency>
+            <Dependency>gc</Dependency>
+            <Dependency>guile</Dependency>
         </BuildDependencies>
     </Source>
 

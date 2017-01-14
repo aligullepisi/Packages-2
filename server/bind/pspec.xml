@@ -15,13 +15,13 @@
         <Description>bind is an implementation of the DNS protocols, bind includes a DNS server (named), a resolver library and tools for verifying that the DNS server is operating properly.</Description>
         <Archive sha1sum="4ddb2670976c06af7e86352616383958d82c51ce" type="targz">ftp://ftp.isc.org/isc/bind9/9.10.2/bind-9.10.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>geoip-devel</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>geoip</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">nslookup-pisilinux.patch</Patch>
@@ -46,20 +46,8 @@
             <Dependency>libxml2</Dependency>
             <Dependency>mit-kerberos</Dependency>
         </RuntimeDependencies>
-	<Files>
+	     <Files>
             <Path fileType="library">/usr/lib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>bind-devel</Name>
-        <IsA>library</IsA>
-        <PartOf>server.library</PartOf>
-        <Summary>bind header and development files</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">bind-libs</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="executable">/usr/bin/isc-config.sh</Path>
             <Path fileType="man">/usr/share/man/man1/isc-config*</Path>

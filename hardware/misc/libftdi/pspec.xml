@@ -17,9 +17,9 @@
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>boost-devel</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>python</Dependency>
             <Dependency>swig</Dependency>
         </BuildDependencies>
         <Patches>
@@ -39,6 +39,11 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/lib/udev/rules.d</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin/libftdi-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="doc">/usr/share/doc/libftdi/examples</Path>
         </Files>
     </Package>
 
@@ -52,22 +57,6 @@
         <Summary>Python bindings for libftdi</Summary>
         <Files>
             <Path fileType="library">/usr/lib/python*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libftdi-devel</Name>
-        <Summary>Development files for libftdi</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libftdi</Dependency>
-            <Dependency>libusb-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/libftdi-config</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
-            <Path fileType="doc">/usr/share/doc/libftdi/examples</Path>
         </Files>
     </Package>
 

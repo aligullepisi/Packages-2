@@ -28,14 +28,14 @@
         <Archive sha1sum="0fd0929783f2610eb6a5969e5aa8247cbc2991b0" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-ru-6.1.4.tar.gz</Archive>
         <Archive sha1sum="461985340593fdc43dfc81c4b9bf21999b7a4f70" type="targz">https://sourceforge.net/projects/eric-ide/files/eric6/stable/6.1.4/eric6-i18n-tr-6.1.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency> 
+            <Dependency>qt5-base</Dependency> 
             <Dependency>qt5-sql-mysql</Dependency>
             <Dependency>python3</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>python3-qt5</Dependency>
-            <Dependency>qscintilla2-devel</Dependency>
+            <Dependency>qscintilla2</Dependency>
             <Dependency>qscintilla2-python3</Dependency>
-            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>qt5-webkit</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>python3-sip</Dependency>
         </BuildDependencies>

@@ -15,7 +15,7 @@
         <Description>Foomatic - database extension consisting of manufacturer-supplied PPD files released under non-free licenses.</Description>
         <Archive sha1sum="4bf4ce1788b4194c6ec617a37bb8b9c6317ab5fa" type="targz">http://www.openprinting.org/download/foomatic/foomatic-db-nonfree-20160609.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cups-devel</Dependency>
+            <Dependency>cups</Dependency>
             <Dependency>foomatic-db</Dependency>
         </BuildDependencies>
     </Source>
