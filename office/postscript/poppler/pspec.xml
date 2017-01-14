@@ -15,17 +15,17 @@
         <Description>poppler is a PDF rendering library based on xpdf.</Description>
         <Archive sha1sum="f204cb6a57730971ef561732a269e7bafc8e8476" type="tarxz">http://poppler.freedesktop.org/poppler-0.34.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>lcms2-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>fontconfig-devel</Dependency>
-            <Dependency>openjpeg-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>openjpeg</Dependency>
+            <Dependency>qt5-base</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -75,20 +75,10 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libpoppler-qt5.so*</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/poppler-qt5.pc</Path>
         </Files>
     </Package>
 
-    <Package>
-        <Name>poppler-qt5-devel</Name>
-        <Summary>Development files for poppler-qt</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">poppler-qt5</Dependency>
-            <Dependency release="current">poppler-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="data">/usr/lib/pkgconfig/poppler-qt5.pc</Path>
-        </Files>
-     </Package>
 
     <Package>
         <Name>poppler-cpp</Name>
@@ -99,17 +89,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libpoppler-cpp.so*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>poppler-cpp-devel</Name>
-        <Summary>Development files for poppler-cpp</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">poppler-cpp</Dependency>
-            <Dependency release="current">poppler-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="library">/usr/lib/pkgconfig/poppler-cpp.pc</Path>
         </Files>
     </Package>
@@ -127,19 +106,6 @@
         <Files>
             <Path fileType="library">/usr/lib/libpoppler-glib.so*</Path>
             <Path fileType="library">/usr/lib/girepository-1.0/Poppler-0.18.typelib</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>poppler-glib-devel</Name>
-        <Summary>Development files for poppler-glib</Summary>
-        <RuntimeDependencies>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency release="current">poppler-glib</Dependency>
-            <Dependency release="current">poppler-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="library">/usr/lib/pkgconfig/poppler-glib.pc</Path>
             <Path fileType="library">/usr/lib/pkgconfig/poppler-cairo.pc</Path>
             <Path fileType="data">/usr/share/gir-1.0/Poppler-0.18.gir</Path>
@@ -147,18 +113,6 @@
         </Files>
     </Package>
 
-    <Package>
-        <Name>poppler-devel</Name>
-        <Summary>Development files for poppler</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">poppler</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib32/pkgconfig/poppler.pc</Path>
-        </Files>
-    </Package>
 
     <Package>
         <Name>poppler-32bit</Name>

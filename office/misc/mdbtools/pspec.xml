@@ -17,11 +17,11 @@
         <Description>mdbtools contains set of libraries and utilities for reading Microsoft Access database (MDB) files.</Description>
         <Archive sha1sum="33b746f29c1308909a1e82546ec24e8f835d461a" type="targz">https://github.com/brianb/mdbtools/archive/0.7.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>unixODBC-devel</Dependency>
-            <!--<Dependency>libglade-devel</Dependency>
-            <Dependency>libgnomeui-devel</Dependency>-->
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
+            <Dependency>unixODBC</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>libgnomeui</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>readline</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -40,44 +40,10 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>mdbtools-devel</Name>
-        <Summary>Development files for mdbtools</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">mdbtools</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    <!-- need scrollkeeper disabled build gui -->   
-    <!--<Package>
-        <Name>mdbtools-gui</Name>
-        <Summary>MDB database explorer</Summary>
-        <Description>mdbtools-gui package contains the gmdb2 graphical user interface for MDB Tools</Description>
-        <RuntimeDependencies>
-            <Dependency release="current">mdbtools</Dependency>
-            <Dependency>libgnomeui</Dependency>
-            <Dependency>libglade</Dependency>
-            <Dependency>gtk2</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libgnome</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/bin/gmdb2</Path>
-            <Path fileType="data">/usr/share/gmdb</Path>
-            <Path fileType="data">/usr/share/applications/gmdb2.desktop</Path>
-            <Path fileType="data">/usr/share/gnome/help/gmdb</Path>
-        </Files>
-        <AdditionalFiles>
-            <AdditionalFile target="/usr/share/applications/gmdb2.desktop" permission="0644" owner="root">gmdb2.desktop</AdditionalFile>
-        </AdditionalFiles>
-    </Package>-->
 
     <History>
         <Update release="1">

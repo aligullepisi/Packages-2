@@ -16,13 +16,13 @@
         <Description>A C++ library for parsing binary Microsoft Visio documents (.vsd). Includes a converter to XHTML with embedded SVG files.</Description>
         <Archive sha1sum="02daada854aee55ff847b42916536de143c7dda4" type="tarxz">http://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.5.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>icu4c-devel</Dependency>
-            <Dependency>librevenge-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>boost-devel</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>librevenge</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>boost</Dependency>
             <Dependency>gperf</Dependency>
-            <Dependency>cppunit-devel</Dependency>
+            <Dependency>cppunit</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -39,19 +39,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc/libvisio</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libvisio-devel</Name>
-        <RuntimeDependencies>
-            <Dependency>icu4c-devel</Dependency>
-            <Dependency>librevenge-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency version="current">libvisio</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>

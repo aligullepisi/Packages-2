@@ -23,16 +23,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>chmlib-devel</Name>
-        <Summary>Development files for chmlib</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">chmlib</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

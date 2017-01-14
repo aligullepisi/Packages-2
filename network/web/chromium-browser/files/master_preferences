@@ -17,7 +17,7 @@
    "make_chrome_default" : false
  },
  "first_run_tabs" : [
-   "http://www.pisilinux.org",
+   "http://www.limelinux.com",
    "welcome_page",
    "new_tab_page"
  ]

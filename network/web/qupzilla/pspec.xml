@@ -13,9 +13,9 @@
         <Description>QupZilla is a new and very fast QtWebEngine browser.</Description>
         <Archive type="tarxz" sha1sum="db05bb206999b782df4d6ae96c6df24cba81944a">https://github.com/QupZilla/qupzilla/releases/download/v2.0.1/QupZilla-2.0.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>qt5-base</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
             <Dependency>qt5-webengine-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>

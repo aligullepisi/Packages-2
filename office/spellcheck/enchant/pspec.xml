@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>aspell</Dependency>
             <Dependency>hunspell</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>glib2</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -57,16 +57,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/enchant/libenchant_zemberek.so</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>enchant-devel</Name>
-        <Summary>Development files for enchant</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">enchant</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>

@@ -16,8 +16,8 @@
         <Description>enca is a character set analyzer that can detect and convert character set of text files.</Description>
         <Archive sha1sum="1913e045a1a8c402c4a77222075b12cfe85625a4" type="tarxz">http://dl.cihar.com/enca/enca-1.16.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>recode-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
+            <Dependency>recode</Dependency>
+            <Dependency>gettext</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>gtk-doc</Dependency>
         </BuildDependencies>
@@ -34,16 +34,6 @@
             <Path fileType="library">/usr/libexec/enca</Path>
             <Path fileType="doc">/usr/share/doc/enca</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>enca-devel</Name>
-        <Summary>Development files for enca</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">enca</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>

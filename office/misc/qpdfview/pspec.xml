@@ -13,15 +13,15 @@
         <Description>It uses Poppler for PDF support, libspectre for PS support, DjVuLibre for DjVu support, CUPS for printing support and the Qt toolkit for its interface.</Description>
         <Archive sha1sum="0730b34b333bbe1d66713d3689c4e971638df72c" type="targz">https://launchpad.net/qpdfview/trunk/0.4.14/+download/qpdfview-0.4.14.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>djvu-devel</Dependency>
-            <Dependency>cups-devel</Dependency>
-            <Dependency>poppler-qt5-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-xmlpatterns-devel</Dependency>
-            <Dependency>libspectre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>djvu</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>poppler-qt5</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-xmlpatterns</Dependency>
+            <Dependency>libspectre</Dependency>
+            <Dependency>zlib</Dependency>
            <Dependency>pkgconfig</Dependency>
-           <Dependency>qt5-svg-devel</Dependency>
+           <Dependency>qt5-svg</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

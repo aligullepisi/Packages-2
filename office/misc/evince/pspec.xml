@@ -17,21 +17,21 @@
         <Archive sha1sum="eab33bc1db02ca0099c4594b08ff1ddfb44996dd" type="tarxz">mirrors://gnome/evince/3.20/evince-3.20.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>itstool</Dependency>
-            <Dependency>atk-devel</Dependency>
-            <Dependency>libgxps-devel</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>libsecret-devel</Dependency>
-            <Dependency>djvu-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>poppler-glib-devel</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>libgxps</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>djvu</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>poppler-glib</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>gobject-introspection</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -70,28 +70,12 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>evince-devel</Name>
-        <Summary>Development files for evince</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">evince</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>evince-docs</Name>
-        <Summary>Documentation files for evince</Summary>
-        <Files>
             <Path fileType="data">/usr/share/gtk-doc/html</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>2016-09-07</Date>

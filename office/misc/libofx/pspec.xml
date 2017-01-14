@@ -16,7 +16,7 @@
         <Description>libofx is a library designed to allow applications to very easily support OFX command responses, usually provided by financial institutions.</Description>
         <Archive sha1sum="33f394c963c087217cb6c508af842d4844bc0823" type="targz">http://sourceforge.net/projects/libofx/files/libofx/0.9.10/libofx-0.9.10.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>opensp-devel</Dependency>
+            <Dependency>opensp</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch level="1">libofx-assorted-c++-fu.patch</Patch>-->
@@ -36,25 +36,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/libofx</Path>
             <Path fileType="man">/usr/share/man/man1</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libofx-devel</Name>
-        <Summary>Development files for libofx</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libofx</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libofx-docs</Name>
-        <Summary>Documentation for libofx</Summary>
-        <Files>
             <Path fileType="doc">/usr/share/doc/libofx/html</Path>
         </Files>
     </Package>

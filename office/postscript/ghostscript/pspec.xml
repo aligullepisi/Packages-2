@@ -15,18 +15,18 @@
         <Description>ghostscript is a set of software that provides a PostScript interpreter, a set of C procedures and an interpreter for PDF files. ghostscript is normally used to display PostScript files and to print PostScript files to non-PostScript printers.</Description>
         <Archive sha1sum="695c56ecb296e9a0d97bc885c3180b0538aafbf5" type="targz">https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs919/ghostscript-9.19.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>tiff-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency versionFrom="2.6">lcms2-devel</Dependency>
-            <Dependency>libXt-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libpaper-devel</Dependency>
-            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency versionFrom="2.6">lcms2</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpaper</Dependency>
+            <Dependency>fontconfig</Dependency>
         </BuildDependencies>
         <Patches>
             <!-- Ubuntu patches -->
@@ -70,6 +70,10 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/cups</Path>
             <Path fileType="data">/usr/share/ghostscript</Path>
+            <Path fileType="executable">/usr/bin/ijs-config</Path>
+            <Path fileType="header">/usr/include/ghostscript</Path>
+            <Path fileType="header">/usr/include/ijs</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <!--
         <AdditionalFiles>
@@ -77,29 +81,6 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/ghostscript/9.00/Resource/Init/cidfmap">fedora/cidfmap</AdditionalFile>
         </AdditionalFiles>
         -->
-    </Package>
-
-    <Package>
-        <Name>ghostscript-docs</Name>
-        <Summary>Documentation for ghostscript</Summary>
-        <Files>
-            <Path fileType="doc">/usr/share/doc/ghostscript/html</Path>
-            <Path fileType="doc">/usr/share/doc/ghostscript/examples</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>ghostscript-devel</Name>
-        <Summary>Development files for ghostscript</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">ghostscript</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/ijs-config</Path>
-            <Path fileType="header">/usr/include/ghostscript</Path>
-            <Path fileType="header">/usr/include/ijs</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
     </Package>
 
     <Package>

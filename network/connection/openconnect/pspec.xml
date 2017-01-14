@@ -19,10 +19,10 @@
             <!--<Dependency>stoken-devel</Dependency>-->
             <!--<Dependency>libproxy-devel</Dependency>-->
             <Dependency>intltool</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>zlib</Dependency>
             <!--<Dependency>gnutls-devel</Dependency>-->
             <!--<Dependency>p11-kit-devel</Dependency>-->
         </BuildDependencies>
@@ -54,8 +54,8 @@
         <RuntimeDependencies>
             <!--<Dependency>stoken</Dependency>-->
             <Dependency release="current">openconnect</Dependency>
-            <Dependency>zlib-devel</Dependency>
-	    <Dependency>openssl-devel</Dependency>
+            <Dependency>zlib</Dependency>
+	    <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

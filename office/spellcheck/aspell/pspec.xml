@@ -36,16 +36,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>aspell-devel</Name>
-        <Summary>Development files for aspell</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">aspell</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="info">/usr/share/info/aspell-dev.info</Path>
         </Files>

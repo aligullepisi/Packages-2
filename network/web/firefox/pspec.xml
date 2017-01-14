@@ -119,7 +119,7 @@
         </Provides>
     </Package>
 
-    <!--Package>
+    <Package>
         <Name>firefox-lang-az</Name>
         <Icon>lang-az</Icon>
         <Summary>Firefox üçün Türkçe dil faylı</Summary>
@@ -523,7 +523,7 @@
         <Files>
             <Path fileType="localedata">/usr/lib/firefox/browser/extensions/langpack-uk@firefox.mozilla.org</Path>
         </Files>
-    </Package-->
+    </Package>
 
     <History>
         <Update release="1">

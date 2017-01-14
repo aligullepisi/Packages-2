@@ -21,10 +21,9 @@
             <Dependency>gtk2</Dependency>
             <Dependency>libXt</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libXext</Dependency>
-            <!--flashplugin-kde-extension-->            
+            <Dependency>libXext</Dependency>          
             <Dependency>libXpm</Dependency>
-             <Dependency>mesa-devel</Dependency>
+             <Dependency>mesa</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -46,16 +46,6 @@
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>recode-devel</Name>
-        <Summary>Development files for recode</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">recode</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
