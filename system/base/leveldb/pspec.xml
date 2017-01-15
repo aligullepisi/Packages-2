@@ -30,14 +30,6 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>leveldb-devel</Name>
-        <RuntimeDependencies>
-            <Dependency release="current">leveldb</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
