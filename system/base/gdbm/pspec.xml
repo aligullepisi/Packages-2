@@ -28,17 +28,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="info">/usr/share/info</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>gdbm-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for gdbm</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">gdbm</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
