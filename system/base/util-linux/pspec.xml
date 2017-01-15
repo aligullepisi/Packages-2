@@ -14,17 +14,14 @@
         <IsA>library</IsA>
         <Summary>Various useful Linux utilities</Summary>
         <Description>The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
-        <Archive sha1sum="462bca6320535d39b62216d8609da5531bfef0bb" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.27/util-linux-2.27.1.tar.xz</Archive>
+        <Archive sha1sum="9720d4ea99f8aff018ea6732dcc5c1fc853f39b3" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.28/util-linux-2.28.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>zlib</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>python</Dependency>
             <Dependency>readline</Dependency>
             <Dependency>shadow</Dependency>
             <Dependency>ncurses</Dependency>
             <Dependency>libcap-ng</Dependency>
-            <Dependency>pam</Dependency>
-            <!-- <Dependency releaseFrom="2">utempter-devel</Dependency>-->
         </BuildDependencies>
         <Patches>
              <Patch level="1">upstream/util-linux-ng-2.21-login-lastlog.patch</Patch>
@@ -34,13 +31,11 @@
     <Package>
         <Name>util-linux</Name>
         <RuntimeDependencies>
-            <Dependency version="current">libutil-linux</Dependency>
             <Dependency>zlib</Dependency>
             <Dependency>perl</Dependency>
             <Dependency>ncurses</Dependency>
             <Dependency>readline</Dependency>
-            <Dependency>eudev</Dependency>
-            <!--<Dependency>utempter</Dependency>-->
+            <Dependency>python</Dependency>
             <Dependency>libcap-ng</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -56,53 +51,14 @@
             <Path fileType="data">/usr/share/getopt</Path>
             <Path fileType="data">/usr/share/bash-completion/completions</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>uuidd</Name>
-        <IsA>service</IsA>
-        <IsA>app:console</IsA>
-        <PartOf>util.misc</PartOf>
-        <Summary>Helper daemon to guarantee uniqueness of time-based UUIDs</Summary>
-        <RuntimeDependencies>
-            <Dependency>libutil-linux</Dependency>
-        </RuntimeDependencies>
-        <!-- FIXME: Add COMAR service -->
-        <Files>
-            <Path fileType="executable">/usr/bin/uuidgen</Path>
-            <Path fileType="executable">/usr/sbin/uuidd</Path>
-            <Path fileType="config">/usr/lib/tmpfiles.d/uuidd.conf</Path>
-            <Path fileType="man">/usr/share/man/man1/uuidgen.1</Path>
-            <Path fileType="man">/usr/share/man/man8/uuidd.8</Path>
-        </Files>
-        <AdditionalFiles>
-            <AdditionalFile target="/usr/lib/tmpfiles.d/uuidd.conf" permission="0644" owner="root">uuidd.tmpfiles</AdditionalFile>
-        </AdditionalFiles> 
-    </Package>
-
-    <Package>
-        <Name>libutil-linux</Name>
-        <IsA>library</IsA>
-        <Summary>util-linux runtime library</Summary>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-        </RuntimeDependencies>
-        <Replaces>
-            <Package>libblkid</Package>
-            <Package>libuuid</Package>
-        </Replaces>
-        <Files>
             <Path fileType="library">/lib</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="man">/usr/share/man/man3/uuid*</Path>
-            <Path fileType="man">/usr/share/man/man3/libblkid*</Path>
-            <Path fileType="man">/usr/share/man/man8/blkid*</Path>
             <Path fileType="header">/usr/include/</Path>
-            <Path fileType="data">/usr/lib/pkgconfig/*.pc</Path>
+            <AdditionalFiles>
+            <AdditionalFile target="/usr/lib/tmpfiles.d/uuidd.conf" permission="0644" owner="root">uuidd.tmpfiles</AdditionalFile>
+            </AdditionalFiles> 
         </Files>
     </Package>
-
 
     <Package>
         <Name>libutil-linux-32bit</Name>
