@@ -30,20 +30,8 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>expat-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for expat</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">expat</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
-            <Path fileType="library">/usr/lib32/pkgconfig</Path>
             <Path fileType="doc">/usr/share/doc/expat/html</Path>
         </Files>
     </Package>
@@ -61,12 +49,13 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>2016-11-12</Date>
+            <Date>2017-01-12</Date>
             <Version>2.2.0</Version>
             <Comment>First release</Comment>
             <Name>Lime GNU/LINUX Community</Name>
