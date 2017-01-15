@@ -28,17 +28,6 @@
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib/libee.so*</Path>
             <Path fileType="doc">/usr/share/doc/libee</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>libee-devel</Name>
-        <PartOf>system.devel</PartOf>
-        <Summary>Development files for libestr</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libee</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include/libee</Path>
             <Path fileType="data">/usr/lib/pkgconfig/libee.pc</Path>
         </Files>
