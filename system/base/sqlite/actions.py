@@ -19,10 +19,9 @@ def setup():
                          "-DSQLITE_DISABLE_DIRSYNC",
                          "-DSQLITE_ENABLE_FTS3",
                          "-DSQLITE_ENABLE_FTS4",
-                         "-DSQLITE_ENABLE_FTS5",
-                         "-DSQLITE_ENABLE_DBSTAT_VTAB=1",
                          "-DSQLITE_ENABLE_FTS3_PARENTHESIS",
                          "-DSQLITE_ENABLE_STMT_SCANSTATUS",
+			 "-DSQLITE_ENABLE_DBSTAT_VTAB=1",
                          "-DSQLITE_SOUNDEX",
                          "-DSQLITE_ENABLE_RTREE",
                          "-DSQLITE_ENABLE_API_ARMOR")
@@ -31,46 +30,20 @@ def setup():
 
     autotools.configure("--disable-static \
                          --enable-readline \
-                         --enable-fts3 \
-                         --enable-fts4 \
-                         --enable-fts5 \
-                         --enable-rtree \
-                         --enable-json1 \
                          --enable-threadsafe")
 
-    #shelltools.cd("tea")
-    #autotools.configure(" \
-    #                     --enable-shared \
-    #                     --with-tcl='/usr/lib/' \
-    #                     --with-tclinclude='/usr/include' \
-    #                     --enable-64bit \
-    #                     --enable-threads")
 
 def build():
     autotools.make("-j1")
 
-    #shelltools.cd("tea")
-    #autotools.make("-j1")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    #shelltools.cd("%s/sqlite-autoconf-3110000/tea" % get.workDIR())
-    #autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     pisitools.dodoc("README*")
 
-    shelltools.cd("%s/sqlite-doc-3110000" % get.workDIR())
+    shelltools.cd("%s/sqlite-doc-3130000" % get.workDIR())
     shelltools.system("pwd")
 
-    pisitools.insinto("/usr/share/doc/sqlite", "../sqlite-doc-3110000/*")
-
-    # fix permissions and remove obsolete files; https://bugs.archlinux.org/task/24605
-    shelltools.system("find %s -type f -perm 755 -exec ls -lha {} \;" % get.installDIR())
-    shelltools.system("find %s -type f -perm 755 -exec chmod 644 {} \;" % get.installDIR())
-    shelltools.system("find %s -type f -name '*~' -exec ls -lha {} \;" % get.installDIR())
-    shelltools.system("find %s -type d -name '*~' -exec ls -lha {} \;" % get.installDIR())
-    shelltools.system("find %s -name '*~' -exec rm -f {} \;" % get.installDIR())
-    shelltools.system("find %s -type f -name '.~*' -exec ls -lha {} \;" % get.installDIR())# /build/pkg/sqlite-doc/usr/share/doc/sqlite/images/fileformat/.~lock.indexpage.odg#
-    shelltools.system("find %s -type d -name '.~*' -exec ls -lha {} \;" % get.installDIR())
-    shelltools.system("find %s -name '.~*' -exec rm -f {} \;" % get.installDIR())
+    pisitools.insinto("/usr/share/doc/sqlite", "../sqlite-doc-3130000/*")
