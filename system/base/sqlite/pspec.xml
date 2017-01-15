@@ -13,8 +13,8 @@
         <IsA>library</IsA>
         <Summary>An SQL Database Engine in a C Library</Summary>
         <Description>SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine. Supports databases up to 2 terabytes in size.</Description>
-        <Archive sha1sum="e2d300e4b24af5ecd67a1396488893fa44864e36" type="targz">http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz</Archive>
-        <Archive sha1sum="9b58a0a48508103352144afee2e47469e74427ba" type="zip">http://www.sqlite.org/2016/sqlite-doc-3110000.zip</Archive>
+        <Archive sha1sum="f6f76e310389e3f510b23826f805850449ae8653" type="targz">http://www.sqlite.org/2016/sqlite-autoconf-3130000.tar.gz</Archive>
+        <Archive sha1sum="1f10c30709c67bdb62d0d86f2b36c0148f64ed21" type="zip">http://www.sqlite.org/2016/sqlite-doc-3130000.zip</Archive>
         <BuildDependencies>
             <Dependency>readline</Dependency>
         </BuildDependencies>
@@ -24,6 +24,7 @@
         <Name>sqlite</Name>
         <RuntimeDependencies>
             <Dependency>readline</Dependency>
+            <Dependency>libedit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -31,7 +32,6 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc/sqlite/README</Path>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 
